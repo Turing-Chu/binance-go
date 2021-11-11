@@ -22863,7 +22863,7 @@ components:
       example:
         symbol: BTCUSDT
         amount: -1183.984
-        notionalValue: -22871089.96704
+        notionalValue: -2.287108996704E7
       properties:
         symbol:
           example: BTCUSDT
@@ -22896,10 +22896,10 @@ components:
         currentBaskets:
         - symbol: BTCUSDT
           amount: -1183.984
-          notionalValue: -22871089.96704
+          notionalValue: -2.287108996704E7
         - symbol: BTCUSDT
           amount: -1183.984
-          notionalValue: -22871089.96704
+          notionalValue: -2.287108996704E7
         fundingRate: "0.001020"
         timestamp: 1583127900000
       properties:
@@ -23192,8 +23192,8 @@ components:
       type: object
     _sapi_v1_bswap_liquidity_liquidity:
       example:
-        USDT: 99999245.54
-        BUSD: 100000315.79
+        USDT: 9.999924554E7
+        BUSD: 1.0000031579E8
       properties:
         BUSD:
           example: 100000315.79
@@ -23230,7 +23230,7 @@ components:
           USDT: 6206.95
           BUSD: 6207.02
         shareAmount: 12415
-        sharePercentage: 0.00006207
+        sharePercentage: 6.207E-5
       properties:
         shareAmount:
           example: 12415
@@ -23253,14 +23253,14 @@ components:
         poolId: 2
         updateTime: 1565769342148
         liquidity:
-          USDT: 99999245.54
-          BUSD: 100000315.79
+          USDT: 9.999924554E7
+          BUSD: 1.0000031579E8
         share:
           asset:
             USDT: 6206.95
             BUSD: 6207.02
           shareAmount: 12415
-          sharePercentage: 0.00006207
+          sharePercentage: 6.207E-5
       properties:
         poolId:
           example: 2
@@ -23348,7 +23348,7 @@ components:
         fee: 120
         baseQty: 299975
         baseAsset: BUSD
-        slippage: 0.00007245
+        slippage: 7.245E-5
         quoteAsset: USDT
       properties:
         quoteAsset:
