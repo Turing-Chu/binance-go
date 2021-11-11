@@ -1,0 +1,93 @@
+# InlineResponse20090Data
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**OtherProfits** | [**[]InlineResponse20090DataOtherProfits**](InlineResponse20090DataOtherProfits.md) |  | 
+**TotalNum** | **int64** | Total Rows | 
+**PageSize** | **int64** | Rows per page | 
+
+## Methods
+
+### NewInlineResponse20090Data
+
+`func NewInlineResponse20090Data(otherProfits []InlineResponse20090DataOtherProfits, totalNum int64, pageSize int64, ) *InlineResponse20090Data`
+
+NewInlineResponse20090Data instantiates a new InlineResponse20090Data object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewInlineResponse20090DataWithDefaults
+
+`func NewInlineResponse20090DataWithDefaults() *InlineResponse20090Data`
+
+NewInlineResponse20090DataWithDefaults instantiates a new InlineResponse20090Data object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetOtherProfits
+
+`func (o *InlineResponse20090Data) GetOtherProfits() []InlineResponse20090DataOtherProfits`
+
+GetOtherProfits returns the OtherProfits field if non-nil, zero value otherwise.
+
+### GetOtherProfitsOk
+
+`func (o *InlineResponse20090Data) GetOtherProfitsOk() (*[]InlineResponse20090DataOtherProfits, bool)`
+
+GetOtherProfitsOk returns a tuple with the OtherProfits field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOtherProfits
+
+`func (o *InlineResponse20090Data) SetOtherProfits(v []InlineResponse20090DataOtherProfits)`
+
+SetOtherProfits sets OtherProfits field to given value.
+
+
+### GetTotalNum
+
+`func (o *InlineResponse20090Data) GetTotalNum() int64`
+
+GetTotalNum returns the TotalNum field if non-nil, zero value otherwise.
+
+### GetTotalNumOk
+
+`func (o *InlineResponse20090Data) GetTotalNumOk() (*int64, bool)`
+
+GetTotalNumOk returns a tuple with the TotalNum field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTotalNum
+
+`func (o *InlineResponse20090Data) SetTotalNum(v int64)`
+
+SetTotalNum sets TotalNum field to given value.
+
+
+### GetPageSize
+
+`func (o *InlineResponse20090Data) GetPageSize() int64`
+
+GetPageSize returns the PageSize field if non-nil, zero value otherwise.
+
+### GetPageSizeOk
+
+`func (o *InlineResponse20090Data) GetPageSizeOk() (*int64, bool)`
+
+GetPageSizeOk returns a tuple with the PageSize field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPageSize
+
+`func (o *InlineResponse20090Data) SetPageSize(v int64)`
+
+SetPageSize sets PageSize field to given value.
+
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
