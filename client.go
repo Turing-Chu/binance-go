@@ -374,12 +374,14 @@ func (c *APIClient) prepareRequest(
 					h.Write(body.Bytes())
 				}
 
-				rawQuery, err := url.QueryUnescape(requestUrl.RawQuery)
-				if err != nil {
-					return nil, err
+				if query.Has("signature") {
+					query.Del("signature")
+				}
+				if query.Has("timestamp") {
+					query.Del("timestamp")
 				}
 				mac := hmac.New(sha256.New, []byte(auth.Key))
-				mac.Write([]byte(rawQuery))
+				mac.Write([]byte(query.Encode()))
 				sign := hex.EncodeToString(mac.Sum(nil))
 				t := strconv.FormatInt(time.Now().UnixMilli(), 10)
 
