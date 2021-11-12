@@ -76,7 +76,7 @@ func (r ApiBswapAddLiquidityPreviewRequest) RecvWindow(recvWindow int64) ApiBswa
 	return r
 }
 
-func (r ApiBswapAddLiquidityPreviewRequest) Execute() (OneOfbswapAddLiquidityPreviewCombinationbswapAddLiquidityPreviewSingle, *_nethttp.Response, error) {
+func (r ApiBswapAddLiquidityPreviewRequest) Execute() (BswapAddLiquidityPreviewCombination, *_nethttp.Response, error) {
 	return r.ApiService.BswapAddLiquidityPreviewExecute(r)
 }
 
@@ -99,14 +99,14 @@ func (a *BSwapApiService) BswapAddLiquidityPreview(ctx _context.Context) ApiBswa
 
 // Execute executes the request
 //  @return OneOfbswapAddLiquidityPreviewCombinationbswapAddLiquidityPreviewSingle
-func (a *BSwapApiService) BswapAddLiquidityPreviewExecute(r ApiBswapAddLiquidityPreviewRequest) (OneOfbswapAddLiquidityPreviewCombinationbswapAddLiquidityPreviewSingle, *_nethttp.Response, error) {
+func (a *BSwapApiService) BswapAddLiquidityPreviewExecute(r ApiBswapAddLiquidityPreviewRequest) (BswapAddLiquidityPreviewCombination, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfbswapAddLiquidityPreviewCombinationbswapAddLiquidityPreviewSingle
+		localVarReturnValue  BswapAddLiquidityPreviewCombination
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BSwapApiService.BswapAddLiquidityPreview")
@@ -1587,7 +1587,7 @@ func (r ApiBswapRemoveLiquidityPreviewRequest) RecvWindow(recvWindow int64) ApiB
 	return r
 }
 
-func (r ApiBswapRemoveLiquidityPreviewRequest) Execute() (OneOfbswapRmvLiquidityPreviewCombinationbswapRmvLiquidityPreviewSingle, *_nethttp.Response, error) {
+func (r ApiBswapRemoveLiquidityPreviewRequest) Execute() (BswapRmvLiquidityPreviewCombination, *_nethttp.Response, error) {
 	return r.ApiService.BswapRemoveLiquidityPreviewExecute(r)
 }
 
@@ -1610,14 +1610,14 @@ func (a *BSwapApiService) BswapRemoveLiquidityPreview(ctx _context.Context) ApiB
 
 // Execute executes the request
 //  @return OneOfbswapRmvLiquidityPreviewCombinationbswapRmvLiquidityPreviewSingle
-func (a *BSwapApiService) BswapRemoveLiquidityPreviewExecute(r ApiBswapRemoveLiquidityPreviewRequest) (OneOfbswapRmvLiquidityPreviewCombinationbswapRmvLiquidityPreviewSingle, *_nethttp.Response, error) {
+func (a *BSwapApiService) BswapRemoveLiquidityPreviewExecute(r ApiBswapRemoveLiquidityPreviewRequest) (BswapRmvLiquidityPreviewCombination, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfbswapRmvLiquidityPreviewCombinationbswapRmvLiquidityPreviewSingle
+		localVarReturnValue  BswapRmvLiquidityPreviewCombination
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BSwapApiService.BswapRemoveLiquidityPreview")

@@ -841,7 +841,7 @@ func (r ApiMarginCancelAllSymbolOrdersRequest) RecvWindow(recvWindow int64) ApiM
 	return r
 }
 
-func (r ApiMarginCancelAllSymbolOrdersRequest) Execute() ([]AnyOfcanceledMarginOrderDetailmarginOcoOrder, *_nethttp.Response, error) {
+func (r ApiMarginCancelAllSymbolOrdersRequest) Execute() ([]CanceledMarginOrderDetail, *_nethttp.Response, error) {
 	return r.ApiService.MarginCancelAllSymbolOrdersExecute(r)
 }
 
@@ -866,14 +866,14 @@ func (a *MarginApiService) MarginCancelAllSymbolOrders(ctx _context.Context) Api
 
 // Execute executes the request
 //  @return []AnyOfcanceledMarginOrderDetailmarginOcoOrder
-func (a *MarginApiService) MarginCancelAllSymbolOrdersExecute(r ApiMarginCancelAllSymbolOrdersRequest) ([]AnyOfcanceledMarginOrderDetailmarginOcoOrder, *_nethttp.Response, error) {
+func (a *MarginApiService) MarginCancelAllSymbolOrdersExecute(r ApiMarginCancelAllSymbolOrdersRequest) ([]CanceledMarginOrderDetail, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodDelete
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  []AnyOfcanceledMarginOrderDetailmarginOcoOrder
+		localVarReturnValue  []CanceledMarginOrderDetail
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MarginApiService.MarginCancelAllSymbolOrders")
@@ -1872,7 +1872,7 @@ func (r ApiMarginCreateOrderRequest) RecvWindow(recvWindow int64) ApiMarginCreat
 	return r
 }
 
-func (r ApiMarginCreateOrderRequest) Execute() (OneOfmarginOrderResponseAckmarginOrderResponseResultmarginOrderResponseFull, *_nethttp.Response, error) {
+func (r ApiMarginCreateOrderRequest) Execute() (MarginOrderResponseResult, *_nethttp.Response, error) {
 	return r.ApiService.MarginCreateOrderExecute(r)
 }
 
@@ -1895,14 +1895,14 @@ func (a *MarginApiService) MarginCreateOrder(ctx _context.Context) ApiMarginCrea
 
 // Execute executes the request
 //  @return OneOfmarginOrderResponseAckmarginOrderResponseResultmarginOrderResponseFull
-func (a *MarginApiService) MarginCreateOrderExecute(r ApiMarginCreateOrderRequest) (OneOfmarginOrderResponseAckmarginOrderResponseResultmarginOrderResponseFull, *_nethttp.Response, error) {
+func (a *MarginApiService) MarginCreateOrderExecute(r ApiMarginCreateOrderRequest) (MarginOrderResponseResult, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfmarginOrderResponseAckmarginOrderResponseResultmarginOrderResponseFull
+		localVarReturnValue  MarginOrderResponseResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MarginApiService.MarginCreateOrder")

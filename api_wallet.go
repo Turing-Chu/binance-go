@@ -674,7 +674,7 @@ func (r ApiGetAccountSnapshotRequest) RecvWindow(recvWindow int64) ApiGetAccount
 	return r
 }
 
-func (r ApiGetAccountSnapshotRequest) Execute() (OneOfsnapshotSpotsnapshotMarginsnapshotFutures, *_nethttp.Response, error) {
+func (r ApiGetAccountSnapshotRequest) Execute() (SnapshotSpot, *_nethttp.Response, error) {
 	return r.ApiService.GetAccountSnapshotExecute(r)
 }
 
@@ -695,14 +695,14 @@ func (a *WalletApiService) GetAccountSnapshot(ctx _context.Context) ApiGetAccoun
 
 // Execute executes the request
 //  @return OneOfsnapshotSpotsnapshotMarginsnapshotFutures
-func (a *WalletApiService) GetAccountSnapshotExecute(r ApiGetAccountSnapshotRequest) (OneOfsnapshotSpotsnapshotMarginsnapshotFutures, *_nethttp.Response, error) {
+func (a *WalletApiService) GetAccountSnapshotExecute(r ApiGetAccountSnapshotRequest) (SnapshotSpot, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfsnapshotSpotsnapshotMarginsnapshotFutures
+		localVarReturnValue  SnapshotSpot
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "WalletApiService.GetAccountSnapshot")

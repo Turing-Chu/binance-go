@@ -461,7 +461,7 @@ func (r ApiGetBookTickerRequest) Symbol(symbol string) ApiGetBookTickerRequest {
 	return r
 }
 
-func (r ApiGetBookTickerRequest) Execute() (OneOfbookTickerbookTickerList, *_nethttp.Response, error) {
+func (r ApiGetBookTickerRequest) Execute() (TickerList, *_nethttp.Response, error) {
 	return r.ApiService.GetBookTickerExecute(r)
 }
 
@@ -488,14 +488,14 @@ func (a *MarketApiService) GetBookTicker(ctx _context.Context) ApiGetBookTickerR
 
 // Execute executes the request
 //  @return OneOfbookTickerbookTickerList
-func (a *MarketApiService) GetBookTickerExecute(r ApiGetBookTickerRequest) (OneOfbookTickerbookTickerList, *_nethttp.Response, error) {
+func (a *MarketApiService) GetBookTickerExecute(r ApiGetBookTickerRequest) (TickerList, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfbookTickerbookTickerList
+		localVarReturnValue  TickerList
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MarketApiService.GetBookTicker")
@@ -1017,7 +1017,7 @@ func (r ApiGetKlinesRequest) Limit(limit int32) ApiGetKlinesRequest {
 	return r
 }
 
-func (r ApiGetKlinesRequest) Execute() ([][]OneOflongstring, *_nethttp.Response, error) {
+func (r ApiGetKlinesRequest) Execute() ([][]interface{}, *_nethttp.Response, error) {
 	return r.ApiService.GetKlinesExecute(r)
 }
 
@@ -1043,14 +1043,14 @@ func (a *MarketApiService) GetKlines(ctx _context.Context) ApiGetKlinesRequest {
 
 // Execute executes the request
 //  @return [][]OneOflongstring
-func (a *MarketApiService) GetKlinesExecute(r ApiGetKlinesRequest) ([][]OneOflongstring, *_nethttp.Response, error) {
+func (a *MarketApiService) GetKlinesExecute(r ApiGetKlinesRequest) ([][]interface{}, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  [][]OneOflongstring
+		localVarReturnValue  [][]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MarketApiService.GetKlines")
@@ -1289,7 +1289,7 @@ func (r ApiGetTicker24hrPriceRequest) Symbol(symbol string) ApiGetTicker24hrPric
 	return r
 }
 
-func (r ApiGetTicker24hrPriceRequest) Execute() (OneOftickertickerList, *_nethttp.Response, error) {
+func (r ApiGetTicker24hrPriceRequest) Execute() (TickerList, *_nethttp.Response, error) {
 	return r.ApiService.GetTicker24hrPriceExecute(r)
 }
 
@@ -1316,14 +1316,14 @@ func (a *MarketApiService) GetTicker24hrPrice(ctx _context.Context) ApiGetTicker
 
 // Execute executes the request
 //  @return OneOftickertickerList
-func (a *MarketApiService) GetTicker24hrPriceExecute(r ApiGetTicker24hrPriceRequest) (OneOftickertickerList, *_nethttp.Response, error) {
+func (a *MarketApiService) GetTicker24hrPriceExecute(r ApiGetTicker24hrPriceRequest) (TickerList, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOftickertickerList
+		localVarReturnValue  TickerList
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MarketApiService.GetTicker24hrPrice")
@@ -1415,7 +1415,7 @@ func (r ApiGetTickerPriceRequest) Symbol(symbol string) ApiGetTickerPriceRequest
 	return r
 }
 
-func (r ApiGetTickerPriceRequest) Execute() (OneOfpriceTickerpriceTickerList, *_nethttp.Response, error) {
+func (r ApiGetTickerPriceRequest) Execute() (PriceTickerList, *_nethttp.Response, error) {
 	return r.ApiService.GetTickerPriceExecute(r)
 }
 
@@ -1442,14 +1442,14 @@ func (a *MarketApiService) GetTickerPrice(ctx _context.Context) ApiGetTickerPric
 
 // Execute executes the request
 //  @return OneOfpriceTickerpriceTickerList
-func (a *MarketApiService) GetTickerPriceExecute(r ApiGetTickerPriceRequest) (OneOfpriceTickerpriceTickerList, *_nethttp.Response, error) {
+func (a *MarketApiService) GetTickerPriceExecute(r ApiGetTickerPriceRequest) (PriceTickerList, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfpriceTickerpriceTickerList
+		localVarReturnValue  PriceTickerList
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MarketApiService.GetTickerPrice")

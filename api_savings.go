@@ -1655,7 +1655,7 @@ func (r ApiLendingGetPurchaseRecordRequest) RecvWindow(recvWindow int64) ApiLend
 	return r
 }
 
-func (r ApiLendingGetPurchaseRecordRequest) Execute() (OneOfsavingsFlexiblePurchaseRecordsavingsFixedActivityPurchaseRecord, *_nethttp.Response, error) {
+func (r ApiLendingGetPurchaseRecordRequest) Execute() (SavingsFixedActivityPurchaseRecord, *_nethttp.Response, error) {
 	return r.ApiService.LendingGetPurchaseRecordExecute(r)
 }
 
@@ -1679,14 +1679,14 @@ func (a *SavingsApiService) LendingGetPurchaseRecord(ctx _context.Context) ApiLe
 
 // Execute executes the request
 //  @return OneOfsavingsFlexiblePurchaseRecordsavingsFixedActivityPurchaseRecord
-func (a *SavingsApiService) LendingGetPurchaseRecordExecute(r ApiLendingGetPurchaseRecordRequest) (OneOfsavingsFlexiblePurchaseRecordsavingsFixedActivityPurchaseRecord, *_nethttp.Response, error) {
+func (a *SavingsApiService) LendingGetPurchaseRecordExecute(r ApiLendingGetPurchaseRecordRequest) (SavingsFixedActivityPurchaseRecord, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfsavingsFlexiblePurchaseRecordsavingsFixedActivityPurchaseRecord
+		localVarReturnValue  SavingsFixedActivityPurchaseRecord
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SavingsApiService.LendingGetPurchaseRecord")
@@ -1883,7 +1883,7 @@ func (r ApiLendingGetRedemptionRecordRequest) RecvWindow(recvWindow int64) ApiLe
 	return r
 }
 
-func (r ApiLendingGetRedemptionRecordRequest) Execute() (OneOfsavingsFlexibleRedemptionRecordsavingsFixedActivityRedemptionRecord, *_nethttp.Response, error) {
+func (r ApiLendingGetRedemptionRecordRequest) Execute() (SavingsFixedActivityPurchaseRecord, *_nethttp.Response, error) {
 	return r.ApiService.LendingGetRedemptionRecordExecute(r)
 }
 
@@ -1907,14 +1907,14 @@ func (a *SavingsApiService) LendingGetRedemptionRecord(ctx _context.Context) Api
 
 // Execute executes the request
 //  @return OneOfsavingsFlexibleRedemptionRecordsavingsFixedActivityRedemptionRecord
-func (a *SavingsApiService) LendingGetRedemptionRecordExecute(r ApiLendingGetRedemptionRecordRequest) (OneOfsavingsFlexibleRedemptionRecordsavingsFixedActivityRedemptionRecord, *_nethttp.Response, error) {
+func (a *SavingsApiService) LendingGetRedemptionRecordExecute(r ApiLendingGetRedemptionRecordRequest) (SavingsFixedActivityPurchaseRecord, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfsavingsFlexibleRedemptionRecordsavingsFixedActivityRedemptionRecord
+		localVarReturnValue  SavingsFixedActivityPurchaseRecord
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SavingsApiService.LendingGetRedemptionRecord")

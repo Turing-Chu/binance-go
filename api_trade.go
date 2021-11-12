@@ -271,7 +271,7 @@ func (r ApiCancelAllSymbolOrdersRequest) RecvWindow(recvWindow int64) ApiCancelA
 	return r
 }
 
-func (r ApiCancelAllSymbolOrdersRequest) Execute() ([]AnyOforderocoOrder, *_nethttp.Response, error) {
+func (r ApiCancelAllSymbolOrdersRequest) Execute() ([]Order, *_nethttp.Response, error) {
 	return r.ApiService.CancelAllSymbolOrdersExecute(r)
 }
 
@@ -295,14 +295,14 @@ func (a *TradeApiService) CancelAllSymbolOrders(ctx _context.Context) ApiCancelA
 
 // Execute executes the request
 //  @return []AnyOforderocoOrder
-func (a *TradeApiService) CancelAllSymbolOrdersExecute(r ApiCancelAllSymbolOrdersRequest) ([]AnyOforderocoOrder, *_nethttp.Response, error) {
+func (a *TradeApiService) CancelAllSymbolOrdersExecute(r ApiCancelAllSymbolOrdersRequest) ([]Order, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodDelete
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  []AnyOforderocoOrder
+		localVarReturnValue  []Order
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "TradeApiService.CancelAllSymbolOrders")
@@ -1044,7 +1044,7 @@ func (r ApiCreateOrderRequest) RecvWindow(recvWindow int64) ApiCreateOrderReques
 	return r
 }
 
-func (r ApiCreateOrderRequest) Execute() (OneOforderResponseAckorderResponseResultorderResponseFull, *_nethttp.Response, error) {
+func (r ApiCreateOrderRequest) Execute() (OrderResponseResult, *_nethttp.Response, error) {
 	return r.ApiService.CreateOrderExecute(r)
 }
 
@@ -1082,14 +1082,14 @@ func (a *TradeApiService) CreateOrder(ctx _context.Context) ApiCreateOrderReques
 
 // Execute executes the request
 //  @return OneOforderResponseAckorderResponseResultorderResponseFull
-func (a *TradeApiService) CreateOrderExecute(r ApiCreateOrderRequest) (OneOforderResponseAckorderResponseResultorderResponseFull, *_nethttp.Response, error) {
+func (a *TradeApiService) CreateOrderExecute(r ApiCreateOrderRequest) (OrderResponseResult, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOforderResponseAckorderResponseResultorderResponseFull
+		localVarReturnValue  OrderResponseResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "TradeApiService.CreateOrder")

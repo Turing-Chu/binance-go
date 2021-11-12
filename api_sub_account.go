@@ -2198,7 +2198,7 @@ func (r ApiSubaccountGetDetailFuturesAccountRequest) RecvWindow(recvWindow int64
 	return r
 }
 
-func (r ApiSubaccountGetDetailFuturesAccountRequest) Execute() (OneOfsubAccountUSDTFuturesDetailssubAccountCOINFuturesDetails, *_nethttp.Response, error) {
+func (r ApiSubaccountGetDetailFuturesAccountRequest) Execute() (SubAccountCOINFuturesDetails, *_nethttp.Response, error) {
 	return r.ApiService.SubaccountGetDetailFuturesAccountExecute(r)
 }
 
@@ -2219,14 +2219,14 @@ func (a *SubAccountApiService) SubaccountGetDetailFuturesAccount(ctx _context.Co
 
 // Execute executes the request
 //  @return OneOfsubAccountUSDTFuturesDetailssubAccountCOINFuturesDetails
-func (a *SubAccountApiService) SubaccountGetDetailFuturesAccountExecute(r ApiSubaccountGetDetailFuturesAccountRequest) (OneOfsubAccountUSDTFuturesDetailssubAccountCOINFuturesDetails, *_nethttp.Response, error) {
+func (a *SubAccountApiService) SubaccountGetDetailFuturesAccountExecute(r ApiSubaccountGetDetailFuturesAccountRequest) (SubAccountCOINFuturesDetails, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfsubAccountUSDTFuturesDetailssubAccountCOINFuturesDetails
+		localVarReturnValue  SubAccountCOINFuturesDetails
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubAccountApiService.SubaccountGetDetailFuturesAccount")
@@ -2736,7 +2736,7 @@ func (r ApiSubaccountGetFuturesAccountSummaryV2Request) RecvWindow(recvWindow in
 	return r
 }
 
-func (r ApiSubaccountGetFuturesAccountSummaryV2Request) Execute() (OneOfsubAccountUSDTFuturesSummarysubAccountCOINFuturesSummary, *_nethttp.Response, error) {
+func (r ApiSubaccountGetFuturesAccountSummaryV2Request) Execute() (SubAccountUSDTFuturesSummary, *_nethttp.Response, error) {
 	return r.ApiService.SubaccountGetFuturesAccountSummaryV2Execute(r)
 }
 
@@ -2757,14 +2757,14 @@ func (a *SubAccountApiService) SubaccountGetFuturesAccountSummaryV2(ctx _context
 
 // Execute executes the request
 //  @return OneOfsubAccountUSDTFuturesSummarysubAccountCOINFuturesSummary
-func (a *SubAccountApiService) SubaccountGetFuturesAccountSummaryV2Execute(r ApiSubaccountGetFuturesAccountSummaryV2Request) (OneOfsubAccountUSDTFuturesSummarysubAccountCOINFuturesSummary, *_nethttp.Response, error) {
+func (a *SubAccountApiService) SubaccountGetFuturesAccountSummaryV2Execute(r ApiSubaccountGetFuturesAccountSummaryV2Request) (SubAccountUSDTFuturesSummary, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfsubAccountUSDTFuturesSummarysubAccountCOINFuturesSummary
+		localVarReturnValue  SubAccountUSDTFuturesSummary
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubAccountApiService.SubaccountGetFuturesAccountSummaryV2")
@@ -3103,7 +3103,7 @@ func (r ApiSubaccountGetFuturesPositionRiskV2Request) RecvWindow(recvWindow int6
 	return r
 }
 
-func (r ApiSubaccountGetFuturesPositionRiskV2Request) Execute() (OneOfsubAccountUSDTFuturesPositionRisksubAccountCOINFuturesPositionRisk, *_nethttp.Response, error) {
+func (r ApiSubaccountGetFuturesPositionRiskV2Request) Execute() (SubAccountUSDTFuturesPositionRisk, *_nethttp.Response, error) {
 	return r.ApiService.SubaccountGetFuturesPositionRiskV2Execute(r)
 }
 
@@ -3124,14 +3124,14 @@ func (a *SubAccountApiService) SubaccountGetFuturesPositionRiskV2(ctx _context.C
 
 // Execute executes the request
 //  @return OneOfsubAccountUSDTFuturesPositionRisksubAccountCOINFuturesPositionRisk
-func (a *SubAccountApiService) SubaccountGetFuturesPositionRiskV2Execute(r ApiSubaccountGetFuturesPositionRiskV2Request) (OneOfsubAccountUSDTFuturesPositionRisksubAccountCOINFuturesPositionRisk, *_nethttp.Response, error) {
+func (a *SubAccountApiService) SubaccountGetFuturesPositionRiskV2Execute(r ApiSubaccountGetFuturesPositionRiskV2Request) (SubAccountUSDTFuturesPositionRisk, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfsubAccountUSDTFuturesPositionRisksubAccountCOINFuturesPositionRisk
+		localVarReturnValue  SubAccountUSDTFuturesPositionRisk
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubAccountApiService.SubaccountGetFuturesPositionRiskV2")
