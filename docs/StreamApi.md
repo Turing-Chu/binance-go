@@ -4,15 +4,15 @@ All URIs are relative to *https://api.binance.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ApiV3UserDataStreamDelete**](StreamApi.md#ApiV3UserDataStreamDelete) | **Delete** /api/v3/userDataStream | Close a ListenKey (USER_STREAM)
-[**ApiV3UserDataStreamPost**](StreamApi.md#ApiV3UserDataStreamPost) | **Post** /api/v3/userDataStream | Create a ListenKey (USER_STREAM)
-[**ApiV3UserDataStreamPut**](StreamApi.md#ApiV3UserDataStreamPut) | **Put** /api/v3/userDataStream | Ping/Keep-alive a ListenKey (USER_STREAM)
+[**CloseSpotListenKey**](StreamApi.md#CloseSpotListenKey) | **Delete** /api/v3/userDataStream | Close a ListenKey (USER_STREAM)
+[**CreateSpotListenKey**](StreamApi.md#CreateSpotListenKey) | **Post** /api/v3/userDataStream | Create a ListenKey (USER_STREAM)
+[**DelaySpotListenKey**](StreamApi.md#DelaySpotListenKey) | **Put** /api/v3/userDataStream | Ping/Keep-alive a ListenKey (USER_STREAM)
 
 
 
-## ApiV3UserDataStreamDelete
+## CloseSpotListenKey
 
-> map[string]interface{} ApiV3UserDataStreamDelete(ctx).ListenKey(listenKey).Execute()
+> map[string]interface{} CloseSpotListenKey(ctx).ListenKey(listenKey).Execute()
 
 Close a ListenKey (USER_STREAM)
 
@@ -35,13 +35,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.StreamApi.ApiV3UserDataStreamDelete(context.Background()).ListenKey(listenKey).Execute()
+    resp, r, err := api_client.StreamApi.CloseSpotListenKey(context.Background()).ListenKey(listenKey).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `StreamApi.ApiV3UserDataStreamDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `StreamApi.CloseSpotListenKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ApiV3UserDataStreamDelete`: map[string]interface{}
-    fmt.Fprintf(os.Stdout, "Response from `StreamApi.ApiV3UserDataStreamDelete`: %v\n", resp)
+    // response from `CloseSpotListenKey`: map[string]interface{}
+    fmt.Fprintf(os.Stdout, "Response from `StreamApi.CloseSpotListenKey`: %v\n", resp)
 }
 ```
 
@@ -51,7 +51,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiApiV3UserDataStreamDeleteRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiCloseSpotListenKeyRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -76,9 +76,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ApiV3UserDataStreamPost
+## CreateSpotListenKey
 
-> InlineResponse20070 ApiV3UserDataStreamPost(ctx).Execute()
+> InlineResponse20070 CreateSpotListenKey(ctx).Execute()
 
 Create a ListenKey (USER_STREAM)
 
@@ -100,13 +100,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.StreamApi.ApiV3UserDataStreamPost(context.Background()).Execute()
+    resp, r, err := api_client.StreamApi.CreateSpotListenKey(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `StreamApi.ApiV3UserDataStreamPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `StreamApi.CreateSpotListenKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ApiV3UserDataStreamPost`: InlineResponse20070
-    fmt.Fprintf(os.Stdout, "Response from `StreamApi.ApiV3UserDataStreamPost`: %v\n", resp)
+    // response from `CreateSpotListenKey`: InlineResponse20070
+    fmt.Fprintf(os.Stdout, "Response from `StreamApi.CreateSpotListenKey`: %v\n", resp)
 }
 ```
 
@@ -116,7 +116,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiApiV3UserDataStreamPostRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiCreateSpotListenKeyRequest struct via the builder pattern
 
 
 ### Return type
@@ -137,9 +137,9 @@ Other parameters are passed through a pointer to a apiApiV3UserDataStreamPostReq
 [[Back to README]](../README.md)
 
 
-## ApiV3UserDataStreamPut
+## DelaySpotListenKey
 
-> map[string]interface{} ApiV3UserDataStreamPut(ctx).ListenKey(listenKey).Execute()
+> map[string]interface{} DelaySpotListenKey(ctx).ListenKey(listenKey).Execute()
 
 Ping/Keep-alive a ListenKey (USER_STREAM)
 
@@ -162,13 +162,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.StreamApi.ApiV3UserDataStreamPut(context.Background()).ListenKey(listenKey).Execute()
+    resp, r, err := api_client.StreamApi.DelaySpotListenKey(context.Background()).ListenKey(listenKey).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `StreamApi.ApiV3UserDataStreamPut``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `StreamApi.DelaySpotListenKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ApiV3UserDataStreamPut`: map[string]interface{}
-    fmt.Fprintf(os.Stdout, "Response from `StreamApi.ApiV3UserDataStreamPut`: %v\n", resp)
+    // response from `DelaySpotListenKey`: map[string]interface{}
+    fmt.Fprintf(os.Stdout, "Response from `StreamApi.DelaySpotListenKey`: %v\n", resp)
 }
 ```
 
@@ -178,7 +178,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiApiV3UserDataStreamPutRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDelaySpotListenKeyRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes

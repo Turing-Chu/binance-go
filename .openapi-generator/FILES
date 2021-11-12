@@ -27,6 +27,7 @@ docs/BLVTApi.md
 docs/BSwapApi.md
 docs/BnbBurnStatus.md
 docs/BookTicker.md
+docs/BookTickerList.md
 docs/BswapAddLiquidityPreviewCombination.md
 docs/BswapAddLiquidityPreviewSingle.md
 docs/BswapRmvLiquidityPreviewCombination.md
@@ -230,6 +231,7 @@ docs/OrderResponseFull.md
 docs/OrderResponseFullFills.md
 docs/OrderResponseResult.md
 docs/PriceTicker.md
+docs/PriceTickerList.md
 docs/SapiV1BlvtTokenInfoCurrentBaskets.md
 docs/SapiV1BswapLiquidityLiquidity.md
 docs/SapiV1BswapLiquidityShare.md
@@ -239,6 +241,10 @@ docs/SapiV1BswapPoolConfigureAssetConfigureBUSD.md
 docs/SapiV1BswapPoolConfigureLiquidity.md
 docs/SapiV1CapitalConfigGetallNetworkList.md
 docs/SavingsApi.md
+docs/SavingsFixedActivityPurchaseRecord.md
+docs/SavingsFixedActivityRedemptionRecord.md
+docs/SavingsFlexiblePurchaseRecord.md
+docs/SavingsFlexibleRedemptionRecord.md
 docs/SnapshotFutures.md
 docs/SnapshotFuturesData.md
 docs/SnapshotFuturesDataAssets.md
@@ -268,6 +274,7 @@ docs/SubAccountUSDTFuturesSummary.md
 docs/SubAccountUSDTFuturesSummaryFutureAccountSummaryResp.md
 docs/SubAccountUSDTFuturesSummaryFutureAccountSummaryRespSubAccountList.md
 docs/Ticker.md
+docs/TickerList.md
 docs/Trade.md
 docs/TradeApi.md
 docs/Transaction.md
@@ -290,6 +297,7 @@ model_account_balances.go
 model_agg_trade.go
 model_bnb_burn_status.go
 model_book_ticker.go
+model_book_ticker_list.go
 model_bswap_add_liquidity_preview_combination.go
 model_bswap_add_liquidity_preview_single.go
 model_bswap_rmv_liquidity_preview_combination.go
@@ -486,6 +494,11 @@ model_order_response_full.go
 model_order_response_full_fills.go
 model_order_response_result.go
 model_price_ticker.go
+model_price_ticker_list.go
+model_savings_fixed_activity_purchase_record.go
+model_savings_fixed_activity_redemption_record.go
+model_savings_flexible_purchase_record.go
+model_savings_flexible_redemption_record.go
 model_snapshot_futures.go
 model_snapshot_futures_data.go
 model_snapshot_futures_data_assets.go
@@ -513,6 +526,7 @@ model_sub_account_usdt_futures_summary.go
 model_sub_account_usdt_futures_summary_future_account_summary_resp.go
 model_sub_account_usdt_futures_summary_future_account_summary_resp_sub_account_list.go
 model_ticker.go
+model_ticker_list.go
 model_trade.go
 model_transaction.go
 response.go

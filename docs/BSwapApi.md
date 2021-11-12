@@ -4,23 +4,23 @@ All URIs are relative to *https://api.binance.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SapiV1BswapAddLiquidityPreviewGet**](BSwapApi.md#SapiV1BswapAddLiquidityPreviewGet) | **Get** /sapi/v1/bswap/addLiquidityPreview | Add Liquidity Preview (USER_DATA)
-[**SapiV1BswapLiquidityAddPost**](BSwapApi.md#SapiV1BswapLiquidityAddPost) | **Post** /sapi/v1/bswap/liquidityAdd | Add Liquidity (TRADE)
-[**SapiV1BswapLiquidityGet**](BSwapApi.md#SapiV1BswapLiquidityGet) | **Get** /sapi/v1/bswap/liquidity | Liquidity information of a pool (USER_DATA)
-[**SapiV1BswapLiquidityOpsGet**](BSwapApi.md#SapiV1BswapLiquidityOpsGet) | **Get** /sapi/v1/bswap/liquidityOps | Liquidity Operation Record (USER_DATA)
-[**SapiV1BswapLiquidityRemovePost**](BSwapApi.md#SapiV1BswapLiquidityRemovePost) | **Post** /sapi/v1/bswap/liquidityRemove | Remove Liquidity (TRADE)
-[**SapiV1BswapPoolConfigureGet**](BSwapApi.md#SapiV1BswapPoolConfigureGet) | **Get** /sapi/v1/bswap/poolConfigure | Pool Configure (USER_DATA)
-[**SapiV1BswapPoolsGet**](BSwapApi.md#SapiV1BswapPoolsGet) | **Get** /sapi/v1/bswap/pools | List All Swap Pools (MARKET_DATA)
-[**SapiV1BswapQuoteGet**](BSwapApi.md#SapiV1BswapQuoteGet) | **Get** /sapi/v1/bswap/quote | Request Quote (USER_DATA)
-[**SapiV1BswapRemoveLiquidityPreviewGet**](BSwapApi.md#SapiV1BswapRemoveLiquidityPreviewGet) | **Get** /sapi/v1/bswap/removeLiquidityPreview | Remove Liquidity Preview (USER_DATA)
-[**SapiV1BswapSwapGet**](BSwapApi.md#SapiV1BswapSwapGet) | **Get** /sapi/v1/bswap/swap | Swap History (USER_DATA)
-[**SapiV1BswapSwapPost**](BSwapApi.md#SapiV1BswapSwapPost) | **Post** /sapi/v1/bswap/swap | Swap (TRADE)
+[**BswapAddLiquidityPreview**](BSwapApi.md#BswapAddLiquidityPreview) | **Get** /sapi/v1/bswap/addLiquidityPreview | Add Liquidity Preview (USER_DATA)
+[**BswapAddLiquidityToPool**](BSwapApi.md#BswapAddLiquidityToPool) | **Post** /sapi/v1/bswap/liquidityAdd | Add Liquidity (TRADE)
+[**BswapGetLiquidityOperationHistory**](BSwapApi.md#BswapGetLiquidityOperationHistory) | **Get** /sapi/v1/bswap/liquidityOps | Liquidity Operation Record (USER_DATA)
+[**BswapGetPoolConfigure**](BSwapApi.md#BswapGetPoolConfigure) | **Get** /sapi/v1/bswap/poolConfigure | Pool Configure (USER_DATA)
+[**BswapGetPoolLiquidityInfo**](BSwapApi.md#BswapGetPoolLiquidityInfo) | **Get** /sapi/v1/bswap/liquidity | Liquidity information of a pool (USER_DATA)
+[**BswapGetPools**](BSwapApi.md#BswapGetPools) | **Get** /sapi/v1/bswap/pools | List All Swap Pools (MARKET_DATA)
+[**BswapGetQuoteBasePrice**](BSwapApi.md#BswapGetQuoteBasePrice) | **Get** /sapi/v1/bswap/quote | Request Quote (USER_DATA)
+[**BswapRemoveLiquidityFromPool**](BSwapApi.md#BswapRemoveLiquidityFromPool) | **Post** /sapi/v1/bswap/liquidityRemove | Remove Liquidity (TRADE)
+[**BswapRemoveLiquidityPreview**](BSwapApi.md#BswapRemoveLiquidityPreview) | **Get** /sapi/v1/bswap/removeLiquidityPreview | Remove Liquidity Preview (USER_DATA)
+[**SwapGetHistory**](BSwapApi.md#SwapGetHistory) | **Get** /sapi/v1/bswap/swap | Swap History (USER_DATA)
+[**SwapQoteAssetToBaseAsset**](BSwapApi.md#SwapQoteAssetToBaseAsset) | **Post** /sapi/v1/bswap/swap | Swap (TRADE)
 
 
 
-## SapiV1BswapAddLiquidityPreviewGet
+## BswapAddLiquidityPreview
 
-> OneOfbswapAddLiquidityPreviewCombinationbswapAddLiquidityPreviewSingle SapiV1BswapAddLiquidityPreviewGet(ctx).PoolId(poolId).Type_(type_).QuoteAsset(quoteAsset).QuoteQty(quoteQty).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
+> OneOfbswapAddLiquidityPreviewCombinationbswapAddLiquidityPreviewSingle BswapAddLiquidityPreview(ctx).PoolId(poolId).Type_(type_).QuoteAsset(quoteAsset).QuoteQty(quoteQty).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
 
 Add Liquidity Preview (USER_DATA)
 
@@ -49,13 +49,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.BSwapApi.SapiV1BswapAddLiquidityPreviewGet(context.Background()).PoolId(poolId).Type_(type_).QuoteAsset(quoteAsset).QuoteQty(quoteQty).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
+    resp, r, err := api_client.BSwapApi.BswapAddLiquidityPreview(context.Background()).PoolId(poolId).Type_(type_).QuoteAsset(quoteAsset).QuoteQty(quoteQty).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SapiV1BswapAddLiquidityPreviewGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.BswapAddLiquidityPreview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1BswapAddLiquidityPreviewGet`: OneOfbswapAddLiquidityPreviewCombinationbswapAddLiquidityPreviewSingle
-    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SapiV1BswapAddLiquidityPreviewGet`: %v\n", resp)
+    // response from `BswapAddLiquidityPreview`: OneOfbswapAddLiquidityPreviewCombinationbswapAddLiquidityPreviewSingle
+    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.BswapAddLiquidityPreview`: %v\n", resp)
 }
 ```
 
@@ -65,7 +65,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1BswapAddLiquidityPreviewGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiBswapAddLiquidityPreviewRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -96,9 +96,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SapiV1BswapLiquidityAddPost
+## BswapAddLiquidityToPool
 
-> InlineResponse200105 SapiV1BswapLiquidityAddPost(ctx).PoolId(poolId).Asset(asset).Quantity(quantity).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
+> InlineResponse200105 BswapAddLiquidityToPool(ctx).PoolId(poolId).Asset(asset).Quantity(quantity).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
 
 Add Liquidity (TRADE)
 
@@ -126,13 +126,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.BSwapApi.SapiV1BswapLiquidityAddPost(context.Background()).PoolId(poolId).Asset(asset).Quantity(quantity).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
+    resp, r, err := api_client.BSwapApi.BswapAddLiquidityToPool(context.Background()).PoolId(poolId).Asset(asset).Quantity(quantity).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SapiV1BswapLiquidityAddPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.BswapAddLiquidityToPool``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1BswapLiquidityAddPost`: InlineResponse200105
-    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SapiV1BswapLiquidityAddPost`: %v\n", resp)
+    // response from `BswapAddLiquidityToPool`: InlineResponse200105
+    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.BswapAddLiquidityToPool`: %v\n", resp)
 }
 ```
 
@@ -142,7 +142,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1BswapLiquidityAddPostRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiBswapAddLiquidityToPoolRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -172,81 +172,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SapiV1BswapLiquidityGet
+## BswapGetLiquidityOperationHistory
 
-> []InlineResponse200104 SapiV1BswapLiquidityGet(ctx).Timestamp(timestamp).Signature(signature).PoolId(poolId).RecvWindow(recvWindow).Execute()
-
-Liquidity information of a pool (USER_DATA)
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    timestamp := int64(789) // int64 | UTC timestamp in ms
-    signature := "signature_example" // string | Signature
-    poolId := int64(789) // int64 |  (optional)
-    recvWindow := int64(5000) // int64 | The value cannot be greater than 60000 (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.BSwapApi.SapiV1BswapLiquidityGet(context.Background()).Timestamp(timestamp).Signature(signature).PoolId(poolId).RecvWindow(recvWindow).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SapiV1BswapLiquidityGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `SapiV1BswapLiquidityGet`: []InlineResponse200104
-    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SapiV1BswapLiquidityGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiSapiV1BswapLiquidityGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **timestamp** | **int64** | UTC timestamp in ms | 
- **signature** | **string** | Signature | 
- **poolId** | **int64** |  | 
- **recvWindow** | **int64** | The value cannot be greater than 60000 | 
-
-### Return type
-
-[**[]InlineResponse200104**](InlineResponse200104.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## SapiV1BswapLiquidityOpsGet
-
-> []InlineResponse200106 SapiV1BswapLiquidityOpsGet(ctx).Timestamp(timestamp).Signature(signature).OperationId(operationId).PoolId(poolId).Operation(operation).StartTime(startTime).EndTime(endTime).Limit(limit).RecvWindow(recvWindow).Execute()
+> []InlineResponse200106 BswapGetLiquidityOperationHistory(ctx).Timestamp(timestamp).Signature(signature).OperationId(operationId).PoolId(poolId).Operation(operation).StartTime(startTime).EndTime(endTime).Limit(limit).RecvWindow(recvWindow).Execute()
 
 Liquidity Operation Record (USER_DATA)
 
@@ -277,13 +205,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.BSwapApi.SapiV1BswapLiquidityOpsGet(context.Background()).Timestamp(timestamp).Signature(signature).OperationId(operationId).PoolId(poolId).Operation(operation).StartTime(startTime).EndTime(endTime).Limit(limit).RecvWindow(recvWindow).Execute()
+    resp, r, err := api_client.BSwapApi.BswapGetLiquidityOperationHistory(context.Background()).Timestamp(timestamp).Signature(signature).OperationId(operationId).PoolId(poolId).Operation(operation).StartTime(startTime).EndTime(endTime).Limit(limit).RecvWindow(recvWindow).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SapiV1BswapLiquidityOpsGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.BswapGetLiquidityOperationHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1BswapLiquidityOpsGet`: []InlineResponse200106
-    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SapiV1BswapLiquidityOpsGet`: %v\n", resp)
+    // response from `BswapGetLiquidityOperationHistory`: []InlineResponse200106
+    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.BswapGetLiquidityOperationHistory`: %v\n", resp)
 }
 ```
 
@@ -293,7 +221,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1BswapLiquidityOpsGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiBswapGetLiquidityOperationHistoryRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -326,9 +254,290 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SapiV1BswapLiquidityRemovePost
+## BswapGetPoolConfigure
 
-> InlineResponse200105 SapiV1BswapLiquidityRemovePost(ctx).PoolId(poolId).Type_(type_).ShareAmount(shareAmount).Timestamp(timestamp).Signature(signature).Asset(asset).RecvWindow(recvWindow).Execute()
+> []InlineResponse200110 BswapGetPoolConfigure(ctx).Timestamp(timestamp).Signature(signature).PoolId(poolId).RecvWindow(recvWindow).Execute()
+
+Pool Configure (USER_DATA)
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    timestamp := int64(789) // int64 | UTC timestamp in ms
+    signature := "signature_example" // string | Signature
+    poolId := int64(2) // int64 |  (optional)
+    recvWindow := int64(5000) // int64 | The value cannot be greater than 60000 (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.BSwapApi.BswapGetPoolConfigure(context.Background()).Timestamp(timestamp).Signature(signature).PoolId(poolId).RecvWindow(recvWindow).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.BswapGetPoolConfigure``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `BswapGetPoolConfigure`: []InlineResponse200110
+    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.BswapGetPoolConfigure`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiBswapGetPoolConfigureRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **timestamp** | **int64** | UTC timestamp in ms | 
+ **signature** | **string** | Signature | 
+ **poolId** | **int64** |  | 
+ **recvWindow** | **int64** | The value cannot be greater than 60000 | 
+
+### Return type
+
+[**[]InlineResponse200110**](InlineResponse200110.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## BswapGetPoolLiquidityInfo
+
+> []InlineResponse200104 BswapGetPoolLiquidityInfo(ctx).Timestamp(timestamp).Signature(signature).PoolId(poolId).RecvWindow(recvWindow).Execute()
+
+Liquidity information of a pool (USER_DATA)
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    timestamp := int64(789) // int64 | UTC timestamp in ms
+    signature := "signature_example" // string | Signature
+    poolId := int64(789) // int64 |  (optional)
+    recvWindow := int64(5000) // int64 | The value cannot be greater than 60000 (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.BSwapApi.BswapGetPoolLiquidityInfo(context.Background()).Timestamp(timestamp).Signature(signature).PoolId(poolId).RecvWindow(recvWindow).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.BswapGetPoolLiquidityInfo``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `BswapGetPoolLiquidityInfo`: []InlineResponse200104
+    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.BswapGetPoolLiquidityInfo`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiBswapGetPoolLiquidityInfoRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **timestamp** | **int64** | UTC timestamp in ms | 
+ **signature** | **string** | Signature | 
+ **poolId** | **int64** |  | 
+ **recvWindow** | **int64** | The value cannot be greater than 60000 | 
+
+### Return type
+
+[**[]InlineResponse200104**](InlineResponse200104.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## BswapGetPools
+
+> []InlineResponse200103 BswapGetPools(ctx).Execute()
+
+List All Swap Pools (MARKET_DATA)
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.BSwapApi.BswapGetPools(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.BswapGetPools``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `BswapGetPools`: []InlineResponse200103
+    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.BswapGetPools`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiBswapGetPoolsRequest struct via the builder pattern
+
+
+### Return type
+
+[**[]InlineResponse200103**](InlineResponse200103.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## BswapGetQuoteBasePrice
+
+> InlineResponse200107 BswapGetQuoteBasePrice(ctx).QuoteAsset(quoteAsset).BaseAsset(baseAsset).QuoteQty(quoteQty).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
+
+Request Quote (USER_DATA)
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    quoteAsset := "USDT" // string | 
+    baseAsset := "BUSD" // string | 
+    quoteQty := float64(1.2) // float64 | 
+    timestamp := int64(789) // int64 | UTC timestamp in ms
+    signature := "signature_example" // string | Signature
+    recvWindow := int64(5000) // int64 | The value cannot be greater than 60000 (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.BSwapApi.BswapGetQuoteBasePrice(context.Background()).QuoteAsset(quoteAsset).BaseAsset(baseAsset).QuoteQty(quoteQty).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.BswapGetQuoteBasePrice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `BswapGetQuoteBasePrice`: InlineResponse200107
+    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.BswapGetQuoteBasePrice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiBswapGetQuoteBasePriceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **quoteAsset** | **string** |  | 
+ **baseAsset** | **string** |  | 
+ **quoteQty** | **float64** |  | 
+ **timestamp** | **int64** | UTC timestamp in ms | 
+ **signature** | **string** | Signature | 
+ **recvWindow** | **int64** | The value cannot be greater than 60000 | 
+
+### Return type
+
+[**InlineResponse200107**](InlineResponse200107.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## BswapRemoveLiquidityFromPool
+
+> InlineResponse200105 BswapRemoveLiquidityFromPool(ctx).PoolId(poolId).Type_(type_).ShareAmount(shareAmount).Timestamp(timestamp).Signature(signature).Asset(asset).RecvWindow(recvWindow).Execute()
 
 Remove Liquidity (TRADE)
 
@@ -357,13 +566,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.BSwapApi.SapiV1BswapLiquidityRemovePost(context.Background()).PoolId(poolId).Type_(type_).ShareAmount(shareAmount).Timestamp(timestamp).Signature(signature).Asset(asset).RecvWindow(recvWindow).Execute()
+    resp, r, err := api_client.BSwapApi.BswapRemoveLiquidityFromPool(context.Background()).PoolId(poolId).Type_(type_).ShareAmount(shareAmount).Timestamp(timestamp).Signature(signature).Asset(asset).RecvWindow(recvWindow).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SapiV1BswapLiquidityRemovePost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.BswapRemoveLiquidityFromPool``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1BswapLiquidityRemovePost`: InlineResponse200105
-    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SapiV1BswapLiquidityRemovePost`: %v\n", resp)
+    // response from `BswapRemoveLiquidityFromPool`: InlineResponse200105
+    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.BswapRemoveLiquidityFromPool`: %v\n", resp)
 }
 ```
 
@@ -373,7 +582,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1BswapLiquidityRemovePostRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiBswapRemoveLiquidityFromPoolRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -404,218 +613,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SapiV1BswapPoolConfigureGet
+## BswapRemoveLiquidityPreview
 
-> []InlineResponse200110 SapiV1BswapPoolConfigureGet(ctx).Timestamp(timestamp).Signature(signature).PoolId(poolId).RecvWindow(recvWindow).Execute()
-
-Pool Configure (USER_DATA)
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    timestamp := int64(789) // int64 | UTC timestamp in ms
-    signature := "signature_example" // string | Signature
-    poolId := int64(2) // int64 |  (optional)
-    recvWindow := int64(5000) // int64 | The value cannot be greater than 60000 (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.BSwapApi.SapiV1BswapPoolConfigureGet(context.Background()).Timestamp(timestamp).Signature(signature).PoolId(poolId).RecvWindow(recvWindow).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SapiV1BswapPoolConfigureGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `SapiV1BswapPoolConfigureGet`: []InlineResponse200110
-    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SapiV1BswapPoolConfigureGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiSapiV1BswapPoolConfigureGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **timestamp** | **int64** | UTC timestamp in ms | 
- **signature** | **string** | Signature | 
- **poolId** | **int64** |  | 
- **recvWindow** | **int64** | The value cannot be greater than 60000 | 
-
-### Return type
-
-[**[]InlineResponse200110**](InlineResponse200110.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## SapiV1BswapPoolsGet
-
-> []InlineResponse200103 SapiV1BswapPoolsGet(ctx).Execute()
-
-List All Swap Pools (MARKET_DATA)
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.BSwapApi.SapiV1BswapPoolsGet(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SapiV1BswapPoolsGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `SapiV1BswapPoolsGet`: []InlineResponse200103
-    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SapiV1BswapPoolsGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiSapiV1BswapPoolsGetRequest struct via the builder pattern
-
-
-### Return type
-
-[**[]InlineResponse200103**](InlineResponse200103.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## SapiV1BswapQuoteGet
-
-> InlineResponse200107 SapiV1BswapQuoteGet(ctx).QuoteAsset(quoteAsset).BaseAsset(baseAsset).QuoteQty(quoteQty).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
-
-Request Quote (USER_DATA)
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    quoteAsset := "USDT" // string | 
-    baseAsset := "BUSD" // string | 
-    quoteQty := float64(1.2) // float64 | 
-    timestamp := int64(789) // int64 | UTC timestamp in ms
-    signature := "signature_example" // string | Signature
-    recvWindow := int64(5000) // int64 | The value cannot be greater than 60000 (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.BSwapApi.SapiV1BswapQuoteGet(context.Background()).QuoteAsset(quoteAsset).BaseAsset(baseAsset).QuoteQty(quoteQty).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SapiV1BswapQuoteGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `SapiV1BswapQuoteGet`: InlineResponse200107
-    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SapiV1BswapQuoteGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiSapiV1BswapQuoteGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **quoteAsset** | **string** |  | 
- **baseAsset** | **string** |  | 
- **quoteQty** | **float64** |  | 
- **timestamp** | **int64** | UTC timestamp in ms | 
- **signature** | **string** | Signature | 
- **recvWindow** | **int64** | The value cannot be greater than 60000 | 
-
-### Return type
-
-[**InlineResponse200107**](InlineResponse200107.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## SapiV1BswapRemoveLiquidityPreviewGet
-
-> OneOfbswapRmvLiquidityPreviewCombinationbswapRmvLiquidityPreviewSingle SapiV1BswapRemoveLiquidityPreviewGet(ctx).PoolId(poolId).Type_(type_).QuoteAsset(quoteAsset).ShareAmount(shareAmount).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
+> OneOfbswapRmvLiquidityPreviewCombinationbswapRmvLiquidityPreviewSingle BswapRemoveLiquidityPreview(ctx).PoolId(poolId).Type_(type_).QuoteAsset(quoteAsset).ShareAmount(shareAmount).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
 
 Remove Liquidity Preview (USER_DATA)
 
@@ -644,13 +644,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.BSwapApi.SapiV1BswapRemoveLiquidityPreviewGet(context.Background()).PoolId(poolId).Type_(type_).QuoteAsset(quoteAsset).ShareAmount(shareAmount).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
+    resp, r, err := api_client.BSwapApi.BswapRemoveLiquidityPreview(context.Background()).PoolId(poolId).Type_(type_).QuoteAsset(quoteAsset).ShareAmount(shareAmount).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SapiV1BswapRemoveLiquidityPreviewGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.BswapRemoveLiquidityPreview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1BswapRemoveLiquidityPreviewGet`: OneOfbswapRmvLiquidityPreviewCombinationbswapRmvLiquidityPreviewSingle
-    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SapiV1BswapRemoveLiquidityPreviewGet`: %v\n", resp)
+    // response from `BswapRemoveLiquidityPreview`: OneOfbswapRmvLiquidityPreviewCombinationbswapRmvLiquidityPreviewSingle
+    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.BswapRemoveLiquidityPreview`: %v\n", resp)
 }
 ```
 
@@ -660,7 +660,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1BswapRemoveLiquidityPreviewGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiBswapRemoveLiquidityPreviewRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -691,9 +691,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SapiV1BswapSwapGet
+## SwapGetHistory
 
-> []InlineResponse200108 SapiV1BswapSwapGet(ctx).Timestamp(timestamp).Signature(signature).SwapId(swapId).StartTime(startTime).EndTime(endTime).Status(status).QuoteAsset(quoteAsset).BaseAsset(baseAsset).Limit(limit).RecvWindow(recvWindow).Execute()
+> []InlineResponse200108 SwapGetHistory(ctx).Timestamp(timestamp).Signature(signature).SwapId(swapId).StartTime(startTime).EndTime(endTime).Status(status).QuoteAsset(quoteAsset).BaseAsset(baseAsset).Limit(limit).RecvWindow(recvWindow).Execute()
 
 Swap History (USER_DATA)
 
@@ -725,13 +725,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.BSwapApi.SapiV1BswapSwapGet(context.Background()).Timestamp(timestamp).Signature(signature).SwapId(swapId).StartTime(startTime).EndTime(endTime).Status(status).QuoteAsset(quoteAsset).BaseAsset(baseAsset).Limit(limit).RecvWindow(recvWindow).Execute()
+    resp, r, err := api_client.BSwapApi.SwapGetHistory(context.Background()).Timestamp(timestamp).Signature(signature).SwapId(swapId).StartTime(startTime).EndTime(endTime).Status(status).QuoteAsset(quoteAsset).BaseAsset(baseAsset).Limit(limit).RecvWindow(recvWindow).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SapiV1BswapSwapGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SwapGetHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1BswapSwapGet`: []InlineResponse200108
-    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SapiV1BswapSwapGet`: %v\n", resp)
+    // response from `SwapGetHistory`: []InlineResponse200108
+    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SwapGetHistory`: %v\n", resp)
 }
 ```
 
@@ -741,7 +741,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1BswapSwapGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSwapGetHistoryRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -775,9 +775,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SapiV1BswapSwapPost
+## SwapQoteAssetToBaseAsset
 
-> InlineResponse200109 SapiV1BswapSwapPost(ctx).QuoteAsset(quoteAsset).BaseAsset(baseAsset).QuoteQty(quoteQty).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
+> InlineResponse200109 SwapQoteAssetToBaseAsset(ctx).QuoteAsset(quoteAsset).BaseAsset(baseAsset).QuoteQty(quoteQty).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
 
 Swap (TRADE)
 
@@ -805,13 +805,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.BSwapApi.SapiV1BswapSwapPost(context.Background()).QuoteAsset(quoteAsset).BaseAsset(baseAsset).QuoteQty(quoteQty).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
+    resp, r, err := api_client.BSwapApi.SwapQoteAssetToBaseAsset(context.Background()).QuoteAsset(quoteAsset).BaseAsset(baseAsset).QuoteQty(quoteQty).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SapiV1BswapSwapPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `BSwapApi.SwapQoteAssetToBaseAsset``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1BswapSwapPost`: InlineResponse200109
-    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SapiV1BswapSwapPost`: %v\n", resp)
+    // response from `SwapQoteAssetToBaseAsset`: InlineResponse200109
+    fmt.Fprintf(os.Stdout, "Response from `BSwapApi.SwapQoteAssetToBaseAsset`: %v\n", resp)
 }
 ```
 
@@ -821,7 +821,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1BswapSwapPostRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSwapQoteAssetToBaseAssetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes

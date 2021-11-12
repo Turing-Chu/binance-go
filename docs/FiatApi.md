@@ -4,14 +4,14 @@ All URIs are relative to *https://api.binance.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SapiV1FiatOrdersGet**](FiatApi.md#SapiV1FiatOrdersGet) | **Get** /sapi/v1/fiat/orders | Fiat Deposit/Withdraw History (USER_DATA)
-[**SapiV1FiatPaymentsGet**](FiatApi.md#SapiV1FiatPaymentsGet) | **Get** /sapi/v1/fiat/payments | Fiat Payments History (USER_DATA)
+[**FiatGetHistoryOrders**](FiatApi.md#FiatGetHistoryOrders) | **Get** /sapi/v1/fiat/orders | Fiat Deposit/Withdraw History (USER_DATA)
+[**FiatGetPaymentsHistory**](FiatApi.md#FiatGetPaymentsHistory) | **Get** /sapi/v1/fiat/payments | Fiat Payments History (USER_DATA)
 
 
 
-## SapiV1FiatOrdersGet
+## FiatGetHistoryOrders
 
-> InlineResponse20072 SapiV1FiatOrdersGet(ctx).TransactionType(transactionType).Timestamp(timestamp).Signature(signature).BeginTime(beginTime).EndTime(endTime).Page(page).Rows(rows).RecvWindow(recvWindow).Execute()
+> InlineResponse20072 FiatGetHistoryOrders(ctx).TransactionType(transactionType).Timestamp(timestamp).Signature(signature).BeginTime(beginTime).EndTime(endTime).Page(page).Rows(rows).RecvWindow(recvWindow).Execute()
 
 Fiat Deposit/Withdraw History (USER_DATA)
 
@@ -41,13 +41,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FiatApi.SapiV1FiatOrdersGet(context.Background()).TransactionType(transactionType).Timestamp(timestamp).Signature(signature).BeginTime(beginTime).EndTime(endTime).Page(page).Rows(rows).RecvWindow(recvWindow).Execute()
+    resp, r, err := api_client.FiatApi.FiatGetHistoryOrders(context.Background()).TransactionType(transactionType).Timestamp(timestamp).Signature(signature).BeginTime(beginTime).EndTime(endTime).Page(page).Rows(rows).RecvWindow(recvWindow).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FiatApi.SapiV1FiatOrdersGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `FiatApi.FiatGetHistoryOrders``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1FiatOrdersGet`: InlineResponse20072
-    fmt.Fprintf(os.Stdout, "Response from `FiatApi.SapiV1FiatOrdersGet`: %v\n", resp)
+    // response from `FiatGetHistoryOrders`: InlineResponse20072
+    fmt.Fprintf(os.Stdout, "Response from `FiatApi.FiatGetHistoryOrders`: %v\n", resp)
 }
 ```
 
@@ -57,7 +57,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1FiatOrdersGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiFiatGetHistoryOrdersRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -89,9 +89,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SapiV1FiatPaymentsGet
+## FiatGetPaymentsHistory
 
-> InlineResponse20073 SapiV1FiatPaymentsGet(ctx).TransactionType(transactionType).Timestamp(timestamp).Signature(signature).BeginTime(beginTime).EndTime(endTime).Page(page).Rows(rows).RecvWindow(recvWindow).Execute()
+> InlineResponse20073 FiatGetPaymentsHistory(ctx).TransactionType(transactionType).Timestamp(timestamp).Signature(signature).BeginTime(beginTime).EndTime(endTime).Page(page).Rows(rows).RecvWindow(recvWindow).Execute()
 
 Fiat Payments History (USER_DATA)
 
@@ -121,13 +121,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FiatApi.SapiV1FiatPaymentsGet(context.Background()).TransactionType(transactionType).Timestamp(timestamp).Signature(signature).BeginTime(beginTime).EndTime(endTime).Page(page).Rows(rows).RecvWindow(recvWindow).Execute()
+    resp, r, err := api_client.FiatApi.FiatGetPaymentsHistory(context.Background()).TransactionType(transactionType).Timestamp(timestamp).Signature(signature).BeginTime(beginTime).EndTime(endTime).Page(page).Rows(rows).RecvWindow(recvWindow).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FiatApi.SapiV1FiatPaymentsGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `FiatApi.FiatGetPaymentsHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1FiatPaymentsGet`: InlineResponse20073
-    fmt.Fprintf(os.Stdout, "Response from `FiatApi.SapiV1FiatPaymentsGet`: %v\n", resp)
+    // response from `FiatGetPaymentsHistory`: InlineResponse20073
+    fmt.Fprintf(os.Stdout, "Response from `FiatApi.FiatGetPaymentsHistory`: %v\n", resp)
 }
 ```
 
@@ -137,7 +137,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1FiatPaymentsGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiFiatGetPaymentsHistoryRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes

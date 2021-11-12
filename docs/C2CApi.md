@@ -4,13 +4,13 @@ All URIs are relative to *https://api.binance.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SapiV1C2cOrderMatchListUserOrderHistoryGet**](C2CApi.md#SapiV1C2cOrderMatchListUserOrderHistoryGet) | **Get** /sapi/v1/c2c/orderMatch/listUserOrderHistory | Get C2C Trade History (USER_DATA)
+[**C2cGetOrderHistory**](C2CApi.md#C2cGetOrderHistory) | **Get** /sapi/v1/c2c/orderMatch/listUserOrderHistory | Get C2C Trade History (USER_DATA)
 
 
 
-## SapiV1C2cOrderMatchListUserOrderHistoryGet
+## C2cGetOrderHistory
 
-> InlineResponse200111 SapiV1C2cOrderMatchListUserOrderHistoryGet(ctx).Timestamp(timestamp).Signature(signature).TradeType(tradeType).StartTimestamp(startTimestamp).EndTimestamp(endTimestamp).Page(page).Rows(rows).RecvWindow(recvWindow).Execute()
+> InlineResponse200111 C2cGetOrderHistory(ctx).Timestamp(timestamp).Signature(signature).TradeType(tradeType).StartTimestamp(startTimestamp).EndTimestamp(endTimestamp).Page(page).Rows(rows).RecvWindow(recvWindow).Execute()
 
 Get C2C Trade History (USER_DATA)
 
@@ -40,13 +40,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.C2CApi.SapiV1C2cOrderMatchListUserOrderHistoryGet(context.Background()).Timestamp(timestamp).Signature(signature).TradeType(tradeType).StartTimestamp(startTimestamp).EndTimestamp(endTimestamp).Page(page).Rows(rows).RecvWindow(recvWindow).Execute()
+    resp, r, err := api_client.C2CApi.C2cGetOrderHistory(context.Background()).Timestamp(timestamp).Signature(signature).TradeType(tradeType).StartTimestamp(startTimestamp).EndTimestamp(endTimestamp).Page(page).Rows(rows).RecvWindow(recvWindow).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `C2CApi.SapiV1C2cOrderMatchListUserOrderHistoryGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `C2CApi.C2cGetOrderHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1C2cOrderMatchListUserOrderHistoryGet`: InlineResponse200111
-    fmt.Fprintf(os.Stdout, "Response from `C2CApi.SapiV1C2cOrderMatchListUserOrderHistoryGet`: %v\n", resp)
+    // response from `C2cGetOrderHistory`: InlineResponse200111
+    fmt.Fprintf(os.Stdout, "Response from `C2CApi.C2cGetOrderHistory`: %v\n", resp)
 }
 ```
 
@@ -56,7 +56,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1C2cOrderMatchListUserOrderHistoryGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiC2cGetOrderHistoryRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes

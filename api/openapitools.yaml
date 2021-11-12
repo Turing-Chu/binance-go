@@ -1,0 +1,4 @@
+packageName: binanceapi
+disallowAdditionalPropertiesIfNotPresent: true
+generateAliasAsModel: true
+enablePostProcessFile: true

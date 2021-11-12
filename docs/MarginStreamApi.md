@@ -4,15 +4,15 @@ All URIs are relative to *https://api.binance.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SapiV1UserDataStreamDelete**](MarginStreamApi.md#SapiV1UserDataStreamDelete) | **Delete** /sapi/v1/userDataStream | Close a ListenKey (USER_STREAM)
-[**SapiV1UserDataStreamPost**](MarginStreamApi.md#SapiV1UserDataStreamPost) | **Post** /sapi/v1/userDataStream | Create a ListenKey (USER_STREAM)
-[**SapiV1UserDataStreamPut**](MarginStreamApi.md#SapiV1UserDataStreamPut) | **Put** /sapi/v1/userDataStream | Ping/Keep-alive a ListenKey (USER_STREAM)
+[**CloseMarginListenKey**](MarginStreamApi.md#CloseMarginListenKey) | **Delete** /sapi/v1/userDataStream | Close a ListenKey (USER_STREAM)
+[**CreateMarginListenKey**](MarginStreamApi.md#CreateMarginListenKey) | **Post** /sapi/v1/userDataStream | Create a ListenKey (USER_STREAM)
+[**DelayMarginListenKey**](MarginStreamApi.md#DelayMarginListenKey) | **Put** /sapi/v1/userDataStream | Ping/Keep-alive a ListenKey (USER_STREAM)
 
 
 
-## SapiV1UserDataStreamDelete
+## CloseMarginListenKey
 
-> map[string]interface{} SapiV1UserDataStreamDelete(ctx).ListenKey(listenKey).Execute()
+> map[string]interface{} CloseMarginListenKey(ctx).ListenKey(listenKey).Execute()
 
 Close a ListenKey (USER_STREAM)
 
@@ -35,13 +35,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.MarginStreamApi.SapiV1UserDataStreamDelete(context.Background()).ListenKey(listenKey).Execute()
+    resp, r, err := api_client.MarginStreamApi.CloseMarginListenKey(context.Background()).ListenKey(listenKey).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `MarginStreamApi.SapiV1UserDataStreamDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `MarginStreamApi.CloseMarginListenKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1UserDataStreamDelete`: map[string]interface{}
-    fmt.Fprintf(os.Stdout, "Response from `MarginStreamApi.SapiV1UserDataStreamDelete`: %v\n", resp)
+    // response from `CloseMarginListenKey`: map[string]interface{}
+    fmt.Fprintf(os.Stdout, "Response from `MarginStreamApi.CloseMarginListenKey`: %v\n", resp)
 }
 ```
 
@@ -51,7 +51,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1UserDataStreamDeleteRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiCloseMarginListenKeyRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -76,9 +76,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SapiV1UserDataStreamPost
+## CreateMarginListenKey
 
-> InlineResponse20070 SapiV1UserDataStreamPost(ctx).Execute()
+> InlineResponse20070 CreateMarginListenKey(ctx).Execute()
 
 Create a ListenKey (USER_STREAM)
 
@@ -100,13 +100,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.MarginStreamApi.SapiV1UserDataStreamPost(context.Background()).Execute()
+    resp, r, err := api_client.MarginStreamApi.CreateMarginListenKey(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `MarginStreamApi.SapiV1UserDataStreamPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `MarginStreamApi.CreateMarginListenKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1UserDataStreamPost`: InlineResponse20070
-    fmt.Fprintf(os.Stdout, "Response from `MarginStreamApi.SapiV1UserDataStreamPost`: %v\n", resp)
+    // response from `CreateMarginListenKey`: InlineResponse20070
+    fmt.Fprintf(os.Stdout, "Response from `MarginStreamApi.CreateMarginListenKey`: %v\n", resp)
 }
 ```
 
@@ -116,7 +116,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1UserDataStreamPostRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiCreateMarginListenKeyRequest struct via the builder pattern
 
 
 ### Return type
@@ -137,9 +137,9 @@ Other parameters are passed through a pointer to a apiSapiV1UserDataStreamPostRe
 [[Back to README]](../README.md)
 
 
-## SapiV1UserDataStreamPut
+## DelayMarginListenKey
 
-> map[string]interface{} SapiV1UserDataStreamPut(ctx).ListenKey(listenKey).Execute()
+> map[string]interface{} DelayMarginListenKey(ctx).ListenKey(listenKey).Execute()
 
 Ping/Keep-alive a ListenKey (USER_STREAM)
 
@@ -162,13 +162,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.MarginStreamApi.SapiV1UserDataStreamPut(context.Background()).ListenKey(listenKey).Execute()
+    resp, r, err := api_client.MarginStreamApi.DelayMarginListenKey(context.Background()).ListenKey(listenKey).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `MarginStreamApi.SapiV1UserDataStreamPut``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `MarginStreamApi.DelayMarginListenKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SapiV1UserDataStreamPut`: map[string]interface{}
-    fmt.Fprintf(os.Stdout, "Response from `MarginStreamApi.SapiV1UserDataStreamPut`: %v\n", resp)
+    // response from `DelayMarginListenKey`: map[string]interface{}
+    fmt.Fprintf(os.Stdout, "Response from `MarginStreamApi.DelayMarginListenKey`: %v\n", resp)
 }
 ```
 
@@ -178,7 +178,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSapiV1UserDataStreamPutRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDelayMarginListenKeyRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
