@@ -334,6 +334,37 @@ func (c *APIClient) prepareRequest(
 		}
 	}
 
+	if query.Has("signature") {
+		query.Del("signature")
+	}
+	if query.Has("timestamp") {
+		query.Del("timestamp")
+	}
+	if ctx != nil {
+		public := false
+		if val, ok := ctx.Value(ContextPublic).(bool); ok {
+			public = val
+		}
+		if !public {
+			// API-Keys Authentication
+			if auth, ok := ctx.Value(ContextAPIKeys).(APIKey); ok {
+				h := sha512.New()
+				if body != nil {
+					h.Write(body.Bytes())
+				}
+
+				mac := hmac.New(sha256.New, []byte(auth.Key))
+				mac.Write([]byte(query.Encode()))
+				sign := hex.EncodeToString(mac.Sum(nil))
+				t := strconv.FormatInt(time.Now().UnixMilli(), 10)
+
+				query.Add("signature", sign)
+				query.Add("timestamp", t)
+				headerParams["X-MBX-APIKEY"] = auth.Key
+			}
+		}
+	}
+
 	// Encode the parameters.
 	requestUrl.RawQuery = query.Encode()
 
@@ -362,34 +393,6 @@ func (c *APIClient) prepareRequest(
 	if ctx != nil {
 		// add context to the request
 		localVarRequest = localVarRequest.WithContext(ctx)
-		public := false
-		if val, ok := ctx.Value(ContextPublic).(bool); ok {
-			public = val
-		}
-		if !public {
-			// API-Keys Authentication
-			if auth, ok := ctx.Value(ContextAPIKeys).(APIKey); ok {
-				h := sha512.New()
-				if body != nil {
-					h.Write(body.Bytes())
-				}
-
-				if query.Has("signature") {
-					query.Del("signature")
-				}
-				if query.Has("timestamp") {
-					query.Del("timestamp")
-				}
-				mac := hmac.New(sha256.New, []byte(auth.Key))
-				mac.Write([]byte(query.Encode()))
-				sign := hex.EncodeToString(mac.Sum(nil))
-				t := strconv.FormatInt(time.Now().UnixMilli(), 10)
-
-				query.Add("signature", sign)
-				query.Add("timestamp", t)
-				localVarRequest.Header.Add("X-MBX-APIKEY", auth.Key)
-			}
-		}
 	}
 
 	for header, value := range c.cfg.DefaultHeader {
