@@ -30,16 +30,16 @@ type AggTrade struct {
 	// Timestamp
 	T bool `json:"T"`
 	// Was the buyer the maker?
-	M bool `json:"m"`
+	Mm bool `json:"m"`
 	// Was the trade the best price match?
-	M bool `json:"M"`
+	MM bool `json:"M"`
 }
 
 // NewAggTrade instantiates a new AggTrade object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAggTrade(a int64, p string, q string, f int64, l int64, t bool, m bool, m bool) *AggTrade {
+func NewAggTrade(a int64, p string, q string, f int64, l int64, t bool, mm bool, MM bool) *AggTrade {
 	this := AggTrade{}
 	this.A = a
 	this.P = p
@@ -47,8 +47,8 @@ func NewAggTrade(a int64, p string, q string, f int64, l int64, t bool, m bool, 
 	this.F = f
 	this.L = l
 	this.T = t
-	this.M = m
-	this.M = m
+	this.Mm = mm
+	this.MM = MM
 	return &this
 }
 
@@ -204,52 +204,52 @@ func (o *AggTrade) SetT(v bool) {
 	o.T = v
 }
 
-// GetM returns the M field value
-func (o *AggTrade) GetM() bool {
+// GetM returns the Mm field value
+func (o *AggTrade) GetMm() bool {
 	if o == nil {
 		var ret bool
 		return ret
 	}
 
-	return o.M
+	return o.Mm
 }
 
-// GetMOk returns a tuple with the M field value
+// GetMmOk returns a tuple with the M field value
 // and a boolean to check if the value has been set.
-func (o *AggTrade) GetMOk() (*bool, bool) {
+func (o *AggTrade) GetMmOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return &o.M, true
+	return &o.Mm, true
 }
 
-// SetM sets field value
-func (o *AggTrade) SetM(v bool) {
-	o.M = v
+// SetMm sets field value
+func (o *AggTrade) SetMm(v bool) {
+	o.Mm = v
 }
 
-// GetM returns the M field value
-func (o *AggTrade) GetM() bool {
+// GetM returns the MM field value
+func (o *AggTrade) GetMM() bool {
 	if o == nil {
 		var ret bool
 		return ret
 	}
 
-	return o.M
+	return o.MM
 }
 
-// GetMOk returns a tuple with the M field value
+// GetMMOk returns a tuple with the M field value
 // and a boolean to check if the value has been set.
-func (o *AggTrade) GetMOk() (*bool, bool) {
+func (o *AggTrade) GetMMOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return &o.M, true
+	return &o.MM, true
 }
 
-// SetM sets field value
-func (o *AggTrade) SetM(v bool) {
-	o.M = v
+// SetMM sets field value
+func (o *AggTrade) SetMM(v bool) {
+	o.MM = v
 }
 
 func (o AggTrade) MarshalJSON() ([]byte, error) {
@@ -273,10 +273,10 @@ func (o AggTrade) MarshalJSON() ([]byte, error) {
 		toSerialize["T"] = o.T
 	}
 	if true {
-		toSerialize["m"] = o.M
+		toSerialize["m"] = o.Mm
 	}
 	if true {
-		toSerialize["M"] = o.M
+		toSerialize["M"] = o.MM
 	}
 	return json.Marshal(toSerialize)
 }
