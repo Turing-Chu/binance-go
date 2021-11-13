@@ -12,13 +12,13 @@ Name | Type | Description | Notes
 **TransactionTime** | **int64** |  | 
 **Symbol** | **string** |  | 
 **IsIsolated** | **bool** |  | 
-**Orders** | [**[]ApiV3AllOrderListOrders**](ApiV3AllOrderListOrders.md) |  | 
+**Orders** | [**[]AllOrderListOrders**](AllOrderListOrders.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse2006
 
-`func NewInlineResponse2006(orderListId int64, contingencyType string, listStatusType string, listOrderStatus string, listClientOrderId string, transactionTime int64, symbol string, isIsolated bool, orders []ApiV3AllOrderListOrders, ) *InlineResponse2006`
+`func NewInlineResponse2006(orderListId int64, contingencyType string, listStatusType string, listOrderStatus string, listClientOrderId string, transactionTime int64, symbol string, isIsolated bool, orders []AllOrderListOrders, ) *InlineResponse2006`
 
 NewInlineResponse2006 instantiates a new InlineResponse2006 object
 This constructor will assign default values to properties that have it defined,
@@ -195,20 +195,20 @@ SetIsIsolated sets IsIsolated field to given value.
 
 ### GetOrders
 
-`func (o *InlineResponse2006) GetOrders() []ApiV3AllOrderListOrders`
+`func (o *InlineResponse2006) GetOrders() []AllOrderListOrders`
 
 GetOrders returns the Orders field if non-nil, zero value otherwise.
 
 ### GetOrdersOk
 
-`func (o *InlineResponse2006) GetOrdersOk() (*[]ApiV3AllOrderListOrders, bool)`
+`func (o *InlineResponse2006) GetOrdersOk() (*[]AllOrderListOrders, bool)`
 
 GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOrders
 
-`func (o *InlineResponse2006) SetOrders(v []ApiV3AllOrderListOrders)`
+`func (o *InlineResponse2006) SetOrders(v []AllOrderListOrders)`
 
 SetOrders sets Orders field to given value.
 

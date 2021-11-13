@@ -12,13 +12,13 @@ Name | Type | Description | Notes
 **TransactionTime** | **int64** |  | 
 **Symbol** | **string** |  | 
 **IsIsolated** | **bool** |  | 
-**Orders** | [**[]ApiV3OpenOrderListOrders**](ApiV3OpenOrderListOrders.md) |  | 
+**Orders** | [**[]OpenOrderListOrders**](OpenOrderListOrders.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse20022
 
-`func NewInlineResponse20022(orderListId int64, contingencyType string, listStatusType string, listOrderStatus string, listClientOrderId string, transactionTime int64, symbol string, isIsolated bool, orders []ApiV3OpenOrderListOrders, ) *InlineResponse20022`
+`func NewInlineResponse20022(orderListId int64, contingencyType string, listStatusType string, listOrderStatus string, listClientOrderId string, transactionTime int64, symbol string, isIsolated bool, orders []OpenOrderListOrders, ) *InlineResponse20022`
 
 NewInlineResponse20022 instantiates a new InlineResponse20022 object
 This constructor will assign default values to properties that have it defined,
@@ -195,20 +195,20 @@ SetIsIsolated sets IsIsolated field to given value.
 
 ### GetOrders
 
-`func (o *InlineResponse20022) GetOrders() []ApiV3OpenOrderListOrders`
+`func (o *InlineResponse20022) GetOrders() []OpenOrderListOrders`
 
 GetOrders returns the Orders field if non-nil, zero value otherwise.
 
 ### GetOrdersOk
 
-`func (o *InlineResponse20022) GetOrdersOk() (*[]ApiV3OpenOrderListOrders, bool)`
+`func (o *InlineResponse20022) GetOrdersOk() (*[]OpenOrderListOrders, bool)`
 
 GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOrders
 
-`func (o *InlineResponse20022) SetOrders(v []ApiV3OpenOrderListOrders)`
+`func (o *InlineResponse20022) SetOrders(v []OpenOrderListOrders)`
 
 SetOrders sets Orders field to given value.
 

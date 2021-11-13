@@ -1,4 +1,4 @@
-# ApiV3AllOrderListOrders
+# OpenOrderListOrders
 
 ## Properties
 
@@ -10,79 +10,79 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewApiV3AllOrderListOrders
+### NewOpenOrderListOrders
 
-`func NewApiV3AllOrderListOrders(symbol string, orderId int64, clientOrderId string, ) *ApiV3AllOrderListOrders`
+`func NewOpenOrderListOrders(symbol string, orderId int64, clientOrderId string, ) *OpenOrderListOrders`
 
-NewApiV3AllOrderListOrders instantiates a new ApiV3AllOrderListOrders object
+NewOpenOrderListOrders instantiates a new OpenOrderListOrders object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewApiV3AllOrderListOrdersWithDefaults
+### NewOpenOrderListOrdersWithDefaults
 
-`func NewApiV3AllOrderListOrdersWithDefaults() *ApiV3AllOrderListOrders`
+`func NewOpenOrderListOrdersWithDefaults() *OpenOrderListOrders`
 
-NewApiV3AllOrderListOrdersWithDefaults instantiates a new ApiV3AllOrderListOrders object
+NewOpenOrderListOrdersWithDefaults instantiates a new OpenOrderListOrders object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetSymbol
 
-`func (o *ApiV3AllOrderListOrders) GetSymbol() string`
+`func (o *OpenOrderListOrders) GetSymbol() string`
 
 GetSymbol returns the Symbol field if non-nil, zero value otherwise.
 
 ### GetSymbolOk
 
-`func (o *ApiV3AllOrderListOrders) GetSymbolOk() (*string, bool)`
+`func (o *OpenOrderListOrders) GetSymbolOk() (*string, bool)`
 
 GetSymbolOk returns a tuple with the Symbol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSymbol
 
-`func (o *ApiV3AllOrderListOrders) SetSymbol(v string)`
+`func (o *OpenOrderListOrders) SetSymbol(v string)`
 
 SetSymbol sets Symbol field to given value.
 
 
 ### GetOrderId
 
-`func (o *ApiV3AllOrderListOrders) GetOrderId() int64`
+`func (o *OpenOrderListOrders) GetOrderId() int64`
 
 GetOrderId returns the OrderId field if non-nil, zero value otherwise.
 
 ### GetOrderIdOk
 
-`func (o *ApiV3AllOrderListOrders) GetOrderIdOk() (*int64, bool)`
+`func (o *OpenOrderListOrders) GetOrderIdOk() (*int64, bool)`
 
 GetOrderIdOk returns a tuple with the OrderId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOrderId
 
-`func (o *ApiV3AllOrderListOrders) SetOrderId(v int64)`
+`func (o *OpenOrderListOrders) SetOrderId(v int64)`
 
 SetOrderId sets OrderId field to given value.
 
 
 ### GetClientOrderId
 
-`func (o *ApiV3AllOrderListOrders) GetClientOrderId() string`
+`func (o *OpenOrderListOrders) GetClientOrderId() string`
 
 GetClientOrderId returns the ClientOrderId field if non-nil, zero value otherwise.
 
 ### GetClientOrderIdOk
 
-`func (o *ApiV3AllOrderListOrders) GetClientOrderIdOk() (*string, bool)`
+`func (o *OpenOrderListOrders) GetClientOrderIdOk() (*string, bool)`
 
 GetClientOrderIdOk returns a tuple with the ClientOrderId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetClientOrderId
 
-`func (o *ApiV3AllOrderListOrders) SetClientOrderId(v string)`
+`func (o *OpenOrderListOrders) SetClientOrderId(v string)`
 
 SetClientOrderId sets ClientOrderId field to given value.
 

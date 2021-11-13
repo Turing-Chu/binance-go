@@ -17,21 +17,21 @@ import (
 
 // InlineResponse2007 struct for InlineResponse2007
 type InlineResponse2007 struct {
-	OrderListId       int64                      `json:"orderListId"`
-	ContingencyType   string                     `json:"contingencyType"`
-	ListStatusType    string                     `json:"listStatusType"`
-	ListOrderStatus   string                     `json:"listOrderStatus"`
-	ListClientOrderId string                     `json:"listClientOrderId"`
-	TransactionTime   int64                      `json:"transactionTime"`
-	Symbol            string                     `json:"symbol"`
-	Orders            []ApiV3OpenOrderListOrders `json:"orders"`
+	OrderListId       int64                 `json:"orderListId"`
+	ContingencyType   string                `json:"contingencyType"`
+	ListStatusType    string                `json:"listStatusType"`
+	ListOrderStatus   string                `json:"listOrderStatus"`
+	ListClientOrderId string                `json:"listClientOrderId"`
+	TransactionTime   int64                 `json:"transactionTime"`
+	Symbol            string                `json:"symbol"`
+	Orders            []OpenOrderListOrders `json:"orders"`
 }
 
 // NewInlineResponse2007 instantiates a new InlineResponse2007 object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInlineResponse2007(orderListId int64, contingencyType string, listStatusType string, listOrderStatus string, listClientOrderId string, transactionTime int64, symbol string, orders []ApiV3OpenOrderListOrders) *InlineResponse2007 {
+func NewInlineResponse2007(orderListId int64, contingencyType string, listStatusType string, listOrderStatus string, listClientOrderId string, transactionTime int64, symbol string, orders []OpenOrderListOrders) *InlineResponse2007 {
 	this := InlineResponse2007{}
 	this.OrderListId = orderListId
 	this.ContingencyType = contingencyType
@@ -221,9 +221,9 @@ func (o *InlineResponse2007) SetSymbol(v string) {
 }
 
 // GetOrders returns the Orders field value
-func (o *InlineResponse2007) GetOrders() []ApiV3OpenOrderListOrders {
+func (o *InlineResponse2007) GetOrders() []OpenOrderListOrders {
 	if o == nil {
-		var ret []ApiV3OpenOrderListOrders
+		var ret []OpenOrderListOrders
 		return ret
 	}
 
@@ -232,7 +232,7 @@ func (o *InlineResponse2007) GetOrders() []ApiV3OpenOrderListOrders {
 
 // GetOrdersOk returns a tuple with the Orders field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse2007) GetOrdersOk() (*[]ApiV3OpenOrderListOrders, bool) {
+func (o *InlineResponse2007) GetOrdersOk() (*[]OpenOrderListOrders, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -240,7 +240,7 @@ func (o *InlineResponse2007) GetOrdersOk() (*[]ApiV3OpenOrderListOrders, bool) {
 }
 
 // SetOrders sets field value
-func (o *InlineResponse2007) SetOrders(v []ApiV3OpenOrderListOrders) {
+func (o *InlineResponse2007) SetOrders(v []OpenOrderListOrders) {
 	o.Orders = v
 }
 

@@ -21,8 +21,7 @@ configuration.go
 docs/Account.md
 docs/AccountBalances.md
 docs/AggTrade.md
-docs/ApiV3AllOrderListOrders.md
-docs/ApiV3OpenOrderListOrders.md
+docs/AllOrderListOrders.md
 docs/BLVTApi.md
 docs/BSwapApi.md
 docs/BlvtTokenInfoCurrentBaskets.md
@@ -232,6 +231,7 @@ docs/ModelError.md
 docs/MyTrade.md
 docs/OcoOrder.md
 docs/OcoOrderOrderReports.md
+docs/OpenOrderListOrders.md
 docs/Order.md
 docs/OrderDetails.md
 docs/OrderResponseAck.md
@@ -282,11 +282,10 @@ docs/WalletApi.md
 git_push.sh
 go.mod
 go.sum
-model__api_v3_all_order_list_orders.go
-model__api_v3_open_order_list_orders.go
 model_account.go
 model_account_balances.go
 model_agg_trade.go
+model_all_order_list_orders.go
 model_blvt_token_info_current_baskets.go
 model_bnb_burn_status.go
 model_book_ticker.go
@@ -487,6 +486,7 @@ model_margin_transfer_details_rows.go
 model_my_trade.go
 model_oco_order.go
 model_oco_order_order_reports.go
+model_open_order_list_orders.go
 model_order.go
 model_order_details.go
 model_order_response_ack.go

@@ -17,22 +17,22 @@ import (
 
 // InlineResponse20022 struct for InlineResponse20022
 type InlineResponse20022 struct {
-	OrderListId       int64                      `json:"orderListId"`
-	ContingencyType   string                     `json:"contingencyType"`
-	ListStatusType    string                     `json:"listStatusType"`
-	ListOrderStatus   string                     `json:"listOrderStatus"`
-	ListClientOrderId string                     `json:"listClientOrderId"`
-	TransactionTime   int64                      `json:"transactionTime"`
-	Symbol            string                     `json:"symbol"`
-	IsIsolated        bool                       `json:"isIsolated"`
-	Orders            []ApiV3OpenOrderListOrders `json:"orders"`
+	OrderListId       int64                 `json:"orderListId"`
+	ContingencyType   string                `json:"contingencyType"`
+	ListStatusType    string                `json:"listStatusType"`
+	ListOrderStatus   string                `json:"listOrderStatus"`
+	ListClientOrderId string                `json:"listClientOrderId"`
+	TransactionTime   int64                 `json:"transactionTime"`
+	Symbol            string                `json:"symbol"`
+	IsIsolated        bool                  `json:"isIsolated"`
+	Orders            []OpenOrderListOrders `json:"orders"`
 }
 
 // NewInlineResponse20022 instantiates a new InlineResponse20022 object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInlineResponse20022(orderListId int64, contingencyType string, listStatusType string, listOrderStatus string, listClientOrderId string, transactionTime int64, symbol string, isIsolated bool, orders []ApiV3OpenOrderListOrders) *InlineResponse20022 {
+func NewInlineResponse20022(orderListId int64, contingencyType string, listStatusType string, listOrderStatus string, listClientOrderId string, transactionTime int64, symbol string, isIsolated bool, orders []OpenOrderListOrders) *InlineResponse20022 {
 	this := InlineResponse20022{}
 	this.OrderListId = orderListId
 	this.ContingencyType = contingencyType
@@ -247,9 +247,9 @@ func (o *InlineResponse20022) SetIsIsolated(v bool) {
 }
 
 // GetOrders returns the Orders field value
-func (o *InlineResponse20022) GetOrders() []ApiV3OpenOrderListOrders {
+func (o *InlineResponse20022) GetOrders() []OpenOrderListOrders {
 	if o == nil {
-		var ret []ApiV3OpenOrderListOrders
+		var ret []OpenOrderListOrders
 		return ret
 	}
 
@@ -258,7 +258,7 @@ func (o *InlineResponse20022) GetOrders() []ApiV3OpenOrderListOrders {
 
 // GetOrdersOk returns a tuple with the Orders field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20022) GetOrdersOk() (*[]ApiV3OpenOrderListOrders, bool) {
+func (o *InlineResponse20022) GetOrdersOk() (*[]OpenOrderListOrders, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -266,7 +266,7 @@ func (o *InlineResponse20022) GetOrdersOk() (*[]ApiV3OpenOrderListOrders, bool) 
 }
 
 // SetOrders sets field value
-func (o *InlineResponse20022) SetOrders(v []ApiV3OpenOrderListOrders) {
+func (o *InlineResponse20022) SetOrders(v []OpenOrderListOrders) {
 	o.Orders = v
 }
 

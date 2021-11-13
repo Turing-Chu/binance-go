@@ -15,35 +15,35 @@ import (
 	"encoding/json"
 )
 
-// ApiV3OpenOrderListOrders struct for ApiV3OpenOrderListOrders
-type ApiV3OpenOrderListOrders struct {
+// AllOrderListOrders struct for AllOrderListOrders
+type AllOrderListOrders struct {
 	Symbol        string `json:"symbol"`
 	OrderId       int64  `json:"orderId"`
 	ClientOrderId string `json:"clientOrderId"`
 }
 
-// NewApiV3OpenOrderListOrders instantiates a new ApiV3OpenOrderListOrders object
+// NewAllOrderListOrders instantiates a new AllOrderListOrders object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewApiV3OpenOrderListOrders(symbol string, orderId int64, clientOrderId string) *ApiV3OpenOrderListOrders {
-	this := ApiV3OpenOrderListOrders{}
+func NewAllOrderListOrders(symbol string, orderId int64, clientOrderId string) *AllOrderListOrders {
+	this := AllOrderListOrders{}
 	this.Symbol = symbol
 	this.OrderId = orderId
 	this.ClientOrderId = clientOrderId
 	return &this
 }
 
-// NewApiV3OpenOrderListOrdersWithDefaults instantiates a new ApiV3OpenOrderListOrders object
+// NewAllOrderListOrdersWithDefaults instantiates a new AllOrderListOrders object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewApiV3OpenOrderListOrdersWithDefaults() *ApiV3OpenOrderListOrders {
-	this := ApiV3OpenOrderListOrders{}
+func NewAllOrderListOrdersWithDefaults() *AllOrderListOrders {
+	this := AllOrderListOrders{}
 	return &this
 }
 
 // GetSymbol returns the Symbol field value
-func (o *ApiV3OpenOrderListOrders) GetSymbol() string {
+func (o *AllOrderListOrders) GetSymbol() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -54,7 +54,7 @@ func (o *ApiV3OpenOrderListOrders) GetSymbol() string {
 
 // GetSymbolOk returns a tuple with the Symbol field value
 // and a boolean to check if the value has been set.
-func (o *ApiV3OpenOrderListOrders) GetSymbolOk() (*string, bool) {
+func (o *AllOrderListOrders) GetSymbolOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -62,12 +62,12 @@ func (o *ApiV3OpenOrderListOrders) GetSymbolOk() (*string, bool) {
 }
 
 // SetSymbol sets field value
-func (o *ApiV3OpenOrderListOrders) SetSymbol(v string) {
+func (o *AllOrderListOrders) SetSymbol(v string) {
 	o.Symbol = v
 }
 
 // GetOrderId returns the OrderId field value
-func (o *ApiV3OpenOrderListOrders) GetOrderId() int64 {
+func (o *AllOrderListOrders) GetOrderId() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -78,7 +78,7 @@ func (o *ApiV3OpenOrderListOrders) GetOrderId() int64 {
 
 // GetOrderIdOk returns a tuple with the OrderId field value
 // and a boolean to check if the value has been set.
-func (o *ApiV3OpenOrderListOrders) GetOrderIdOk() (*int64, bool) {
+func (o *AllOrderListOrders) GetOrderIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -86,12 +86,12 @@ func (o *ApiV3OpenOrderListOrders) GetOrderIdOk() (*int64, bool) {
 }
 
 // SetOrderId sets field value
-func (o *ApiV3OpenOrderListOrders) SetOrderId(v int64) {
+func (o *AllOrderListOrders) SetOrderId(v int64) {
 	o.OrderId = v
 }
 
 // GetClientOrderId returns the ClientOrderId field value
-func (o *ApiV3OpenOrderListOrders) GetClientOrderId() string {
+func (o *AllOrderListOrders) GetClientOrderId() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -102,7 +102,7 @@ func (o *ApiV3OpenOrderListOrders) GetClientOrderId() string {
 
 // GetClientOrderIdOk returns a tuple with the ClientOrderId field value
 // and a boolean to check if the value has been set.
-func (o *ApiV3OpenOrderListOrders) GetClientOrderIdOk() (*string, bool) {
+func (o *AllOrderListOrders) GetClientOrderIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -110,11 +110,11 @@ func (o *ApiV3OpenOrderListOrders) GetClientOrderIdOk() (*string, bool) {
 }
 
 // SetClientOrderId sets field value
-func (o *ApiV3OpenOrderListOrders) SetClientOrderId(v string) {
+func (o *AllOrderListOrders) SetClientOrderId(v string) {
 	o.ClientOrderId = v
 }
 
-func (o ApiV3OpenOrderListOrders) MarshalJSON() ([]byte, error) {
+func (o AllOrderListOrders) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if true {
 		toSerialize["symbol"] = o.Symbol
@@ -128,38 +128,38 @@ func (o ApiV3OpenOrderListOrders) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableApiV3OpenOrderListOrders struct {
-	value *ApiV3OpenOrderListOrders
+type NullableAllOrderListOrders struct {
+	value *AllOrderListOrders
 	isSet bool
 }
 
-func (v NullableApiV3OpenOrderListOrders) Get() *ApiV3OpenOrderListOrders {
+func (v NullableAllOrderListOrders) Get() *AllOrderListOrders {
 	return v.value
 }
 
-func (v *NullableApiV3OpenOrderListOrders) Set(val *ApiV3OpenOrderListOrders) {
+func (v *NullableAllOrderListOrders) Set(val *AllOrderListOrders) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableApiV3OpenOrderListOrders) IsSet() bool {
+func (v NullableAllOrderListOrders) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableApiV3OpenOrderListOrders) Unset() {
+func (v *NullableAllOrderListOrders) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableApiV3OpenOrderListOrders(val *ApiV3OpenOrderListOrders) *NullableApiV3OpenOrderListOrders {
-	return &NullableApiV3OpenOrderListOrders{value: val, isSet: true}
+func NewNullableAllOrderListOrders(val *AllOrderListOrders) *NullableAllOrderListOrders {
+	return &NullableAllOrderListOrders{value: val, isSet: true}
 }
 
-func (v NullableApiV3OpenOrderListOrders) MarshalJSON() ([]byte, error) {
+func (v NullableAllOrderListOrders) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableApiV3OpenOrderListOrders) UnmarshalJSON(src []byte) error {
+func (v *NullableAllOrderListOrders) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
