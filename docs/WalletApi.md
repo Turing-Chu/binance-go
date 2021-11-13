@@ -405,7 +405,7 @@ Name | Type | Description  | Notes
 
 ## GetAllTokenInfo
 
-> []InlineResponse20030 GetAllTokenInfo(ctx).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
+> []CoinInfo GetAllTokenInfo(ctx).Timestamp(timestamp).Signature(signature).RecvWindow(recvWindow).Execute()
 
 All Coins' Information (USER_DATA)
 
@@ -435,7 +435,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WalletApi.GetAllTokenInfo``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetAllTokenInfo`: []InlineResponse20030
+    // response from `GetAllTokenInfo`: []CoinInfo
     fmt.Fprintf(os.Stdout, "Response from `WalletApi.GetAllTokenInfo`: %v\n", resp)
 }
 ```
@@ -457,7 +457,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20030**](InlineResponse20030.md)
+[**[]CoinInfo**](CoinInfo.md)
 
 ### Authorization
 

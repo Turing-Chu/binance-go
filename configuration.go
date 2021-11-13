@@ -29,10 +29,20 @@ func (c contextKey) String() string {
 }
 
 var (
-	ContextPublic = contextKey("public")
+	// ContextOAuth2 takes an oauth2.TokenSource as authentication for the request.
+	ContextOAuth2 = contextKey("token")
+
+	// ContextBasicAuth takes BasicAuth as authentication for the request.
+	ContextBasicAuth = contextKey("basic")
+
+	// ContextAccessToken takes a string oauth2 access token as authentication for the request.
+	ContextAccessToken = contextKey("accesstoken")
 
 	// ContextAPIKeys takes a string apikey as authentication for the request
 	ContextAPIKeys = contextKey("apiKeys")
+
+	// ContextHttpSignatureAuth takes HttpSignatureAuth as authentication for the request.
+	ContextHttpSignatureAuth = contextKey("httpsignature")
 
 	// ContextServerIndex uses a server configuration from the index.
 	ContextServerIndex = contextKey("serverIndex")
@@ -78,14 +88,13 @@ type ServerConfigurations []ServerConfiguration
 
 // Configuration stores the configuration of the API client
 type Configuration struct {
+	BasePath         string            `json:"base_path,omitempty"`
 	Host             string            `json:"host,omitempty"`
 	Scheme           string            `json:"scheme,omitempty"`
 	DefaultHeader    map[string]string `json:"defaultHeader,omitempty"`
 	UserAgent        string            `json:"userAgent,omitempty"`
 	Debug            bool              `json:"debug,omitempty"`
 	Servers          ServerConfigurations
-	Key              string `json:"key,omitempty"`
-	Secret           string `json:"secret,omitempty"`
 	OperationServers map[string]ServerConfigurations
 	HTTPClient       *http.Client
 }
@@ -93,6 +102,7 @@ type Configuration struct {
 // NewConfiguration returns a new Configuration object
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
+		BasePath:      "https://api.binance.com",
 		DefaultHeader: make(map[string]string),
 		UserAgent:     "OpenAPI-Generator/1.0.0/go",
 		Debug:         false,

@@ -15,8 +15,8 @@ import (
 	"encoding/json"
 )
 
-// InlineResponse20030 struct for InlineResponse20030
-type InlineResponse20030 struct {
+// CoinInfo struct for CoinInfo
+type CoinInfo struct {
 	Coin              string                                 `json:"coin"`
 	DepositAllEnable  bool                                   `json:"depositAllEnable"`
 	Free              string                                 `json:"free"`
@@ -33,12 +33,12 @@ type InlineResponse20030 struct {
 	Withdrawing       string                                 `json:"withdrawing"`
 }
 
-// NewInlineResponse20030 instantiates a new InlineResponse20030 object
+// NewCoinInfo instantiates a new CoinInfo object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInlineResponse20030(coin string, depositAllEnable bool, free string, freeze string, ipoable string, ipoing string, isLegalMoney bool, locked string, name string, networkList []SapiV1CapitalConfigGetallNetworkList, storage string, trading bool, withdrawAllEnable bool, withdrawing string) *InlineResponse20030 {
-	this := InlineResponse20030{}
+func NewCoinInfo(coin string, depositAllEnable bool, free string, freeze string, ipoable string, ipoing string, isLegalMoney bool, locked string, name string, networkList []SapiV1CapitalConfigGetallNetworkList, storage string, trading bool, withdrawAllEnable bool, withdrawing string) *CoinInfo {
+	this := CoinInfo{}
 	this.Coin = coin
 	this.DepositAllEnable = depositAllEnable
 	this.Free = free
@@ -56,16 +56,16 @@ func NewInlineResponse20030(coin string, depositAllEnable bool, free string, fre
 	return &this
 }
 
-// NewInlineResponse20030WithDefaults instantiates a new InlineResponse20030 object
+// NewCoinInfoWithDefaults instantiates a new CoinInfo object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewInlineResponse20030WithDefaults() *InlineResponse20030 {
-	this := InlineResponse20030{}
+func NewCoinInfoWithDefaults() *CoinInfo {
+	this := CoinInfo{}
 	return &this
 }
 
 // GetCoin returns the Coin field value
-func (o *InlineResponse20030) GetCoin() string {
+func (o *CoinInfo) GetCoin() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -76,7 +76,7 @@ func (o *InlineResponse20030) GetCoin() string {
 
 // GetCoinOk returns a tuple with the Coin field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetCoinOk() (*string, bool) {
+func (o *CoinInfo) GetCoinOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -84,12 +84,12 @@ func (o *InlineResponse20030) GetCoinOk() (*string, bool) {
 }
 
 // SetCoin sets field value
-func (o *InlineResponse20030) SetCoin(v string) {
+func (o *CoinInfo) SetCoin(v string) {
 	o.Coin = v
 }
 
 // GetDepositAllEnable returns the DepositAllEnable field value
-func (o *InlineResponse20030) GetDepositAllEnable() bool {
+func (o *CoinInfo) GetDepositAllEnable() bool {
 	if o == nil {
 		var ret bool
 		return ret
@@ -100,7 +100,7 @@ func (o *InlineResponse20030) GetDepositAllEnable() bool {
 
 // GetDepositAllEnableOk returns a tuple with the DepositAllEnable field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetDepositAllEnableOk() (*bool, bool) {
+func (o *CoinInfo) GetDepositAllEnableOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -108,12 +108,12 @@ func (o *InlineResponse20030) GetDepositAllEnableOk() (*bool, bool) {
 }
 
 // SetDepositAllEnable sets field value
-func (o *InlineResponse20030) SetDepositAllEnable(v bool) {
+func (o *CoinInfo) SetDepositAllEnable(v bool) {
 	o.DepositAllEnable = v
 }
 
 // GetFree returns the Free field value
-func (o *InlineResponse20030) GetFree() string {
+func (o *CoinInfo) GetFree() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -124,7 +124,7 @@ func (o *InlineResponse20030) GetFree() string {
 
 // GetFreeOk returns a tuple with the Free field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetFreeOk() (*string, bool) {
+func (o *CoinInfo) GetFreeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -132,12 +132,12 @@ func (o *InlineResponse20030) GetFreeOk() (*string, bool) {
 }
 
 // SetFree sets field value
-func (o *InlineResponse20030) SetFree(v string) {
+func (o *CoinInfo) SetFree(v string) {
 	o.Free = v
 }
 
 // GetFreeze returns the Freeze field value
-func (o *InlineResponse20030) GetFreeze() string {
+func (o *CoinInfo) GetFreeze() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -148,7 +148,7 @@ func (o *InlineResponse20030) GetFreeze() string {
 
 // GetFreezeOk returns a tuple with the Freeze field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetFreezeOk() (*string, bool) {
+func (o *CoinInfo) GetFreezeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -156,12 +156,12 @@ func (o *InlineResponse20030) GetFreezeOk() (*string, bool) {
 }
 
 // SetFreeze sets field value
-func (o *InlineResponse20030) SetFreeze(v string) {
+func (o *CoinInfo) SetFreeze(v string) {
 	o.Freeze = v
 }
 
 // GetIpoable returns the Ipoable field value
-func (o *InlineResponse20030) GetIpoable() string {
+func (o *CoinInfo) GetIpoable() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -172,7 +172,7 @@ func (o *InlineResponse20030) GetIpoable() string {
 
 // GetIpoableOk returns a tuple with the Ipoable field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetIpoableOk() (*string, bool) {
+func (o *CoinInfo) GetIpoableOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -180,12 +180,12 @@ func (o *InlineResponse20030) GetIpoableOk() (*string, bool) {
 }
 
 // SetIpoable sets field value
-func (o *InlineResponse20030) SetIpoable(v string) {
+func (o *CoinInfo) SetIpoable(v string) {
 	o.Ipoable = v
 }
 
 // GetIpoing returns the Ipoing field value
-func (o *InlineResponse20030) GetIpoing() string {
+func (o *CoinInfo) GetIpoing() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -196,7 +196,7 @@ func (o *InlineResponse20030) GetIpoing() string {
 
 // GetIpoingOk returns a tuple with the Ipoing field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetIpoingOk() (*string, bool) {
+func (o *CoinInfo) GetIpoingOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -204,12 +204,12 @@ func (o *InlineResponse20030) GetIpoingOk() (*string, bool) {
 }
 
 // SetIpoing sets field value
-func (o *InlineResponse20030) SetIpoing(v string) {
+func (o *CoinInfo) SetIpoing(v string) {
 	o.Ipoing = v
 }
 
 // GetIsLegalMoney returns the IsLegalMoney field value
-func (o *InlineResponse20030) GetIsLegalMoney() bool {
+func (o *CoinInfo) GetIsLegalMoney() bool {
 	if o == nil {
 		var ret bool
 		return ret
@@ -220,7 +220,7 @@ func (o *InlineResponse20030) GetIsLegalMoney() bool {
 
 // GetIsLegalMoneyOk returns a tuple with the IsLegalMoney field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetIsLegalMoneyOk() (*bool, bool) {
+func (o *CoinInfo) GetIsLegalMoneyOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -228,12 +228,12 @@ func (o *InlineResponse20030) GetIsLegalMoneyOk() (*bool, bool) {
 }
 
 // SetIsLegalMoney sets field value
-func (o *InlineResponse20030) SetIsLegalMoney(v bool) {
+func (o *CoinInfo) SetIsLegalMoney(v bool) {
 	o.IsLegalMoney = v
 }
 
 // GetLocked returns the Locked field value
-func (o *InlineResponse20030) GetLocked() string {
+func (o *CoinInfo) GetLocked() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -244,7 +244,7 @@ func (o *InlineResponse20030) GetLocked() string {
 
 // GetLockedOk returns a tuple with the Locked field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetLockedOk() (*string, bool) {
+func (o *CoinInfo) GetLockedOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -252,12 +252,12 @@ func (o *InlineResponse20030) GetLockedOk() (*string, bool) {
 }
 
 // SetLocked sets field value
-func (o *InlineResponse20030) SetLocked(v string) {
+func (o *CoinInfo) SetLocked(v string) {
 	o.Locked = v
 }
 
 // GetName returns the Name field value
-func (o *InlineResponse20030) GetName() string {
+func (o *CoinInfo) GetName() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -268,7 +268,7 @@ func (o *InlineResponse20030) GetName() string {
 
 // GetNameOk returns a tuple with the Name field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetNameOk() (*string, bool) {
+func (o *CoinInfo) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -276,12 +276,12 @@ func (o *InlineResponse20030) GetNameOk() (*string, bool) {
 }
 
 // SetName sets field value
-func (o *InlineResponse20030) SetName(v string) {
+func (o *CoinInfo) SetName(v string) {
 	o.Name = v
 }
 
 // GetNetworkList returns the NetworkList field value
-func (o *InlineResponse20030) GetNetworkList() []SapiV1CapitalConfigGetallNetworkList {
+func (o *CoinInfo) GetNetworkList() []SapiV1CapitalConfigGetallNetworkList {
 	if o == nil {
 		var ret []SapiV1CapitalConfigGetallNetworkList
 		return ret
@@ -292,7 +292,7 @@ func (o *InlineResponse20030) GetNetworkList() []SapiV1CapitalConfigGetallNetwor
 
 // GetNetworkListOk returns a tuple with the NetworkList field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetNetworkListOk() (*[]SapiV1CapitalConfigGetallNetworkList, bool) {
+func (o *CoinInfo) GetNetworkListOk() (*[]SapiV1CapitalConfigGetallNetworkList, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -300,12 +300,12 @@ func (o *InlineResponse20030) GetNetworkListOk() (*[]SapiV1CapitalConfigGetallNe
 }
 
 // SetNetworkList sets field value
-func (o *InlineResponse20030) SetNetworkList(v []SapiV1CapitalConfigGetallNetworkList) {
+func (o *CoinInfo) SetNetworkList(v []SapiV1CapitalConfigGetallNetworkList) {
 	o.NetworkList = v
 }
 
 // GetStorage returns the Storage field value
-func (o *InlineResponse20030) GetStorage() string {
+func (o *CoinInfo) GetStorage() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -316,7 +316,7 @@ func (o *InlineResponse20030) GetStorage() string {
 
 // GetStorageOk returns a tuple with the Storage field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetStorageOk() (*string, bool) {
+func (o *CoinInfo) GetStorageOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -324,12 +324,12 @@ func (o *InlineResponse20030) GetStorageOk() (*string, bool) {
 }
 
 // SetStorage sets field value
-func (o *InlineResponse20030) SetStorage(v string) {
+func (o *CoinInfo) SetStorage(v string) {
 	o.Storage = v
 }
 
 // GetTrading returns the Trading field value
-func (o *InlineResponse20030) GetTrading() bool {
+func (o *CoinInfo) GetTrading() bool {
 	if o == nil {
 		var ret bool
 		return ret
@@ -340,7 +340,7 @@ func (o *InlineResponse20030) GetTrading() bool {
 
 // GetTradingOk returns a tuple with the Trading field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetTradingOk() (*bool, bool) {
+func (o *CoinInfo) GetTradingOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -348,12 +348,12 @@ func (o *InlineResponse20030) GetTradingOk() (*bool, bool) {
 }
 
 // SetTrading sets field value
-func (o *InlineResponse20030) SetTrading(v bool) {
+func (o *CoinInfo) SetTrading(v bool) {
 	o.Trading = v
 }
 
 // GetWithdrawAllEnable returns the WithdrawAllEnable field value
-func (o *InlineResponse20030) GetWithdrawAllEnable() bool {
+func (o *CoinInfo) GetWithdrawAllEnable() bool {
 	if o == nil {
 		var ret bool
 		return ret
@@ -364,7 +364,7 @@ func (o *InlineResponse20030) GetWithdrawAllEnable() bool {
 
 // GetWithdrawAllEnableOk returns a tuple with the WithdrawAllEnable field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetWithdrawAllEnableOk() (*bool, bool) {
+func (o *CoinInfo) GetWithdrawAllEnableOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -372,12 +372,12 @@ func (o *InlineResponse20030) GetWithdrawAllEnableOk() (*bool, bool) {
 }
 
 // SetWithdrawAllEnable sets field value
-func (o *InlineResponse20030) SetWithdrawAllEnable(v bool) {
+func (o *CoinInfo) SetWithdrawAllEnable(v bool) {
 	o.WithdrawAllEnable = v
 }
 
 // GetWithdrawing returns the Withdrawing field value
-func (o *InlineResponse20030) GetWithdrawing() string {
+func (o *CoinInfo) GetWithdrawing() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -388,7 +388,7 @@ func (o *InlineResponse20030) GetWithdrawing() string {
 
 // GetWithdrawingOk returns a tuple with the Withdrawing field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20030) GetWithdrawingOk() (*string, bool) {
+func (o *CoinInfo) GetWithdrawingOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -396,11 +396,11 @@ func (o *InlineResponse20030) GetWithdrawingOk() (*string, bool) {
 }
 
 // SetWithdrawing sets field value
-func (o *InlineResponse20030) SetWithdrawing(v string) {
+func (o *CoinInfo) SetWithdrawing(v string) {
 	o.Withdrawing = v
 }
 
-func (o InlineResponse20030) MarshalJSON() ([]byte, error) {
+func (o CoinInfo) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if true {
 		toSerialize["coin"] = o.Coin
@@ -447,38 +447,38 @@ func (o InlineResponse20030) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableInlineResponse20030 struct {
-	value *InlineResponse20030
+type NullableCoinInfo struct {
+	value *CoinInfo
 	isSet bool
 }
 
-func (v NullableInlineResponse20030) Get() *InlineResponse20030 {
+func (v NullableCoinInfo) Get() *CoinInfo {
 	return v.value
 }
 
-func (v *NullableInlineResponse20030) Set(val *InlineResponse20030) {
+func (v *NullableCoinInfo) Set(val *CoinInfo) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableInlineResponse20030) IsSet() bool {
+func (v NullableCoinInfo) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableInlineResponse20030) Unset() {
+func (v *NullableCoinInfo) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableInlineResponse20030(val *InlineResponse20030) *NullableInlineResponse20030 {
-	return &NullableInlineResponse20030{value: val, isSet: true}
+func NewNullableCoinInfo(val *CoinInfo) *NullableCoinInfo {
+	return &NullableCoinInfo{value: val, isSet: true}
 }
 
-func (v NullableInlineResponse20030) MarshalJSON() ([]byte, error) {
+func (v NullableCoinInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableInlineResponse20030) UnmarshalJSON(src []byte) error {
+func (v *NullableCoinInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

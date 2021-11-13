@@ -34,6 +34,7 @@ docs/BswapRmvLiquidityPreviewCombination.md
 docs/BswapRmvLiquidityPreviewSingle.md
 docs/C2CApi.md
 docs/CanceledMarginOrderDetail.md
+docs/CoinInfo.md
 docs/FiatApi.md
 docs/InlineResponse200.md
 docs/InlineResponse2001.md
@@ -81,7 +82,6 @@ docs/InlineResponse20027.md
 docs/InlineResponse20028.md
 docs/InlineResponse20029.md
 docs/InlineResponse2003.md
-docs/InlineResponse20030.md
 docs/InlineResponse20031.md
 docs/InlineResponse20032.md
 docs/InlineResponse20033.md
@@ -303,6 +303,7 @@ model_bswap_add_liquidity_preview_single.go
 model_bswap_rmv_liquidity_preview_combination.go
 model_bswap_rmv_liquidity_preview_single.go
 model_canceled_margin_order_detail.go
+model_coin_info.go
 model_error.go
 model_inline_response_200.go
 model_inline_response_200_1.go
@@ -350,7 +351,6 @@ model_inline_response_200_27.go
 model_inline_response_200_28.go
 model_inline_response_200_29.go
 model_inline_response_200_3.go
-model_inline_response_200_30.go
 model_inline_response_200_31.go
 model_inline_response_200_32.go
 model_inline_response_200_33.go

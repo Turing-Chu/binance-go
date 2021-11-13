@@ -1021,7 +1021,7 @@ func (r ApiGetAllTokenInfoRequest) RecvWindow(recvWindow int64) ApiGetAllTokenIn
 	return r
 }
 
-func (r ApiGetAllTokenInfoRequest) Execute() ([]InlineResponse20030, *_nethttp.Response, error) {
+func (r ApiGetAllTokenInfoRequest) Execute() ([]CoinInfo, *_nethttp.Response, error) {
 	return r.ApiService.GetAllTokenInfoExecute(r)
 }
 
@@ -1044,14 +1044,14 @@ func (a *WalletApiService) GetAllTokenInfo(ctx _context.Context) ApiGetAllTokenI
 
 // Execute executes the request
 //  @return []InlineResponse20030
-func (a *WalletApiService) GetAllTokenInfoExecute(r ApiGetAllTokenInfoRequest) ([]InlineResponse20030, *_nethttp.Response, error) {
+func (a *WalletApiService) GetAllTokenInfoExecute(r ApiGetAllTokenInfoRequest) ([]CoinInfo, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  []InlineResponse20030
+		localVarReturnValue  []CoinInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "WalletApiService.GetAllTokenInfo")

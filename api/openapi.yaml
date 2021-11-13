@@ -5810,7 +5810,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/inline_response_200_30'
+                  $ref: '#/components/schemas/coin_info'
                 type: array
           description: All coins details information
         "400":
@@ -19189,7 +19189,7 @@ components:
       - withdrawMax
       - withdrawMin
       type: object
-    inline_response_200_30:
+    coin_info:
       example:
         trading: true
         withdrawAllEnable: true

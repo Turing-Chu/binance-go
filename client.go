@@ -14,10 +14,6 @@ package binanceapi
 import (
 	"bytes"
 	"context"
-	"crypto/hmac"
-	"crypto/sha256"
-	"crypto/sha512"
-	"encoding/hex"
 	"encoding/json"
 	"encoding/xml"
 	"errors"
@@ -37,6 +33,8 @@ import (
 	"strings"
 	"time"
 	"unicode/utf8"
+
+	"golang.org/x/oauth2"
 )
 
 var (
@@ -225,6 +223,11 @@ func (c *APIClient) callAPI(request *http.Request) (*http.Response, error) {
 	return resp, err
 }
 
+// ChangeBasePath changes base path to allow switching to mocks
+func (c *APIClient) ChangeBasePath(path string) {
+	c.cfg.BasePath = path
+}
+
 // Allow modification of underlying config for alternate implementations and testing
 // Caution: modifying the configuration while live can cause data races and potentially unwanted behavior
 func (c *APIClient) GetConfig() *Configuration {
@@ -311,68 +314,37 @@ func (c *APIClient) prepareRequest(
 	}
 
 	// Setup path and query parameters
-	requestUrl, err := url.Parse(path)
+	url, err := url.Parse(path)
 	if err != nil {
 		return nil, err
 	}
 
 	// Override request host, if applicable
 	if c.cfg.Host != "" {
-		requestUrl.Host = c.cfg.Host
+		url.Host = c.cfg.Host
 	}
 
 	// Override request scheme, if applicable
 	if c.cfg.Scheme != "" {
-		requestUrl.Scheme = c.cfg.Scheme
+		url.Scheme = c.cfg.Scheme
 	}
 
 	// Adding Query Param
-	query := requestUrl.Query()
+	query := url.Query()
 	for k, v := range queryParams {
 		for _, iv := range v {
 			query.Add(k, iv)
 		}
 	}
 
-	if query.Has("signature") {
-		query.Del("signature")
-	}
-	if query.Has("timestamp") {
-		query.Del("timestamp")
-	}
-	if ctx != nil {
-		public := false
-		if val, ok := ctx.Value(ContextPublic).(bool); ok {
-			public = val
-		}
-		if !public {
-			// API-Keys Authentication
-			if auth, ok := ctx.Value(ContextAPIKeys).(APIKey); ok {
-				h := sha512.New()
-				if body != nil {
-					h.Write(body.Bytes())
-				}
-
-				mac := hmac.New(sha256.New, []byte(auth.Key))
-				mac.Write([]byte(query.Encode()))
-				sign := hex.EncodeToString(mac.Sum(nil))
-				t := strconv.FormatInt(time.Now().UnixMilli(), 10)
-
-				query.Add("signature", sign)
-				query.Add("timestamp", t)
-				headerParams["X-MBX-APIKEY"] = auth.Key
-			}
-		}
-	}
-
 	// Encode the parameters.
-	requestUrl.RawQuery = query.Encode()
+	url.RawQuery = query.Encode()
 
 	// Generate a new request
 	if body != nil {
-		localVarRequest, err = http.NewRequest(method, requestUrl.String(), body)
+		localVarRequest, err = http.NewRequest(method, url.String(), body)
 	} else {
-		localVarRequest, err = http.NewRequest(method, requestUrl.String(), nil)
+		localVarRequest, err = http.NewRequest(method, url.String(), nil)
 	}
 	if err != nil {
 		return nil, err
@@ -393,6 +365,30 @@ func (c *APIClient) prepareRequest(
 	if ctx != nil {
 		// add context to the request
 		localVarRequest = localVarRequest.WithContext(ctx)
+
+		// Walk through any authentication.
+
+		// OAuth2 authentication
+		if tok, ok := ctx.Value(ContextOAuth2).(oauth2.TokenSource); ok {
+			// We were able to grab an oauth2 token from the context
+			var latestToken *oauth2.Token
+			if latestToken, err = tok.Token(); err != nil {
+				return nil, err
+			}
+
+			latestToken.SetAuthHeader(localVarRequest)
+		}
+
+		// Basic HTTP Authentication
+		if auth, ok := ctx.Value(ContextBasicAuth).(BasicAuth); ok {
+			localVarRequest.SetBasicAuth(auth.UserName, auth.Password)
+		}
+
+		// AccessToken Authentication
+		if auth, ok := ctx.Value(ContextAccessToken).(string); ok {
+			localVarRequest.Header.Add("Authorization", "Bearer "+auth)
+		}
+
 	}
 
 	for header, value := range c.cfg.DefaultHeader {

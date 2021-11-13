@@ -22,3 +22,12 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+api_wallet.go
+api_trade.go
+api_sub_account.go
+api_savings.go
+api_market.go
+api_margin.go
+api_b_swap.go
+model_agg_trade.go
