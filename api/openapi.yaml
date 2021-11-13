@@ -19087,7 +19087,7 @@ components:
       - msg
       - status
       type: object
-    _sapi_v1_capital_config_getall_networkList:
+    capital_config_getall_networkList:
       example:
         withdrawIntegerMultiple: "0.00000001"
         withdrawMax: "9999999999.99999999"
@@ -19272,7 +19272,7 @@ components:
           type: string
         networkList:
           items:
-            $ref: '#/components/schemas/_sapi_v1_capital_config_getall_networkList'
+            $ref: '#/components/schemas/capital_config_getall_networkList'
           type: array
         storage:
           example: "0.00000000"
@@ -23036,7 +23036,7 @@ components:
       - data
       - msg
       type: object
-    _sapi_v1_blvt_tokenInfo_currentBaskets:
+    blvt_tokenInfo_currentBaskets:
       example:
         symbol: BTCUSDT
         amount: -1183.984
@@ -23097,7 +23097,7 @@ components:
           type: string
         currentBaskets:
           items:
-            $ref: '#/components/schemas/_sapi_v1_blvt_tokenInfo_currentBaskets'
+            $ref: '#/components/schemas/blvt_tokenInfo_currentBaskets'
           type: array
         nav:
           example: "4.79"
@@ -23367,7 +23367,7 @@ components:
       - poolId
       - poolName
       type: object
-    _sapi_v1_bswap_liquidity_liquidity:
+    bswap_liquidity_liquidity:
       example:
         USDT: 9.999924554E7
         BUSD: 1.0000031579E8
@@ -23384,7 +23384,7 @@ components:
       - BUSD
       - USDT
       type: object
-    _sapi_v1_bswap_liquidity_share_asset:
+    bswap_liquidity_share_asset:
       example:
         USDT: 6206.95
         BUSD: 6207.02
@@ -23401,7 +23401,7 @@ components:
       - BUSD
       - USDT
       type: object
-    _sapi_v1_bswap_liquidity_share:
+    bswap_liquidity_share:
       example:
         asset:
           USDT: 6206.95
@@ -23418,7 +23418,7 @@ components:
           format: double
           type: number
         asset:
-          $ref: '#/components/schemas/_sapi_v1_bswap_liquidity_share_asset'
+          $ref: '#/components/schemas/bswap_liquidity_share_asset'
       required:
       - asset
       - shareAmount
@@ -23451,9 +23451,9 @@ components:
           format: int64
           type: integer
         liquidity:
-          $ref: '#/components/schemas/_sapi_v1_bswap_liquidity_liquidity'
+          $ref: '#/components/schemas/bswap_liquidity_liquidity'
         share:
-          $ref: '#/components/schemas/_sapi_v1_bswap_liquidity_share'
+          $ref: '#/components/schemas/bswap_liquidity_share'
       required:
       - liquidity
       - poolId
@@ -23632,7 +23632,7 @@ components:
       required:
       - swapId
       type: object
-    _sapi_v1_bswap_poolConfigure_liquidity:
+    bswap_poolConfigure_liquidity:
       example:
         minRedeemShare: 0.1
         constantA: 2000
@@ -23658,7 +23658,7 @@ components:
       - minRedeemShare
       - slippageTolerance
       type: object
-    _sapi_v1_bswap_poolConfigure_assetConfigure_BUSD:
+    bswap_poolConfigure_assetConfigure_BUSD:
       example:
         maxAdd: 20
         minAdd: 10
@@ -23687,7 +23687,7 @@ components:
       - minAdd
       - minSwap
       type: object
-    _sapi_v1_bswap_poolConfigure_assetConfigure:
+    bswap_poolConfigure_assetConfigure:
       example:
         USDT:
           maxAdd: 20
@@ -23701,9 +23701,9 @@ components:
           minSwap: 10
       properties:
         BUSD:
-          $ref: '#/components/schemas/_sapi_v1_bswap_poolConfigure_assetConfigure_BUSD'
+          $ref: '#/components/schemas/bswap_poolConfigure_assetConfigure_BUSD'
         USDT:
-          $ref: '#/components/schemas/_sapi_v1_bswap_poolConfigure_assetConfigure_BUSD'
+          $ref: '#/components/schemas/bswap_poolConfigure_assetConfigure_BUSD'
       required:
       - BUSD
       - USDT
@@ -23741,9 +23741,9 @@ components:
           format: int64
           type: integer
         liquidity:
-          $ref: '#/components/schemas/_sapi_v1_bswap_poolConfigure_liquidity'
+          $ref: '#/components/schemas/bswap_poolConfigure_liquidity'
         assetConfigure:
-          $ref: '#/components/schemas/_sapi_v1_bswap_poolConfigure_assetConfigure'
+          $ref: '#/components/schemas/bswap_poolConfigure_assetConfigure'
       required:
       - assetConfigure
       - liquidity
