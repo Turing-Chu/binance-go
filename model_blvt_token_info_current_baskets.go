@@ -15,35 +15,35 @@ import (
 	"encoding/json"
 )
 
-// SapiV1BlvtTokenInfoCurrentBaskets struct for SapiV1BlvtTokenInfoCurrentBaskets
-type SapiV1BlvtTokenInfoCurrentBaskets struct {
+// BlvtTokenInfoCurrentBaskets struct for BlvtTokenInfoCurrentBaskets
+type BlvtTokenInfoCurrentBaskets struct {
 	Symbol        string `json:"symbol"`
 	Amount        string `json:"amount"`
 	NotionalValue string `json:"notionalValue"`
 }
 
-// NewSapiV1BlvtTokenInfoCurrentBaskets instantiates a new SapiV1BlvtTokenInfoCurrentBaskets object
+// NewBlvtTokenInfoCurrentBaskets instantiates a new BlvtTokenInfoCurrentBaskets object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSapiV1BlvtTokenInfoCurrentBaskets(symbol string, amount string, notionalValue string) *SapiV1BlvtTokenInfoCurrentBaskets {
-	this := SapiV1BlvtTokenInfoCurrentBaskets{}
+func NewBlvtTokenInfoCurrentBaskets(symbol string, amount string, notionalValue string) *BlvtTokenInfoCurrentBaskets {
+	this := BlvtTokenInfoCurrentBaskets{}
 	this.Symbol = symbol
 	this.Amount = amount
 	this.NotionalValue = notionalValue
 	return &this
 }
 
-// NewSapiV1BlvtTokenInfoCurrentBasketsWithDefaults instantiates a new SapiV1BlvtTokenInfoCurrentBaskets object
+// NewBlvtTokenInfoCurrentBasketsWithDefaults instantiates a new BlvtTokenInfoCurrentBaskets object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewSapiV1BlvtTokenInfoCurrentBasketsWithDefaults() *SapiV1BlvtTokenInfoCurrentBaskets {
-	this := SapiV1BlvtTokenInfoCurrentBaskets{}
+func NewBlvtTokenInfoCurrentBasketsWithDefaults() *BlvtTokenInfoCurrentBaskets {
+	this := BlvtTokenInfoCurrentBaskets{}
 	return &this
 }
 
 // GetSymbol returns the Symbol field value
-func (o *SapiV1BlvtTokenInfoCurrentBaskets) GetSymbol() string {
+func (o *BlvtTokenInfoCurrentBaskets) GetSymbol() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -54,7 +54,7 @@ func (o *SapiV1BlvtTokenInfoCurrentBaskets) GetSymbol() string {
 
 // GetSymbolOk returns a tuple with the Symbol field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BlvtTokenInfoCurrentBaskets) GetSymbolOk() (*string, bool) {
+func (o *BlvtTokenInfoCurrentBaskets) GetSymbolOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -62,12 +62,12 @@ func (o *SapiV1BlvtTokenInfoCurrentBaskets) GetSymbolOk() (*string, bool) {
 }
 
 // SetSymbol sets field value
-func (o *SapiV1BlvtTokenInfoCurrentBaskets) SetSymbol(v string) {
+func (o *BlvtTokenInfoCurrentBaskets) SetSymbol(v string) {
 	o.Symbol = v
 }
 
 // GetAmount returns the Amount field value
-func (o *SapiV1BlvtTokenInfoCurrentBaskets) GetAmount() string {
+func (o *BlvtTokenInfoCurrentBaskets) GetAmount() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -78,7 +78,7 @@ func (o *SapiV1BlvtTokenInfoCurrentBaskets) GetAmount() string {
 
 // GetAmountOk returns a tuple with the Amount field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BlvtTokenInfoCurrentBaskets) GetAmountOk() (*string, bool) {
+func (o *BlvtTokenInfoCurrentBaskets) GetAmountOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -86,12 +86,12 @@ func (o *SapiV1BlvtTokenInfoCurrentBaskets) GetAmountOk() (*string, bool) {
 }
 
 // SetAmount sets field value
-func (o *SapiV1BlvtTokenInfoCurrentBaskets) SetAmount(v string) {
+func (o *BlvtTokenInfoCurrentBaskets) SetAmount(v string) {
 	o.Amount = v
 }
 
 // GetNotionalValue returns the NotionalValue field value
-func (o *SapiV1BlvtTokenInfoCurrentBaskets) GetNotionalValue() string {
+func (o *BlvtTokenInfoCurrentBaskets) GetNotionalValue() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -102,7 +102,7 @@ func (o *SapiV1BlvtTokenInfoCurrentBaskets) GetNotionalValue() string {
 
 // GetNotionalValueOk returns a tuple with the NotionalValue field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BlvtTokenInfoCurrentBaskets) GetNotionalValueOk() (*string, bool) {
+func (o *BlvtTokenInfoCurrentBaskets) GetNotionalValueOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -110,11 +110,11 @@ func (o *SapiV1BlvtTokenInfoCurrentBaskets) GetNotionalValueOk() (*string, bool)
 }
 
 // SetNotionalValue sets field value
-func (o *SapiV1BlvtTokenInfoCurrentBaskets) SetNotionalValue(v string) {
+func (o *BlvtTokenInfoCurrentBaskets) SetNotionalValue(v string) {
 	o.NotionalValue = v
 }
 
-func (o SapiV1BlvtTokenInfoCurrentBaskets) MarshalJSON() ([]byte, error) {
+func (o BlvtTokenInfoCurrentBaskets) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if true {
 		toSerialize["symbol"] = o.Symbol
@@ -128,38 +128,38 @@ func (o SapiV1BlvtTokenInfoCurrentBaskets) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableSapiV1BlvtTokenInfoCurrentBaskets struct {
-	value *SapiV1BlvtTokenInfoCurrentBaskets
+type NullableBlvtTokenInfoCurrentBaskets struct {
+	value *BlvtTokenInfoCurrentBaskets
 	isSet bool
 }
 
-func (v NullableSapiV1BlvtTokenInfoCurrentBaskets) Get() *SapiV1BlvtTokenInfoCurrentBaskets {
+func (v NullableBlvtTokenInfoCurrentBaskets) Get() *BlvtTokenInfoCurrentBaskets {
 	return v.value
 }
 
-func (v *NullableSapiV1BlvtTokenInfoCurrentBaskets) Set(val *SapiV1BlvtTokenInfoCurrentBaskets) {
+func (v *NullableBlvtTokenInfoCurrentBaskets) Set(val *BlvtTokenInfoCurrentBaskets) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableSapiV1BlvtTokenInfoCurrentBaskets) IsSet() bool {
+func (v NullableBlvtTokenInfoCurrentBaskets) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableSapiV1BlvtTokenInfoCurrentBaskets) Unset() {
+func (v *NullableBlvtTokenInfoCurrentBaskets) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableSapiV1BlvtTokenInfoCurrentBaskets(val *SapiV1BlvtTokenInfoCurrentBaskets) *NullableSapiV1BlvtTokenInfoCurrentBaskets {
-	return &NullableSapiV1BlvtTokenInfoCurrentBaskets{value: val, isSet: true}
+func NewNullableBlvtTokenInfoCurrentBaskets(val *BlvtTokenInfoCurrentBaskets) *NullableBlvtTokenInfoCurrentBaskets {
+	return &NullableBlvtTokenInfoCurrentBaskets{value: val, isSet: true}
 }
 
-func (v NullableSapiV1BlvtTokenInfoCurrentBaskets) MarshalJSON() ([]byte, error) {
+func (v NullableBlvtTokenInfoCurrentBaskets) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableSapiV1BlvtTokenInfoCurrentBaskets) UnmarshalJSON(src []byte) error {
+func (v *NullableBlvtTokenInfoCurrentBaskets) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **IsLegalMoney** | **bool** |  | 
 **Locked** | **string** |  | 
 **Name** | **string** |  | 
-**NetworkList** | [**[]SapiV1CapitalConfigGetallNetworkList**](SapiV1CapitalConfigGetallNetworkList.md) |  | 
+**NetworkList** | [**[]CapitalConfigGetallNetworkList**](CapitalConfigGetallNetworkList.md) |  | 
 **Storage** | **string** |  | 
 **Trading** | **bool** |  | 
 **WithdrawAllEnable** | **bool** |  | 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 ### NewCoinInfo
 
-`func NewCoinInfo(coin string, depositAllEnable bool, free string, freeze string, ipoable string, ipoing string, isLegalMoney bool, locked string, name string, networkList []SapiV1CapitalConfigGetallNetworkList, storage string, trading bool, withdrawAllEnable bool, withdrawing string, ) *CoinInfo`
+`func NewCoinInfo(coin string, depositAllEnable bool, free string, freeze string, ipoable string, ipoing string, isLegalMoney bool, locked string, name string, networkList []CapitalConfigGetallNetworkList, storage string, trading bool, withdrawAllEnable bool, withdrawing string, ) *CoinInfo`
 
 NewCoinInfo instantiates a new CoinInfo object
 This constructor will assign default values to properties that have it defined,
@@ -220,20 +220,20 @@ SetName sets Name field to given value.
 
 ### GetNetworkList
 
-`func (o *CoinInfo) GetNetworkList() []SapiV1CapitalConfigGetallNetworkList`
+`func (o *CoinInfo) GetNetworkList() []CapitalConfigGetallNetworkList`
 
 GetNetworkList returns the NetworkList field if non-nil, zero value otherwise.
 
 ### GetNetworkListOk
 
-`func (o *CoinInfo) GetNetworkListOk() (*[]SapiV1CapitalConfigGetallNetworkList, bool)`
+`func (o *CoinInfo) GetNetworkListOk() (*[]CapitalConfigGetallNetworkList, bool)`
 
 GetNetworkListOk returns a tuple with the NetworkList field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetworkList
 
-`func (o *CoinInfo) SetNetworkList(v []SapiV1CapitalConfigGetallNetworkList)`
+`func (o *CoinInfo) SetNetworkList(v []CapitalConfigGetallNetworkList)`
 
 SetNetworkList sets NetworkList field to given value.
 

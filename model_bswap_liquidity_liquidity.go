@@ -15,33 +15,33 @@ import (
 	"encoding/json"
 )
 
-// SapiV1BswapLiquidityShareAsset struct for SapiV1BswapLiquidityShareAsset
-type SapiV1BswapLiquidityShareAsset struct {
+// BswapLiquidityLiquidity struct for BswapLiquidityLiquidity
+type BswapLiquidityLiquidity struct {
 	BUSD float64 `json:"BUSD"`
 	USDT float64 `json:"USDT"`
 }
 
-// NewSapiV1BswapLiquidityShareAsset instantiates a new SapiV1BswapLiquidityShareAsset object
+// NewBswapLiquidityLiquidity instantiates a new BswapLiquidityLiquidity object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSapiV1BswapLiquidityShareAsset(bUSD float64, uSDT float64) *SapiV1BswapLiquidityShareAsset {
-	this := SapiV1BswapLiquidityShareAsset{}
+func NewBswapLiquidityLiquidity(bUSD float64, uSDT float64) *BswapLiquidityLiquidity {
+	this := BswapLiquidityLiquidity{}
 	this.BUSD = bUSD
 	this.USDT = uSDT
 	return &this
 }
 
-// NewSapiV1BswapLiquidityShareAssetWithDefaults instantiates a new SapiV1BswapLiquidityShareAsset object
+// NewBswapLiquidityLiquidityWithDefaults instantiates a new BswapLiquidityLiquidity object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewSapiV1BswapLiquidityShareAssetWithDefaults() *SapiV1BswapLiquidityShareAsset {
-	this := SapiV1BswapLiquidityShareAsset{}
+func NewBswapLiquidityLiquidityWithDefaults() *BswapLiquidityLiquidity {
+	this := BswapLiquidityLiquidity{}
 	return &this
 }
 
 // GetBUSD returns the BUSD field value
-func (o *SapiV1BswapLiquidityShareAsset) GetBUSD() float64 {
+func (o *BswapLiquidityLiquidity) GetBUSD() float64 {
 	if o == nil {
 		var ret float64
 		return ret
@@ -52,7 +52,7 @@ func (o *SapiV1BswapLiquidityShareAsset) GetBUSD() float64 {
 
 // GetBUSDOk returns a tuple with the BUSD field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BswapLiquidityShareAsset) GetBUSDOk() (*float64, bool) {
+func (o *BswapLiquidityLiquidity) GetBUSDOk() (*float64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -60,12 +60,12 @@ func (o *SapiV1BswapLiquidityShareAsset) GetBUSDOk() (*float64, bool) {
 }
 
 // SetBUSD sets field value
-func (o *SapiV1BswapLiquidityShareAsset) SetBUSD(v float64) {
+func (o *BswapLiquidityLiquidity) SetBUSD(v float64) {
 	o.BUSD = v
 }
 
 // GetUSDT returns the USDT field value
-func (o *SapiV1BswapLiquidityShareAsset) GetUSDT() float64 {
+func (o *BswapLiquidityLiquidity) GetUSDT() float64 {
 	if o == nil {
 		var ret float64
 		return ret
@@ -76,7 +76,7 @@ func (o *SapiV1BswapLiquidityShareAsset) GetUSDT() float64 {
 
 // GetUSDTOk returns a tuple with the USDT field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BswapLiquidityShareAsset) GetUSDTOk() (*float64, bool) {
+func (o *BswapLiquidityLiquidity) GetUSDTOk() (*float64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -84,11 +84,11 @@ func (o *SapiV1BswapLiquidityShareAsset) GetUSDTOk() (*float64, bool) {
 }
 
 // SetUSDT sets field value
-func (o *SapiV1BswapLiquidityShareAsset) SetUSDT(v float64) {
+func (o *BswapLiquidityLiquidity) SetUSDT(v float64) {
 	o.USDT = v
 }
 
-func (o SapiV1BswapLiquidityShareAsset) MarshalJSON() ([]byte, error) {
+func (o BswapLiquidityLiquidity) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if true {
 		toSerialize["BUSD"] = o.BUSD
@@ -99,38 +99,38 @@ func (o SapiV1BswapLiquidityShareAsset) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableSapiV1BswapLiquidityShareAsset struct {
-	value *SapiV1BswapLiquidityShareAsset
+type NullableBswapLiquidityLiquidity struct {
+	value *BswapLiquidityLiquidity
 	isSet bool
 }
 
-func (v NullableSapiV1BswapLiquidityShareAsset) Get() *SapiV1BswapLiquidityShareAsset {
+func (v NullableBswapLiquidityLiquidity) Get() *BswapLiquidityLiquidity {
 	return v.value
 }
 
-func (v *NullableSapiV1BswapLiquidityShareAsset) Set(val *SapiV1BswapLiquidityShareAsset) {
+func (v *NullableBswapLiquidityLiquidity) Set(val *BswapLiquidityLiquidity) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableSapiV1BswapLiquidityShareAsset) IsSet() bool {
+func (v NullableBswapLiquidityLiquidity) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableSapiV1BswapLiquidityShareAsset) Unset() {
+func (v *NullableBswapLiquidityLiquidity) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableSapiV1BswapLiquidityShareAsset(val *SapiV1BswapLiquidityShareAsset) *NullableSapiV1BswapLiquidityShareAsset {
-	return &NullableSapiV1BswapLiquidityShareAsset{value: val, isSet: true}
+func NewNullableBswapLiquidityLiquidity(val *BswapLiquidityLiquidity) *NullableBswapLiquidityLiquidity {
+	return &NullableBswapLiquidityLiquidity{value: val, isSet: true}
 }
 
-func (v NullableSapiV1BswapLiquidityShareAsset) MarshalJSON() ([]byte, error) {
+func (v NullableBswapLiquidityLiquidity) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableSapiV1BswapLiquidityShareAsset) UnmarshalJSON(src []byte) error {
+func (v *NullableBswapLiquidityLiquidity) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

@@ -17,18 +17,18 @@ import (
 
 // InlineResponse200104 struct for InlineResponse200104
 type InlineResponse200104 struct {
-	PoolId     int64                         `json:"poolId"`
-	PoolNmae   string                        `json:"poolNmae"`
-	UpdateTime int64                         `json:"updateTime"`
-	Liquidity  SapiV1BswapLiquidityLiquidity `json:"liquidity"`
-	Share      SapiV1BswapLiquidityShare     `json:"share"`
+	PoolId     int64                   `json:"poolId"`
+	PoolNmae   string                  `json:"poolNmae"`
+	UpdateTime int64                   `json:"updateTime"`
+	Liquidity  BswapLiquidityLiquidity `json:"liquidity"`
+	Share      BswapLiquidityShare     `json:"share"`
 }
 
 // NewInlineResponse200104 instantiates a new InlineResponse200104 object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInlineResponse200104(poolId int64, poolNmae string, updateTime int64, liquidity SapiV1BswapLiquidityLiquidity, share SapiV1BswapLiquidityShare) *InlineResponse200104 {
+func NewInlineResponse200104(poolId int64, poolNmae string, updateTime int64, liquidity BswapLiquidityLiquidity, share BswapLiquidityShare) *InlineResponse200104 {
 	this := InlineResponse200104{}
 	this.PoolId = poolId
 	this.PoolNmae = poolNmae
@@ -119,9 +119,9 @@ func (o *InlineResponse200104) SetUpdateTime(v int64) {
 }
 
 // GetLiquidity returns the Liquidity field value
-func (o *InlineResponse200104) GetLiquidity() SapiV1BswapLiquidityLiquidity {
+func (o *InlineResponse200104) GetLiquidity() BswapLiquidityLiquidity {
 	if o == nil {
-		var ret SapiV1BswapLiquidityLiquidity
+		var ret BswapLiquidityLiquidity
 		return ret
 	}
 
@@ -130,7 +130,7 @@ func (o *InlineResponse200104) GetLiquidity() SapiV1BswapLiquidityLiquidity {
 
 // GetLiquidityOk returns a tuple with the Liquidity field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse200104) GetLiquidityOk() (*SapiV1BswapLiquidityLiquidity, bool) {
+func (o *InlineResponse200104) GetLiquidityOk() (*BswapLiquidityLiquidity, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -138,14 +138,14 @@ func (o *InlineResponse200104) GetLiquidityOk() (*SapiV1BswapLiquidityLiquidity,
 }
 
 // SetLiquidity sets field value
-func (o *InlineResponse200104) SetLiquidity(v SapiV1BswapLiquidityLiquidity) {
+func (o *InlineResponse200104) SetLiquidity(v BswapLiquidityLiquidity) {
 	o.Liquidity = v
 }
 
 // GetShare returns the Share field value
-func (o *InlineResponse200104) GetShare() SapiV1BswapLiquidityShare {
+func (o *InlineResponse200104) GetShare() BswapLiquidityShare {
 	if o == nil {
-		var ret SapiV1BswapLiquidityShare
+		var ret BswapLiquidityShare
 		return ret
 	}
 
@@ -154,7 +154,7 @@ func (o *InlineResponse200104) GetShare() SapiV1BswapLiquidityShare {
 
 // GetShareOk returns a tuple with the Share field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse200104) GetShareOk() (*SapiV1BswapLiquidityShare, bool) {
+func (o *InlineResponse200104) GetShareOk() (*BswapLiquidityShare, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -162,7 +162,7 @@ func (o *InlineResponse200104) GetShareOk() (*SapiV1BswapLiquidityShare, bool) {
 }
 
 // SetShare sets field value
-func (o *InlineResponse200104) SetShare(v SapiV1BswapLiquidityShare) {
+func (o *InlineResponse200104) SetShare(v BswapLiquidityShare) {
 	o.Share = v
 }
 

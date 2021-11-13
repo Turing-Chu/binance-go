@@ -15,20 +15,20 @@ import (
 	"encoding/json"
 )
 
-// SapiV1BswapPoolConfigureAssetConfigureBUSD struct for SapiV1BswapPoolConfigureAssetConfigureBUSD
-type SapiV1BswapPoolConfigureAssetConfigureBUSD struct {
+// BswapPoolConfigureAssetConfigureBUSD struct for BswapPoolConfigureAssetConfigureBUSD
+type BswapPoolConfigureAssetConfigureBUSD struct {
 	MinAdd  int64 `json:"minAdd"`
 	MaxAdd  int64 `json:"maxAdd"`
 	MinSwap int64 `json:"minSwap"`
 	MaxSwap int64 `json:"maxSwap"`
 }
 
-// NewSapiV1BswapPoolConfigureAssetConfigureBUSD instantiates a new SapiV1BswapPoolConfigureAssetConfigureBUSD object
+// NewBswapPoolConfigureAssetConfigureBUSD instantiates a new BswapPoolConfigureAssetConfigureBUSD object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSapiV1BswapPoolConfigureAssetConfigureBUSD(minAdd int64, maxAdd int64, minSwap int64, maxSwap int64) *SapiV1BswapPoolConfigureAssetConfigureBUSD {
-	this := SapiV1BswapPoolConfigureAssetConfigureBUSD{}
+func NewBswapPoolConfigureAssetConfigureBUSD(minAdd int64, maxAdd int64, minSwap int64, maxSwap int64) *BswapPoolConfigureAssetConfigureBUSD {
+	this := BswapPoolConfigureAssetConfigureBUSD{}
 	this.MinAdd = minAdd
 	this.MaxAdd = maxAdd
 	this.MinSwap = minSwap
@@ -36,16 +36,16 @@ func NewSapiV1BswapPoolConfigureAssetConfigureBUSD(minAdd int64, maxAdd int64, m
 	return &this
 }
 
-// NewSapiV1BswapPoolConfigureAssetConfigureBUSDWithDefaults instantiates a new SapiV1BswapPoolConfigureAssetConfigureBUSD object
+// NewBswapPoolConfigureAssetConfigureBUSDWithDefaults instantiates a new BswapPoolConfigureAssetConfigureBUSD object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewSapiV1BswapPoolConfigureAssetConfigureBUSDWithDefaults() *SapiV1BswapPoolConfigureAssetConfigureBUSD {
-	this := SapiV1BswapPoolConfigureAssetConfigureBUSD{}
+func NewBswapPoolConfigureAssetConfigureBUSDWithDefaults() *BswapPoolConfigureAssetConfigureBUSD {
+	this := BswapPoolConfigureAssetConfigureBUSD{}
 	return &this
 }
 
 // GetMinAdd returns the MinAdd field value
-func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMinAdd() int64 {
+func (o *BswapPoolConfigureAssetConfigureBUSD) GetMinAdd() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -56,7 +56,7 @@ func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMinAdd() int64 {
 
 // GetMinAddOk returns a tuple with the MinAdd field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMinAddOk() (*int64, bool) {
+func (o *BswapPoolConfigureAssetConfigureBUSD) GetMinAddOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -64,12 +64,12 @@ func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMinAddOk() (*int64, bool
 }
 
 // SetMinAdd sets field value
-func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) SetMinAdd(v int64) {
+func (o *BswapPoolConfigureAssetConfigureBUSD) SetMinAdd(v int64) {
 	o.MinAdd = v
 }
 
 // GetMaxAdd returns the MaxAdd field value
-func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMaxAdd() int64 {
+func (o *BswapPoolConfigureAssetConfigureBUSD) GetMaxAdd() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -80,7 +80,7 @@ func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMaxAdd() int64 {
 
 // GetMaxAddOk returns a tuple with the MaxAdd field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMaxAddOk() (*int64, bool) {
+func (o *BswapPoolConfigureAssetConfigureBUSD) GetMaxAddOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -88,12 +88,12 @@ func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMaxAddOk() (*int64, bool
 }
 
 // SetMaxAdd sets field value
-func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) SetMaxAdd(v int64) {
+func (o *BswapPoolConfigureAssetConfigureBUSD) SetMaxAdd(v int64) {
 	o.MaxAdd = v
 }
 
 // GetMinSwap returns the MinSwap field value
-func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMinSwap() int64 {
+func (o *BswapPoolConfigureAssetConfigureBUSD) GetMinSwap() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -104,7 +104,7 @@ func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMinSwap() int64 {
 
 // GetMinSwapOk returns a tuple with the MinSwap field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMinSwapOk() (*int64, bool) {
+func (o *BswapPoolConfigureAssetConfigureBUSD) GetMinSwapOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -112,12 +112,12 @@ func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMinSwapOk() (*int64, boo
 }
 
 // SetMinSwap sets field value
-func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) SetMinSwap(v int64) {
+func (o *BswapPoolConfigureAssetConfigureBUSD) SetMinSwap(v int64) {
 	o.MinSwap = v
 }
 
 // GetMaxSwap returns the MaxSwap field value
-func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMaxSwap() int64 {
+func (o *BswapPoolConfigureAssetConfigureBUSD) GetMaxSwap() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -128,7 +128,7 @@ func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMaxSwap() int64 {
 
 // GetMaxSwapOk returns a tuple with the MaxSwap field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMaxSwapOk() (*int64, bool) {
+func (o *BswapPoolConfigureAssetConfigureBUSD) GetMaxSwapOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -136,11 +136,11 @@ func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) GetMaxSwapOk() (*int64, boo
 }
 
 // SetMaxSwap sets field value
-func (o *SapiV1BswapPoolConfigureAssetConfigureBUSD) SetMaxSwap(v int64) {
+func (o *BswapPoolConfigureAssetConfigureBUSD) SetMaxSwap(v int64) {
 	o.MaxSwap = v
 }
 
-func (o SapiV1BswapPoolConfigureAssetConfigureBUSD) MarshalJSON() ([]byte, error) {
+func (o BswapPoolConfigureAssetConfigureBUSD) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if true {
 		toSerialize["minAdd"] = o.MinAdd
@@ -157,38 +157,38 @@ func (o SapiV1BswapPoolConfigureAssetConfigureBUSD) MarshalJSON() ([]byte, error
 	return json.Marshal(toSerialize)
 }
 
-type NullableSapiV1BswapPoolConfigureAssetConfigureBUSD struct {
-	value *SapiV1BswapPoolConfigureAssetConfigureBUSD
+type NullableBswapPoolConfigureAssetConfigureBUSD struct {
+	value *BswapPoolConfigureAssetConfigureBUSD
 	isSet bool
 }
 
-func (v NullableSapiV1BswapPoolConfigureAssetConfigureBUSD) Get() *SapiV1BswapPoolConfigureAssetConfigureBUSD {
+func (v NullableBswapPoolConfigureAssetConfigureBUSD) Get() *BswapPoolConfigureAssetConfigureBUSD {
 	return v.value
 }
 
-func (v *NullableSapiV1BswapPoolConfigureAssetConfigureBUSD) Set(val *SapiV1BswapPoolConfigureAssetConfigureBUSD) {
+func (v *NullableBswapPoolConfigureAssetConfigureBUSD) Set(val *BswapPoolConfigureAssetConfigureBUSD) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableSapiV1BswapPoolConfigureAssetConfigureBUSD) IsSet() bool {
+func (v NullableBswapPoolConfigureAssetConfigureBUSD) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableSapiV1BswapPoolConfigureAssetConfigureBUSD) Unset() {
+func (v *NullableBswapPoolConfigureAssetConfigureBUSD) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableSapiV1BswapPoolConfigureAssetConfigureBUSD(val *SapiV1BswapPoolConfigureAssetConfigureBUSD) *NullableSapiV1BswapPoolConfigureAssetConfigureBUSD {
-	return &NullableSapiV1BswapPoolConfigureAssetConfigureBUSD{value: val, isSet: true}
+func NewNullableBswapPoolConfigureAssetConfigureBUSD(val *BswapPoolConfigureAssetConfigureBUSD) *NullableBswapPoolConfigureAssetConfigureBUSD {
+	return &NullableBswapPoolConfigureAssetConfigureBUSD{value: val, isSet: true}
 }
 
-func (v NullableSapiV1BswapPoolConfigureAssetConfigureBUSD) MarshalJSON() ([]byte, error) {
+func (v NullableBswapPoolConfigureAssetConfigureBUSD) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableSapiV1BswapPoolConfigureAssetConfigureBUSD) UnmarshalJSON(src []byte) error {
+func (v *NullableBswapPoolConfigureAssetConfigureBUSD) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

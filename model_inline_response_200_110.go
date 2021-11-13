@@ -17,18 +17,18 @@ import (
 
 // InlineResponse200110 struct for InlineResponse200110
 type InlineResponse200110 struct {
-	PoolId         int64                                  `json:"poolId"`
-	PoolNmae       string                                 `json:"poolNmae"`
-	UpdateTime     int64                                  `json:"updateTime"`
-	Liquidity      SapiV1BswapPoolConfigureLiquidity      `json:"liquidity"`
-	AssetConfigure SapiV1BswapPoolConfigureAssetConfigure `json:"assetConfigure"`
+	PoolId         int64                            `json:"poolId"`
+	PoolNmae       string                           `json:"poolNmae"`
+	UpdateTime     int64                            `json:"updateTime"`
+	Liquidity      BswapPoolConfigureLiquidity      `json:"liquidity"`
+	AssetConfigure BswapPoolConfigureAssetConfigure `json:"assetConfigure"`
 }
 
 // NewInlineResponse200110 instantiates a new InlineResponse200110 object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInlineResponse200110(poolId int64, poolNmae string, updateTime int64, liquidity SapiV1BswapPoolConfigureLiquidity, assetConfigure SapiV1BswapPoolConfigureAssetConfigure) *InlineResponse200110 {
+func NewInlineResponse200110(poolId int64, poolNmae string, updateTime int64, liquidity BswapPoolConfigureLiquidity, assetConfigure BswapPoolConfigureAssetConfigure) *InlineResponse200110 {
 	this := InlineResponse200110{}
 	this.PoolId = poolId
 	this.PoolNmae = poolNmae
@@ -119,9 +119,9 @@ func (o *InlineResponse200110) SetUpdateTime(v int64) {
 }
 
 // GetLiquidity returns the Liquidity field value
-func (o *InlineResponse200110) GetLiquidity() SapiV1BswapPoolConfigureLiquidity {
+func (o *InlineResponse200110) GetLiquidity() BswapPoolConfigureLiquidity {
 	if o == nil {
-		var ret SapiV1BswapPoolConfigureLiquidity
+		var ret BswapPoolConfigureLiquidity
 		return ret
 	}
 
@@ -130,7 +130,7 @@ func (o *InlineResponse200110) GetLiquidity() SapiV1BswapPoolConfigureLiquidity 
 
 // GetLiquidityOk returns a tuple with the Liquidity field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse200110) GetLiquidityOk() (*SapiV1BswapPoolConfigureLiquidity, bool) {
+func (o *InlineResponse200110) GetLiquidityOk() (*BswapPoolConfigureLiquidity, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -138,14 +138,14 @@ func (o *InlineResponse200110) GetLiquidityOk() (*SapiV1BswapPoolConfigureLiquid
 }
 
 // SetLiquidity sets field value
-func (o *InlineResponse200110) SetLiquidity(v SapiV1BswapPoolConfigureLiquidity) {
+func (o *InlineResponse200110) SetLiquidity(v BswapPoolConfigureLiquidity) {
 	o.Liquidity = v
 }
 
 // GetAssetConfigure returns the AssetConfigure field value
-func (o *InlineResponse200110) GetAssetConfigure() SapiV1BswapPoolConfigureAssetConfigure {
+func (o *InlineResponse200110) GetAssetConfigure() BswapPoolConfigureAssetConfigure {
 	if o == nil {
-		var ret SapiV1BswapPoolConfigureAssetConfigure
+		var ret BswapPoolConfigureAssetConfigure
 		return ret
 	}
 
@@ -154,7 +154,7 @@ func (o *InlineResponse200110) GetAssetConfigure() SapiV1BswapPoolConfigureAsset
 
 // GetAssetConfigureOk returns a tuple with the AssetConfigure field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse200110) GetAssetConfigureOk() (*SapiV1BswapPoolConfigureAssetConfigure, bool) {
+func (o *InlineResponse200110) GetAssetConfigureOk() (*BswapPoolConfigureAssetConfigure, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -162,7 +162,7 @@ func (o *InlineResponse200110) GetAssetConfigureOk() (*SapiV1BswapPoolConfigureA
 }
 
 // SetAssetConfigure sets field value
-func (o *InlineResponse200110) SetAssetConfigure(v SapiV1BswapPoolConfigureAssetConfigure) {
+func (o *InlineResponse200110) SetAssetConfigure(v BswapPoolConfigureAssetConfigure) {
 	o.AssetConfigure = v
 }
 

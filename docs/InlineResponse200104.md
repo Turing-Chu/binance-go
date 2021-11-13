@@ -7,14 +7,14 @@ Name | Type | Description | Notes
 **PoolId** | **int64** |  | 
 **PoolNmae** | **string** |  | 
 **UpdateTime** | **int64** |  | 
-**Liquidity** | [**SapiV1BswapLiquidityLiquidity**](SapiV1BswapLiquidityLiquidity.md) |  | 
-**Share** | [**SapiV1BswapLiquidityShare**](SapiV1BswapLiquidityShare.md) |  | 
+**Liquidity** | [**BswapLiquidityLiquidity**](BswapLiquidityLiquidity.md) |  | 
+**Share** | [**BswapLiquidityShare**](BswapLiquidityShare.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200104
 
-`func NewInlineResponse200104(poolId int64, poolNmae string, updateTime int64, liquidity SapiV1BswapLiquidityLiquidity, share SapiV1BswapLiquidityShare, ) *InlineResponse200104`
+`func NewInlineResponse200104(poolId int64, poolNmae string, updateTime int64, liquidity BswapLiquidityLiquidity, share BswapLiquidityShare, ) *InlineResponse200104`
 
 NewInlineResponse200104 instantiates a new InlineResponse200104 object
 This constructor will assign default values to properties that have it defined,
@@ -91,40 +91,40 @@ SetUpdateTime sets UpdateTime field to given value.
 
 ### GetLiquidity
 
-`func (o *InlineResponse200104) GetLiquidity() SapiV1BswapLiquidityLiquidity`
+`func (o *InlineResponse200104) GetLiquidity() BswapLiquidityLiquidity`
 
 GetLiquidity returns the Liquidity field if non-nil, zero value otherwise.
 
 ### GetLiquidityOk
 
-`func (o *InlineResponse200104) GetLiquidityOk() (*SapiV1BswapLiquidityLiquidity, bool)`
+`func (o *InlineResponse200104) GetLiquidityOk() (*BswapLiquidityLiquidity, bool)`
 
 GetLiquidityOk returns a tuple with the Liquidity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLiquidity
 
-`func (o *InlineResponse200104) SetLiquidity(v SapiV1BswapLiquidityLiquidity)`
+`func (o *InlineResponse200104) SetLiquidity(v BswapLiquidityLiquidity)`
 
 SetLiquidity sets Liquidity field to given value.
 
 
 ### GetShare
 
-`func (o *InlineResponse200104) GetShare() SapiV1BswapLiquidityShare`
+`func (o *InlineResponse200104) GetShare() BswapLiquidityShare`
 
 GetShare returns the Share field if non-nil, zero value otherwise.
 
 ### GetShareOk
 
-`func (o *InlineResponse200104) GetShareOk() (*SapiV1BswapLiquidityShare, bool)`
+`func (o *InlineResponse200104) GetShareOk() (*BswapLiquidityShare, bool)`
 
 GetShareOk returns a tuple with the Share field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetShare
 
-`func (o *InlineResponse200104) SetShare(v SapiV1BswapLiquidityShare)`
+`func (o *InlineResponse200104) SetShare(v BswapLiquidityShare)`
 
 SetShare sets Share field to given value.
 

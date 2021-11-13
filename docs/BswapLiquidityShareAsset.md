@@ -1,4 +1,4 @@
-# SapiV1BswapLiquidityLiquidity
+# BswapLiquidityShareAsset
 
 ## Properties
 
@@ -9,59 +9,59 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewSapiV1BswapLiquidityLiquidity
+### NewBswapLiquidityShareAsset
 
-`func NewSapiV1BswapLiquidityLiquidity(bUSD float64, uSDT float64, ) *SapiV1BswapLiquidityLiquidity`
+`func NewBswapLiquidityShareAsset(bUSD float64, uSDT float64, ) *BswapLiquidityShareAsset`
 
-NewSapiV1BswapLiquidityLiquidity instantiates a new SapiV1BswapLiquidityLiquidity object
+NewBswapLiquidityShareAsset instantiates a new BswapLiquidityShareAsset object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewSapiV1BswapLiquidityLiquidityWithDefaults
+### NewBswapLiquidityShareAssetWithDefaults
 
-`func NewSapiV1BswapLiquidityLiquidityWithDefaults() *SapiV1BswapLiquidityLiquidity`
+`func NewBswapLiquidityShareAssetWithDefaults() *BswapLiquidityShareAsset`
 
-NewSapiV1BswapLiquidityLiquidityWithDefaults instantiates a new SapiV1BswapLiquidityLiquidity object
+NewBswapLiquidityShareAssetWithDefaults instantiates a new BswapLiquidityShareAsset object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetBUSD
 
-`func (o *SapiV1BswapLiquidityLiquidity) GetBUSD() float64`
+`func (o *BswapLiquidityShareAsset) GetBUSD() float64`
 
 GetBUSD returns the BUSD field if non-nil, zero value otherwise.
 
 ### GetBUSDOk
 
-`func (o *SapiV1BswapLiquidityLiquidity) GetBUSDOk() (*float64, bool)`
+`func (o *BswapLiquidityShareAsset) GetBUSDOk() (*float64, bool)`
 
 GetBUSDOk returns a tuple with the BUSD field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBUSD
 
-`func (o *SapiV1BswapLiquidityLiquidity) SetBUSD(v float64)`
+`func (o *BswapLiquidityShareAsset) SetBUSD(v float64)`
 
 SetBUSD sets BUSD field to given value.
 
 
 ### GetUSDT
 
-`func (o *SapiV1BswapLiquidityLiquidity) GetUSDT() float64`
+`func (o *BswapLiquidityShareAsset) GetUSDT() float64`
 
 GetUSDT returns the USDT field if non-nil, zero value otherwise.
 
 ### GetUSDTOk
 
-`func (o *SapiV1BswapLiquidityLiquidity) GetUSDTOk() (*float64, bool)`
+`func (o *BswapLiquidityShareAsset) GetUSDTOk() (*float64, bool)`
 
 GetUSDTOk returns a tuple with the USDT field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUSDT
 
-`func (o *SapiV1BswapLiquidityLiquidity) SetUSDT(v float64)`
+`func (o *BswapLiquidityShareAsset) SetUSDT(v float64)`
 
 SetUSDT sets USDT field to given value.
 

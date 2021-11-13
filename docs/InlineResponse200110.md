@@ -7,14 +7,14 @@ Name | Type | Description | Notes
 **PoolId** | **int64** |  | 
 **PoolNmae** | **string** |  | 
 **UpdateTime** | **int64** |  | 
-**Liquidity** | [**SapiV1BswapPoolConfigureLiquidity**](SapiV1BswapPoolConfigureLiquidity.md) |  | 
-**AssetConfigure** | [**SapiV1BswapPoolConfigureAssetConfigure**](SapiV1BswapPoolConfigureAssetConfigure.md) |  | 
+**Liquidity** | [**BswapPoolConfigureLiquidity**](BswapPoolConfigureLiquidity.md) |  | 
+**AssetConfigure** | [**BswapPoolConfigureAssetConfigure**](BswapPoolConfigureAssetConfigure.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200110
 
-`func NewInlineResponse200110(poolId int64, poolNmae string, updateTime int64, liquidity SapiV1BswapPoolConfigureLiquidity, assetConfigure SapiV1BswapPoolConfigureAssetConfigure, ) *InlineResponse200110`
+`func NewInlineResponse200110(poolId int64, poolNmae string, updateTime int64, liquidity BswapPoolConfigureLiquidity, assetConfigure BswapPoolConfigureAssetConfigure, ) *InlineResponse200110`
 
 NewInlineResponse200110 instantiates a new InlineResponse200110 object
 This constructor will assign default values to properties that have it defined,
@@ -91,40 +91,40 @@ SetUpdateTime sets UpdateTime field to given value.
 
 ### GetLiquidity
 
-`func (o *InlineResponse200110) GetLiquidity() SapiV1BswapPoolConfigureLiquidity`
+`func (o *InlineResponse200110) GetLiquidity() BswapPoolConfigureLiquidity`
 
 GetLiquidity returns the Liquidity field if non-nil, zero value otherwise.
 
 ### GetLiquidityOk
 
-`func (o *InlineResponse200110) GetLiquidityOk() (*SapiV1BswapPoolConfigureLiquidity, bool)`
+`func (o *InlineResponse200110) GetLiquidityOk() (*BswapPoolConfigureLiquidity, bool)`
 
 GetLiquidityOk returns a tuple with the Liquidity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLiquidity
 
-`func (o *InlineResponse200110) SetLiquidity(v SapiV1BswapPoolConfigureLiquidity)`
+`func (o *InlineResponse200110) SetLiquidity(v BswapPoolConfigureLiquidity)`
 
 SetLiquidity sets Liquidity field to given value.
 
 
 ### GetAssetConfigure
 
-`func (o *InlineResponse200110) GetAssetConfigure() SapiV1BswapPoolConfigureAssetConfigure`
+`func (o *InlineResponse200110) GetAssetConfigure() BswapPoolConfigureAssetConfigure`
 
 GetAssetConfigure returns the AssetConfigure field if non-nil, zero value otherwise.
 
 ### GetAssetConfigureOk
 
-`func (o *InlineResponse200110) GetAssetConfigureOk() (*SapiV1BswapPoolConfigureAssetConfigure, bool)`
+`func (o *InlineResponse200110) GetAssetConfigureOk() (*BswapPoolConfigureAssetConfigure, bool)`
 
 GetAssetConfigureOk returns a tuple with the AssetConfigure field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAssetConfigure
 
-`func (o *InlineResponse200110) SetAssetConfigure(v SapiV1BswapPoolConfigureAssetConfigure)`
+`func (o *InlineResponse200110) SetAssetConfigure(v BswapPoolConfigureAssetConfigure)`
 
 SetAssetConfigure sets AssetConfigure field to given value.
 

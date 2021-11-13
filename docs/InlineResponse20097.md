@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Underlying** | **string** |  | 
 **TokenIssued** | **string** |  | 
 **Basket** | **string** |  | 
-**CurrentBaskets** | [**[]SapiV1BlvtTokenInfoCurrentBaskets**](SapiV1BlvtTokenInfoCurrentBaskets.md) |  | 
+**CurrentBaskets** | [**[]BlvtTokenInfoCurrentBaskets**](BlvtTokenInfoCurrentBaskets.md) |  | 
 **Nav** | **string** |  | 
 **RealLeverage** | **string** |  | 
 **FundingRate** | **string** |  | 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 ### NewInlineResponse20097
 
-`func NewInlineResponse20097(tokenName string, description string, underlying string, tokenIssued string, basket string, currentBaskets []SapiV1BlvtTokenInfoCurrentBaskets, nav string, realLeverage string, fundingRate string, dailyManagementFee string, purchaseFeePct string, dailyPurchaseLimit string, redeemFeePct string, dailyRedeemLimit string, timestamp int64, ) *InlineResponse20097`
+`func NewInlineResponse20097(tokenName string, description string, underlying string, tokenIssued string, basket string, currentBaskets []BlvtTokenInfoCurrentBaskets, nav string, realLeverage string, fundingRate string, dailyManagementFee string, purchaseFeePct string, dailyPurchaseLimit string, redeemFeePct string, dailyRedeemLimit string, timestamp int64, ) *InlineResponse20097`
 
 NewInlineResponse20097 instantiates a new InlineResponse20097 object
 This constructor will assign default values to properties that have it defined,
@@ -141,20 +141,20 @@ SetBasket sets Basket field to given value.
 
 ### GetCurrentBaskets
 
-`func (o *InlineResponse20097) GetCurrentBaskets() []SapiV1BlvtTokenInfoCurrentBaskets`
+`func (o *InlineResponse20097) GetCurrentBaskets() []BlvtTokenInfoCurrentBaskets`
 
 GetCurrentBaskets returns the CurrentBaskets field if non-nil, zero value otherwise.
 
 ### GetCurrentBasketsOk
 
-`func (o *InlineResponse20097) GetCurrentBasketsOk() (*[]SapiV1BlvtTokenInfoCurrentBaskets, bool)`
+`func (o *InlineResponse20097) GetCurrentBasketsOk() (*[]BlvtTokenInfoCurrentBaskets, bool)`
 
 GetCurrentBasketsOk returns a tuple with the CurrentBaskets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCurrentBaskets
 
-`func (o *InlineResponse20097) SetCurrentBaskets(v []SapiV1BlvtTokenInfoCurrentBaskets)`
+`func (o *InlineResponse20097) SetCurrentBaskets(v []BlvtTokenInfoCurrentBaskets)`
 
 SetCurrentBaskets sets CurrentBaskets field to given value.
 

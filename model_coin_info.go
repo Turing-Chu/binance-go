@@ -17,27 +17,27 @@ import (
 
 // CoinInfo struct for CoinInfo
 type CoinInfo struct {
-	Coin              string                                 `json:"coin"`
-	DepositAllEnable  bool                                   `json:"depositAllEnable"`
-	Free              string                                 `json:"free"`
-	Freeze            string                                 `json:"freeze"`
-	Ipoable           string                                 `json:"ipoable"`
-	Ipoing            string                                 `json:"ipoing"`
-	IsLegalMoney      bool                                   `json:"isLegalMoney"`
-	Locked            string                                 `json:"locked"`
-	Name              string                                 `json:"name"`
-	NetworkList       []SapiV1CapitalConfigGetallNetworkList `json:"networkList"`
-	Storage           string                                 `json:"storage"`
-	Trading           bool                                   `json:"trading"`
-	WithdrawAllEnable bool                                   `json:"withdrawAllEnable"`
-	Withdrawing       string                                 `json:"withdrawing"`
+	Coin              string                           `json:"coin"`
+	DepositAllEnable  bool                             `json:"depositAllEnable"`
+	Free              string                           `json:"free"`
+	Freeze            string                           `json:"freeze"`
+	Ipoable           string                           `json:"ipoable"`
+	Ipoing            string                           `json:"ipoing"`
+	IsLegalMoney      bool                             `json:"isLegalMoney"`
+	Locked            string                           `json:"locked"`
+	Name              string                           `json:"name"`
+	NetworkList       []CapitalConfigGetallNetworkList `json:"networkList"`
+	Storage           string                           `json:"storage"`
+	Trading           bool                             `json:"trading"`
+	WithdrawAllEnable bool                             `json:"withdrawAllEnable"`
+	Withdrawing       string                           `json:"withdrawing"`
 }
 
 // NewCoinInfo instantiates a new CoinInfo object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCoinInfo(coin string, depositAllEnable bool, free string, freeze string, ipoable string, ipoing string, isLegalMoney bool, locked string, name string, networkList []SapiV1CapitalConfigGetallNetworkList, storage string, trading bool, withdrawAllEnable bool, withdrawing string) *CoinInfo {
+func NewCoinInfo(coin string, depositAllEnable bool, free string, freeze string, ipoable string, ipoing string, isLegalMoney bool, locked string, name string, networkList []CapitalConfigGetallNetworkList, storage string, trading bool, withdrawAllEnable bool, withdrawing string) *CoinInfo {
 	this := CoinInfo{}
 	this.Coin = coin
 	this.DepositAllEnable = depositAllEnable
@@ -281,9 +281,9 @@ func (o *CoinInfo) SetName(v string) {
 }
 
 // GetNetworkList returns the NetworkList field value
-func (o *CoinInfo) GetNetworkList() []SapiV1CapitalConfigGetallNetworkList {
+func (o *CoinInfo) GetNetworkList() []CapitalConfigGetallNetworkList {
 	if o == nil {
-		var ret []SapiV1CapitalConfigGetallNetworkList
+		var ret []CapitalConfigGetallNetworkList
 		return ret
 	}
 
@@ -292,7 +292,7 @@ func (o *CoinInfo) GetNetworkList() []SapiV1CapitalConfigGetallNetworkList {
 
 // GetNetworkListOk returns a tuple with the NetworkList field value
 // and a boolean to check if the value has been set.
-func (o *CoinInfo) GetNetworkListOk() (*[]SapiV1CapitalConfigGetallNetworkList, bool) {
+func (o *CoinInfo) GetNetworkListOk() (*[]CapitalConfigGetallNetworkList, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -300,7 +300,7 @@ func (o *CoinInfo) GetNetworkListOk() (*[]SapiV1CapitalConfigGetallNetworkList, 
 }
 
 // SetNetworkList sets field value
-func (o *CoinInfo) SetNetworkList(v []SapiV1CapitalConfigGetallNetworkList) {
+func (o *CoinInfo) SetNetworkList(v []CapitalConfigGetallNetworkList) {
 	o.NetworkList = v
 }
 

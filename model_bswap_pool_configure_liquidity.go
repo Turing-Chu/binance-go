@@ -15,8 +15,8 @@ import (
 	"encoding/json"
 )
 
-// SapiV1BswapPoolConfigureLiquidity struct for SapiV1BswapPoolConfigureLiquidity
-type SapiV1BswapPoolConfigureLiquidity struct {
+// BswapPoolConfigureLiquidity struct for BswapPoolConfigureLiquidity
+type BswapPoolConfigureLiquidity struct {
 	// \"NA\" if pool is an innovation pool
 	ConstantA      int64   `json:"constantA"`
 	MinRedeemShare float64 `json:"minRedeemShare"`
@@ -24,28 +24,28 @@ type SapiV1BswapPoolConfigureLiquidity struct {
 	SlippageTolerance float64 `json:"slippageTolerance"`
 }
 
-// NewSapiV1BswapPoolConfigureLiquidity instantiates a new SapiV1BswapPoolConfigureLiquidity object
+// NewBswapPoolConfigureLiquidity instantiates a new BswapPoolConfigureLiquidity object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSapiV1BswapPoolConfigureLiquidity(constantA int64, minRedeemShare float64, slippageTolerance float64) *SapiV1BswapPoolConfigureLiquidity {
-	this := SapiV1BswapPoolConfigureLiquidity{}
+func NewBswapPoolConfigureLiquidity(constantA int64, minRedeemShare float64, slippageTolerance float64) *BswapPoolConfigureLiquidity {
+	this := BswapPoolConfigureLiquidity{}
 	this.ConstantA = constantA
 	this.MinRedeemShare = minRedeemShare
 	this.SlippageTolerance = slippageTolerance
 	return &this
 }
 
-// NewSapiV1BswapPoolConfigureLiquidityWithDefaults instantiates a new SapiV1BswapPoolConfigureLiquidity object
+// NewBswapPoolConfigureLiquidityWithDefaults instantiates a new BswapPoolConfigureLiquidity object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewSapiV1BswapPoolConfigureLiquidityWithDefaults() *SapiV1BswapPoolConfigureLiquidity {
-	this := SapiV1BswapPoolConfigureLiquidity{}
+func NewBswapPoolConfigureLiquidityWithDefaults() *BswapPoolConfigureLiquidity {
+	this := BswapPoolConfigureLiquidity{}
 	return &this
 }
 
 // GetConstantA returns the ConstantA field value
-func (o *SapiV1BswapPoolConfigureLiquidity) GetConstantA() int64 {
+func (o *BswapPoolConfigureLiquidity) GetConstantA() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -56,7 +56,7 @@ func (o *SapiV1BswapPoolConfigureLiquidity) GetConstantA() int64 {
 
 // GetConstantAOk returns a tuple with the ConstantA field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BswapPoolConfigureLiquidity) GetConstantAOk() (*int64, bool) {
+func (o *BswapPoolConfigureLiquidity) GetConstantAOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -64,12 +64,12 @@ func (o *SapiV1BswapPoolConfigureLiquidity) GetConstantAOk() (*int64, bool) {
 }
 
 // SetConstantA sets field value
-func (o *SapiV1BswapPoolConfigureLiquidity) SetConstantA(v int64) {
+func (o *BswapPoolConfigureLiquidity) SetConstantA(v int64) {
 	o.ConstantA = v
 }
 
 // GetMinRedeemShare returns the MinRedeemShare field value
-func (o *SapiV1BswapPoolConfigureLiquidity) GetMinRedeemShare() float64 {
+func (o *BswapPoolConfigureLiquidity) GetMinRedeemShare() float64 {
 	if o == nil {
 		var ret float64
 		return ret
@@ -80,7 +80,7 @@ func (o *SapiV1BswapPoolConfigureLiquidity) GetMinRedeemShare() float64 {
 
 // GetMinRedeemShareOk returns a tuple with the MinRedeemShare field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BswapPoolConfigureLiquidity) GetMinRedeemShareOk() (*float64, bool) {
+func (o *BswapPoolConfigureLiquidity) GetMinRedeemShareOk() (*float64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -88,12 +88,12 @@ func (o *SapiV1BswapPoolConfigureLiquidity) GetMinRedeemShareOk() (*float64, boo
 }
 
 // SetMinRedeemShare sets field value
-func (o *SapiV1BswapPoolConfigureLiquidity) SetMinRedeemShare(v float64) {
+func (o *BswapPoolConfigureLiquidity) SetMinRedeemShare(v float64) {
 	o.MinRedeemShare = v
 }
 
 // GetSlippageTolerance returns the SlippageTolerance field value
-func (o *SapiV1BswapPoolConfigureLiquidity) GetSlippageTolerance() float64 {
+func (o *BswapPoolConfigureLiquidity) GetSlippageTolerance() float64 {
 	if o == nil {
 		var ret float64
 		return ret
@@ -104,7 +104,7 @@ func (o *SapiV1BswapPoolConfigureLiquidity) GetSlippageTolerance() float64 {
 
 // GetSlippageToleranceOk returns a tuple with the SlippageTolerance field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BswapPoolConfigureLiquidity) GetSlippageToleranceOk() (*float64, bool) {
+func (o *BswapPoolConfigureLiquidity) GetSlippageToleranceOk() (*float64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -112,11 +112,11 @@ func (o *SapiV1BswapPoolConfigureLiquidity) GetSlippageToleranceOk() (*float64, 
 }
 
 // SetSlippageTolerance sets field value
-func (o *SapiV1BswapPoolConfigureLiquidity) SetSlippageTolerance(v float64) {
+func (o *BswapPoolConfigureLiquidity) SetSlippageTolerance(v float64) {
 	o.SlippageTolerance = v
 }
 
-func (o SapiV1BswapPoolConfigureLiquidity) MarshalJSON() ([]byte, error) {
+func (o BswapPoolConfigureLiquidity) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if true {
 		toSerialize["constantA"] = o.ConstantA
@@ -130,38 +130,38 @@ func (o SapiV1BswapPoolConfigureLiquidity) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableSapiV1BswapPoolConfigureLiquidity struct {
-	value *SapiV1BswapPoolConfigureLiquidity
+type NullableBswapPoolConfigureLiquidity struct {
+	value *BswapPoolConfigureLiquidity
 	isSet bool
 }
 
-func (v NullableSapiV1BswapPoolConfigureLiquidity) Get() *SapiV1BswapPoolConfigureLiquidity {
+func (v NullableBswapPoolConfigureLiquidity) Get() *BswapPoolConfigureLiquidity {
 	return v.value
 }
 
-func (v *NullableSapiV1BswapPoolConfigureLiquidity) Set(val *SapiV1BswapPoolConfigureLiquidity) {
+func (v *NullableBswapPoolConfigureLiquidity) Set(val *BswapPoolConfigureLiquidity) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableSapiV1BswapPoolConfigureLiquidity) IsSet() bool {
+func (v NullableBswapPoolConfigureLiquidity) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableSapiV1BswapPoolConfigureLiquidity) Unset() {
+func (v *NullableBswapPoolConfigureLiquidity) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableSapiV1BswapPoolConfigureLiquidity(val *SapiV1BswapPoolConfigureLiquidity) *NullableSapiV1BswapPoolConfigureLiquidity {
-	return &NullableSapiV1BswapPoolConfigureLiquidity{value: val, isSet: true}
+func NewNullableBswapPoolConfigureLiquidity(val *BswapPoolConfigureLiquidity) *NullableBswapPoolConfigureLiquidity {
+	return &NullableBswapPoolConfigureLiquidity{value: val, isSet: true}
 }
 
-func (v NullableSapiV1BswapPoolConfigureLiquidity) MarshalJSON() ([]byte, error) {
+func (v NullableBswapPoolConfigureLiquidity) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableSapiV1BswapPoolConfigureLiquidity) UnmarshalJSON(src []byte) error {
+func (v *NullableBswapPoolConfigureLiquidity) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

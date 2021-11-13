@@ -1,4 +1,4 @@
-# SapiV1BswapPoolConfigureLiquidity
+# BswapPoolConfigureLiquidity
 
 ## Properties
 
@@ -10,79 +10,79 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewSapiV1BswapPoolConfigureLiquidity
+### NewBswapPoolConfigureLiquidity
 
-`func NewSapiV1BswapPoolConfigureLiquidity(constantA int64, minRedeemShare float64, slippageTolerance float64, ) *SapiV1BswapPoolConfigureLiquidity`
+`func NewBswapPoolConfigureLiquidity(constantA int64, minRedeemShare float64, slippageTolerance float64, ) *BswapPoolConfigureLiquidity`
 
-NewSapiV1BswapPoolConfigureLiquidity instantiates a new SapiV1BswapPoolConfigureLiquidity object
+NewBswapPoolConfigureLiquidity instantiates a new BswapPoolConfigureLiquidity object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewSapiV1BswapPoolConfigureLiquidityWithDefaults
+### NewBswapPoolConfigureLiquidityWithDefaults
 
-`func NewSapiV1BswapPoolConfigureLiquidityWithDefaults() *SapiV1BswapPoolConfigureLiquidity`
+`func NewBswapPoolConfigureLiquidityWithDefaults() *BswapPoolConfigureLiquidity`
 
-NewSapiV1BswapPoolConfigureLiquidityWithDefaults instantiates a new SapiV1BswapPoolConfigureLiquidity object
+NewBswapPoolConfigureLiquidityWithDefaults instantiates a new BswapPoolConfigureLiquidity object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetConstantA
 
-`func (o *SapiV1BswapPoolConfigureLiquidity) GetConstantA() int64`
+`func (o *BswapPoolConfigureLiquidity) GetConstantA() int64`
 
 GetConstantA returns the ConstantA field if non-nil, zero value otherwise.
 
 ### GetConstantAOk
 
-`func (o *SapiV1BswapPoolConfigureLiquidity) GetConstantAOk() (*int64, bool)`
+`func (o *BswapPoolConfigureLiquidity) GetConstantAOk() (*int64, bool)`
 
 GetConstantAOk returns a tuple with the ConstantA field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConstantA
 
-`func (o *SapiV1BswapPoolConfigureLiquidity) SetConstantA(v int64)`
+`func (o *BswapPoolConfigureLiquidity) SetConstantA(v int64)`
 
 SetConstantA sets ConstantA field to given value.
 
 
 ### GetMinRedeemShare
 
-`func (o *SapiV1BswapPoolConfigureLiquidity) GetMinRedeemShare() float64`
+`func (o *BswapPoolConfigureLiquidity) GetMinRedeemShare() float64`
 
 GetMinRedeemShare returns the MinRedeemShare field if non-nil, zero value otherwise.
 
 ### GetMinRedeemShareOk
 
-`func (o *SapiV1BswapPoolConfigureLiquidity) GetMinRedeemShareOk() (*float64, bool)`
+`func (o *BswapPoolConfigureLiquidity) GetMinRedeemShareOk() (*float64, bool)`
 
 GetMinRedeemShareOk returns a tuple with the MinRedeemShare field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMinRedeemShare
 
-`func (o *SapiV1BswapPoolConfigureLiquidity) SetMinRedeemShare(v float64)`
+`func (o *BswapPoolConfigureLiquidity) SetMinRedeemShare(v float64)`
 
 SetMinRedeemShare sets MinRedeemShare field to given value.
 
 
 ### GetSlippageTolerance
 
-`func (o *SapiV1BswapPoolConfigureLiquidity) GetSlippageTolerance() float64`
+`func (o *BswapPoolConfigureLiquidity) GetSlippageTolerance() float64`
 
 GetSlippageTolerance returns the SlippageTolerance field if non-nil, zero value otherwise.
 
 ### GetSlippageToleranceOk
 
-`func (o *SapiV1BswapPoolConfigureLiquidity) GetSlippageToleranceOk() (*float64, bool)`
+`func (o *BswapPoolConfigureLiquidity) GetSlippageToleranceOk() (*float64, bool)`
 
 GetSlippageToleranceOk returns a tuple with the SlippageTolerance field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSlippageTolerance
 
-`func (o *SapiV1BswapPoolConfigureLiquidity) SetSlippageTolerance(v float64)`
+`func (o *BswapPoolConfigureLiquidity) SetSlippageTolerance(v float64)`
 
 SetSlippageTolerance sets SlippageTolerance field to given value.
 

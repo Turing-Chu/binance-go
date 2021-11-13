@@ -15,8 +15,8 @@ import (
 	"encoding/json"
 )
 
-// SapiV1CapitalConfigGetallNetworkList struct for SapiV1CapitalConfigGetallNetworkList
-type SapiV1CapitalConfigGetallNetworkList struct {
+// CapitalConfigGetallNetworkList struct for CapitalConfigGetallNetworkList
+type CapitalConfigGetallNetworkList struct {
 	AddressRegex string `json:"addressRegex"`
 	Coin         string `json:"coin"`
 	// shown only when \"depositEnable\" is false.
@@ -41,12 +41,12 @@ type SapiV1CapitalConfigGetallNetworkList struct {
 	SameAddress             bool   `json:"sameAddress"`
 }
 
-// NewSapiV1CapitalConfigGetallNetworkList instantiates a new SapiV1CapitalConfigGetallNetworkList object
+// NewCapitalConfigGetallNetworkList instantiates a new CapitalConfigGetallNetworkList object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSapiV1CapitalConfigGetallNetworkList(addressRegex string, coin string, depositDesc string, depositEnable bool, isDefault bool, memoRegex string, minConfirm int64, name string, resetAddressStatus bool, specialTips string, unLockConfirm int64, withdrawDesc string, withdrawEnable bool, withdrawFee string, withdrawIntegerMultiple string, withdrawMax string, withdrawMin string, sameAddress bool) *SapiV1CapitalConfigGetallNetworkList {
-	this := SapiV1CapitalConfigGetallNetworkList{}
+func NewCapitalConfigGetallNetworkList(addressRegex string, coin string, depositDesc string, depositEnable bool, isDefault bool, memoRegex string, minConfirm int64, name string, resetAddressStatus bool, specialTips string, unLockConfirm int64, withdrawDesc string, withdrawEnable bool, withdrawFee string, withdrawIntegerMultiple string, withdrawMax string, withdrawMin string, sameAddress bool) *CapitalConfigGetallNetworkList {
+	this := CapitalConfigGetallNetworkList{}
 	this.AddressRegex = addressRegex
 	this.Coin = coin
 	this.DepositDesc = depositDesc
@@ -68,16 +68,16 @@ func NewSapiV1CapitalConfigGetallNetworkList(addressRegex string, coin string, d
 	return &this
 }
 
-// NewSapiV1CapitalConfigGetallNetworkListWithDefaults instantiates a new SapiV1CapitalConfigGetallNetworkList object
+// NewCapitalConfigGetallNetworkListWithDefaults instantiates a new CapitalConfigGetallNetworkList object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewSapiV1CapitalConfigGetallNetworkListWithDefaults() *SapiV1CapitalConfigGetallNetworkList {
-	this := SapiV1CapitalConfigGetallNetworkList{}
+func NewCapitalConfigGetallNetworkListWithDefaults() *CapitalConfigGetallNetworkList {
+	this := CapitalConfigGetallNetworkList{}
 	return &this
 }
 
 // GetAddressRegex returns the AddressRegex field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetAddressRegex() string {
+func (o *CapitalConfigGetallNetworkList) GetAddressRegex() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -88,7 +88,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetAddressRegex() string {
 
 // GetAddressRegexOk returns a tuple with the AddressRegex field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetAddressRegexOk() (*string, bool) {
+func (o *CapitalConfigGetallNetworkList) GetAddressRegexOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -96,12 +96,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetAddressRegexOk() (*string, boo
 }
 
 // SetAddressRegex sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetAddressRegex(v string) {
+func (o *CapitalConfigGetallNetworkList) SetAddressRegex(v string) {
 	o.AddressRegex = v
 }
 
 // GetCoin returns the Coin field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetCoin() string {
+func (o *CapitalConfigGetallNetworkList) GetCoin() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -112,7 +112,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetCoin() string {
 
 // GetCoinOk returns a tuple with the Coin field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetCoinOk() (*string, bool) {
+func (o *CapitalConfigGetallNetworkList) GetCoinOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -120,12 +120,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetCoinOk() (*string, bool) {
 }
 
 // SetCoin sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetCoin(v string) {
+func (o *CapitalConfigGetallNetworkList) SetCoin(v string) {
 	o.Coin = v
 }
 
 // GetDepositDesc returns the DepositDesc field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetDepositDesc() string {
+func (o *CapitalConfigGetallNetworkList) GetDepositDesc() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -136,7 +136,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetDepositDesc() string {
 
 // GetDepositDescOk returns a tuple with the DepositDesc field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetDepositDescOk() (*string, bool) {
+func (o *CapitalConfigGetallNetworkList) GetDepositDescOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -144,12 +144,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetDepositDescOk() (*string, bool
 }
 
 // SetDepositDesc sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetDepositDesc(v string) {
+func (o *CapitalConfigGetallNetworkList) SetDepositDesc(v string) {
 	o.DepositDesc = v
 }
 
 // GetDepositEnable returns the DepositEnable field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetDepositEnable() bool {
+func (o *CapitalConfigGetallNetworkList) GetDepositEnable() bool {
 	if o == nil {
 		var ret bool
 		return ret
@@ -160,7 +160,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetDepositEnable() bool {
 
 // GetDepositEnableOk returns a tuple with the DepositEnable field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetDepositEnableOk() (*bool, bool) {
+func (o *CapitalConfigGetallNetworkList) GetDepositEnableOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -168,12 +168,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetDepositEnableOk() (*bool, bool
 }
 
 // SetDepositEnable sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetDepositEnable(v bool) {
+func (o *CapitalConfigGetallNetworkList) SetDepositEnable(v bool) {
 	o.DepositEnable = v
 }
 
 // GetIsDefault returns the IsDefault field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetIsDefault() bool {
+func (o *CapitalConfigGetallNetworkList) GetIsDefault() bool {
 	if o == nil {
 		var ret bool
 		return ret
@@ -184,7 +184,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetIsDefault() bool {
 
 // GetIsDefaultOk returns a tuple with the IsDefault field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetIsDefaultOk() (*bool, bool) {
+func (o *CapitalConfigGetallNetworkList) GetIsDefaultOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -192,12 +192,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetIsDefaultOk() (*bool, bool) {
 }
 
 // SetIsDefault sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetIsDefault(v bool) {
+func (o *CapitalConfigGetallNetworkList) SetIsDefault(v bool) {
 	o.IsDefault = v
 }
 
 // GetMemoRegex returns the MemoRegex field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetMemoRegex() string {
+func (o *CapitalConfigGetallNetworkList) GetMemoRegex() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -208,7 +208,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetMemoRegex() string {
 
 // GetMemoRegexOk returns a tuple with the MemoRegex field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetMemoRegexOk() (*string, bool) {
+func (o *CapitalConfigGetallNetworkList) GetMemoRegexOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -216,12 +216,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetMemoRegexOk() (*string, bool) 
 }
 
 // SetMemoRegex sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetMemoRegex(v string) {
+func (o *CapitalConfigGetallNetworkList) SetMemoRegex(v string) {
 	o.MemoRegex = v
 }
 
 // GetMinConfirm returns the MinConfirm field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetMinConfirm() int64 {
+func (o *CapitalConfigGetallNetworkList) GetMinConfirm() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -232,7 +232,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetMinConfirm() int64 {
 
 // GetMinConfirmOk returns a tuple with the MinConfirm field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetMinConfirmOk() (*int64, bool) {
+func (o *CapitalConfigGetallNetworkList) GetMinConfirmOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -240,12 +240,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetMinConfirmOk() (*int64, bool) 
 }
 
 // SetMinConfirm sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetMinConfirm(v int64) {
+func (o *CapitalConfigGetallNetworkList) SetMinConfirm(v int64) {
 	o.MinConfirm = v
 }
 
 // GetName returns the Name field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetName() string {
+func (o *CapitalConfigGetallNetworkList) GetName() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -256,7 +256,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetName() string {
 
 // GetNameOk returns a tuple with the Name field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetNameOk() (*string, bool) {
+func (o *CapitalConfigGetallNetworkList) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -264,12 +264,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetNameOk() (*string, bool) {
 }
 
 // SetName sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetName(v string) {
+func (o *CapitalConfigGetallNetworkList) SetName(v string) {
 	o.Name = v
 }
 
 // GetResetAddressStatus returns the ResetAddressStatus field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetResetAddressStatus() bool {
+func (o *CapitalConfigGetallNetworkList) GetResetAddressStatus() bool {
 	if o == nil {
 		var ret bool
 		return ret
@@ -280,7 +280,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetResetAddressStatus() bool {
 
 // GetResetAddressStatusOk returns a tuple with the ResetAddressStatus field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetResetAddressStatusOk() (*bool, bool) {
+func (o *CapitalConfigGetallNetworkList) GetResetAddressStatusOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -288,12 +288,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetResetAddressStatusOk() (*bool,
 }
 
 // SetResetAddressStatus sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetResetAddressStatus(v bool) {
+func (o *CapitalConfigGetallNetworkList) SetResetAddressStatus(v bool) {
 	o.ResetAddressStatus = v
 }
 
 // GetSpecialTips returns the SpecialTips field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetSpecialTips() string {
+func (o *CapitalConfigGetallNetworkList) GetSpecialTips() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -304,7 +304,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetSpecialTips() string {
 
 // GetSpecialTipsOk returns a tuple with the SpecialTips field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetSpecialTipsOk() (*string, bool) {
+func (o *CapitalConfigGetallNetworkList) GetSpecialTipsOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -312,12 +312,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetSpecialTipsOk() (*string, bool
 }
 
 // SetSpecialTips sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetSpecialTips(v string) {
+func (o *CapitalConfigGetallNetworkList) SetSpecialTips(v string) {
 	o.SpecialTips = v
 }
 
 // GetUnLockConfirm returns the UnLockConfirm field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetUnLockConfirm() int64 {
+func (o *CapitalConfigGetallNetworkList) GetUnLockConfirm() int64 {
 	if o == nil {
 		var ret int64
 		return ret
@@ -328,7 +328,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetUnLockConfirm() int64 {
 
 // GetUnLockConfirmOk returns a tuple with the UnLockConfirm field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetUnLockConfirmOk() (*int64, bool) {
+func (o *CapitalConfigGetallNetworkList) GetUnLockConfirmOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -336,12 +336,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetUnLockConfirmOk() (*int64, boo
 }
 
 // SetUnLockConfirm sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetUnLockConfirm(v int64) {
+func (o *CapitalConfigGetallNetworkList) SetUnLockConfirm(v int64) {
 	o.UnLockConfirm = v
 }
 
 // GetWithdrawDesc returns the WithdrawDesc field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawDesc() string {
+func (o *CapitalConfigGetallNetworkList) GetWithdrawDesc() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -352,7 +352,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawDesc() string {
 
 // GetWithdrawDescOk returns a tuple with the WithdrawDesc field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawDescOk() (*string, bool) {
+func (o *CapitalConfigGetallNetworkList) GetWithdrawDescOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -360,12 +360,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawDescOk() (*string, boo
 }
 
 // SetWithdrawDesc sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetWithdrawDesc(v string) {
+func (o *CapitalConfigGetallNetworkList) SetWithdrawDesc(v string) {
 	o.WithdrawDesc = v
 }
 
 // GetWithdrawEnable returns the WithdrawEnable field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawEnable() bool {
+func (o *CapitalConfigGetallNetworkList) GetWithdrawEnable() bool {
 	if o == nil {
 		var ret bool
 		return ret
@@ -376,7 +376,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawEnable() bool {
 
 // GetWithdrawEnableOk returns a tuple with the WithdrawEnable field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawEnableOk() (*bool, bool) {
+func (o *CapitalConfigGetallNetworkList) GetWithdrawEnableOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -384,12 +384,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawEnableOk() (*bool, boo
 }
 
 // SetWithdrawEnable sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetWithdrawEnable(v bool) {
+func (o *CapitalConfigGetallNetworkList) SetWithdrawEnable(v bool) {
 	o.WithdrawEnable = v
 }
 
 // GetWithdrawFee returns the WithdrawFee field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawFee() string {
+func (o *CapitalConfigGetallNetworkList) GetWithdrawFee() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -400,7 +400,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawFee() string {
 
 // GetWithdrawFeeOk returns a tuple with the WithdrawFee field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawFeeOk() (*string, bool) {
+func (o *CapitalConfigGetallNetworkList) GetWithdrawFeeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -408,12 +408,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawFeeOk() (*string, bool
 }
 
 // SetWithdrawFee sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetWithdrawFee(v string) {
+func (o *CapitalConfigGetallNetworkList) SetWithdrawFee(v string) {
 	o.WithdrawFee = v
 }
 
 // GetWithdrawIntegerMultiple returns the WithdrawIntegerMultiple field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawIntegerMultiple() string {
+func (o *CapitalConfigGetallNetworkList) GetWithdrawIntegerMultiple() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -424,7 +424,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawIntegerMultiple() stri
 
 // GetWithdrawIntegerMultipleOk returns a tuple with the WithdrawIntegerMultiple field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawIntegerMultipleOk() (*string, bool) {
+func (o *CapitalConfigGetallNetworkList) GetWithdrawIntegerMultipleOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -432,12 +432,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawIntegerMultipleOk() (*
 }
 
 // SetWithdrawIntegerMultiple sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetWithdrawIntegerMultiple(v string) {
+func (o *CapitalConfigGetallNetworkList) SetWithdrawIntegerMultiple(v string) {
 	o.WithdrawIntegerMultiple = v
 }
 
 // GetWithdrawMax returns the WithdrawMax field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawMax() string {
+func (o *CapitalConfigGetallNetworkList) GetWithdrawMax() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -448,7 +448,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawMax() string {
 
 // GetWithdrawMaxOk returns a tuple with the WithdrawMax field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawMaxOk() (*string, bool) {
+func (o *CapitalConfigGetallNetworkList) GetWithdrawMaxOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -456,12 +456,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawMaxOk() (*string, bool
 }
 
 // SetWithdrawMax sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetWithdrawMax(v string) {
+func (o *CapitalConfigGetallNetworkList) SetWithdrawMax(v string) {
 	o.WithdrawMax = v
 }
 
 // GetWithdrawMin returns the WithdrawMin field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawMin() string {
+func (o *CapitalConfigGetallNetworkList) GetWithdrawMin() string {
 	if o == nil {
 		var ret string
 		return ret
@@ -472,7 +472,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawMin() string {
 
 // GetWithdrawMinOk returns a tuple with the WithdrawMin field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawMinOk() (*string, bool) {
+func (o *CapitalConfigGetallNetworkList) GetWithdrawMinOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -480,12 +480,12 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetWithdrawMinOk() (*string, bool
 }
 
 // SetWithdrawMin sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetWithdrawMin(v string) {
+func (o *CapitalConfigGetallNetworkList) SetWithdrawMin(v string) {
 	o.WithdrawMin = v
 }
 
 // GetSameAddress returns the SameAddress field value
-func (o *SapiV1CapitalConfigGetallNetworkList) GetSameAddress() bool {
+func (o *CapitalConfigGetallNetworkList) GetSameAddress() bool {
 	if o == nil {
 		var ret bool
 		return ret
@@ -496,7 +496,7 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetSameAddress() bool {
 
 // GetSameAddressOk returns a tuple with the SameAddress field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1CapitalConfigGetallNetworkList) GetSameAddressOk() (*bool, bool) {
+func (o *CapitalConfigGetallNetworkList) GetSameAddressOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -504,11 +504,11 @@ func (o *SapiV1CapitalConfigGetallNetworkList) GetSameAddressOk() (*bool, bool) 
 }
 
 // SetSameAddress sets field value
-func (o *SapiV1CapitalConfigGetallNetworkList) SetSameAddress(v bool) {
+func (o *CapitalConfigGetallNetworkList) SetSameAddress(v bool) {
 	o.SameAddress = v
 }
 
-func (o SapiV1CapitalConfigGetallNetworkList) MarshalJSON() ([]byte, error) {
+func (o CapitalConfigGetallNetworkList) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if true {
 		toSerialize["addressRegex"] = o.AddressRegex
@@ -567,38 +567,38 @@ func (o SapiV1CapitalConfigGetallNetworkList) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableSapiV1CapitalConfigGetallNetworkList struct {
-	value *SapiV1CapitalConfigGetallNetworkList
+type NullableCapitalConfigGetallNetworkList struct {
+	value *CapitalConfigGetallNetworkList
 	isSet bool
 }
 
-func (v NullableSapiV1CapitalConfigGetallNetworkList) Get() *SapiV1CapitalConfigGetallNetworkList {
+func (v NullableCapitalConfigGetallNetworkList) Get() *CapitalConfigGetallNetworkList {
 	return v.value
 }
 
-func (v *NullableSapiV1CapitalConfigGetallNetworkList) Set(val *SapiV1CapitalConfigGetallNetworkList) {
+func (v *NullableCapitalConfigGetallNetworkList) Set(val *CapitalConfigGetallNetworkList) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableSapiV1CapitalConfigGetallNetworkList) IsSet() bool {
+func (v NullableCapitalConfigGetallNetworkList) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableSapiV1CapitalConfigGetallNetworkList) Unset() {
+func (v *NullableCapitalConfigGetallNetworkList) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableSapiV1CapitalConfigGetallNetworkList(val *SapiV1CapitalConfigGetallNetworkList) *NullableSapiV1CapitalConfigGetallNetworkList {
-	return &NullableSapiV1CapitalConfigGetallNetworkList{value: val, isSet: true}
+func NewNullableCapitalConfigGetallNetworkList(val *CapitalConfigGetallNetworkList) *NullableCapitalConfigGetallNetworkList {
+	return &NullableCapitalConfigGetallNetworkList{value: val, isSet: true}
 }
 
-func (v NullableSapiV1CapitalConfigGetallNetworkList) MarshalJSON() ([]byte, error) {
+func (v NullableCapitalConfigGetallNetworkList) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableSapiV1CapitalConfigGetallNetworkList) UnmarshalJSON(src []byte) error {
+func (v *NullableCapitalConfigGetallNetworkList) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

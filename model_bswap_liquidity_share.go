@@ -15,35 +15,35 @@ import (
 	"encoding/json"
 )
 
-// SapiV1BswapLiquidityShare struct for SapiV1BswapLiquidityShare
-type SapiV1BswapLiquidityShare struct {
-	ShareAmount     float64                        `json:"shareAmount"`
-	SharePercentage float64                        `json:"sharePercentage"`
-	Asset           SapiV1BswapLiquidityShareAsset `json:"asset"`
+// BswapLiquidityShare struct for BswapLiquidityShare
+type BswapLiquidityShare struct {
+	ShareAmount     float64                  `json:"shareAmount"`
+	SharePercentage float64                  `json:"sharePercentage"`
+	Asset           BswapLiquidityShareAsset `json:"asset"`
 }
 
-// NewSapiV1BswapLiquidityShare instantiates a new SapiV1BswapLiquidityShare object
+// NewBswapLiquidityShare instantiates a new BswapLiquidityShare object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSapiV1BswapLiquidityShare(shareAmount float64, sharePercentage float64, asset SapiV1BswapLiquidityShareAsset) *SapiV1BswapLiquidityShare {
-	this := SapiV1BswapLiquidityShare{}
+func NewBswapLiquidityShare(shareAmount float64, sharePercentage float64, asset BswapLiquidityShareAsset) *BswapLiquidityShare {
+	this := BswapLiquidityShare{}
 	this.ShareAmount = shareAmount
 	this.SharePercentage = sharePercentage
 	this.Asset = asset
 	return &this
 }
 
-// NewSapiV1BswapLiquidityShareWithDefaults instantiates a new SapiV1BswapLiquidityShare object
+// NewBswapLiquidityShareWithDefaults instantiates a new BswapLiquidityShare object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewSapiV1BswapLiquidityShareWithDefaults() *SapiV1BswapLiquidityShare {
-	this := SapiV1BswapLiquidityShare{}
+func NewBswapLiquidityShareWithDefaults() *BswapLiquidityShare {
+	this := BswapLiquidityShare{}
 	return &this
 }
 
 // GetShareAmount returns the ShareAmount field value
-func (o *SapiV1BswapLiquidityShare) GetShareAmount() float64 {
+func (o *BswapLiquidityShare) GetShareAmount() float64 {
 	if o == nil {
 		var ret float64
 		return ret
@@ -54,7 +54,7 @@ func (o *SapiV1BswapLiquidityShare) GetShareAmount() float64 {
 
 // GetShareAmountOk returns a tuple with the ShareAmount field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BswapLiquidityShare) GetShareAmountOk() (*float64, bool) {
+func (o *BswapLiquidityShare) GetShareAmountOk() (*float64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -62,12 +62,12 @@ func (o *SapiV1BswapLiquidityShare) GetShareAmountOk() (*float64, bool) {
 }
 
 // SetShareAmount sets field value
-func (o *SapiV1BswapLiquidityShare) SetShareAmount(v float64) {
+func (o *BswapLiquidityShare) SetShareAmount(v float64) {
 	o.ShareAmount = v
 }
 
 // GetSharePercentage returns the SharePercentage field value
-func (o *SapiV1BswapLiquidityShare) GetSharePercentage() float64 {
+func (o *BswapLiquidityShare) GetSharePercentage() float64 {
 	if o == nil {
 		var ret float64
 		return ret
@@ -78,7 +78,7 @@ func (o *SapiV1BswapLiquidityShare) GetSharePercentage() float64 {
 
 // GetSharePercentageOk returns a tuple with the SharePercentage field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BswapLiquidityShare) GetSharePercentageOk() (*float64, bool) {
+func (o *BswapLiquidityShare) GetSharePercentageOk() (*float64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -86,14 +86,14 @@ func (o *SapiV1BswapLiquidityShare) GetSharePercentageOk() (*float64, bool) {
 }
 
 // SetSharePercentage sets field value
-func (o *SapiV1BswapLiquidityShare) SetSharePercentage(v float64) {
+func (o *BswapLiquidityShare) SetSharePercentage(v float64) {
 	o.SharePercentage = v
 }
 
 // GetAsset returns the Asset field value
-func (o *SapiV1BswapLiquidityShare) GetAsset() SapiV1BswapLiquidityShareAsset {
+func (o *BswapLiquidityShare) GetAsset() BswapLiquidityShareAsset {
 	if o == nil {
-		var ret SapiV1BswapLiquidityShareAsset
+		var ret BswapLiquidityShareAsset
 		return ret
 	}
 
@@ -102,7 +102,7 @@ func (o *SapiV1BswapLiquidityShare) GetAsset() SapiV1BswapLiquidityShareAsset {
 
 // GetAssetOk returns a tuple with the Asset field value
 // and a boolean to check if the value has been set.
-func (o *SapiV1BswapLiquidityShare) GetAssetOk() (*SapiV1BswapLiquidityShareAsset, bool) {
+func (o *BswapLiquidityShare) GetAssetOk() (*BswapLiquidityShareAsset, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -110,11 +110,11 @@ func (o *SapiV1BswapLiquidityShare) GetAssetOk() (*SapiV1BswapLiquidityShareAsse
 }
 
 // SetAsset sets field value
-func (o *SapiV1BswapLiquidityShare) SetAsset(v SapiV1BswapLiquidityShareAsset) {
+func (o *BswapLiquidityShare) SetAsset(v BswapLiquidityShareAsset) {
 	o.Asset = v
 }
 
-func (o SapiV1BswapLiquidityShare) MarshalJSON() ([]byte, error) {
+func (o BswapLiquidityShare) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if true {
 		toSerialize["shareAmount"] = o.ShareAmount
@@ -128,38 +128,38 @@ func (o SapiV1BswapLiquidityShare) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableSapiV1BswapLiquidityShare struct {
-	value *SapiV1BswapLiquidityShare
+type NullableBswapLiquidityShare struct {
+	value *BswapLiquidityShare
 	isSet bool
 }
 
-func (v NullableSapiV1BswapLiquidityShare) Get() *SapiV1BswapLiquidityShare {
+func (v NullableBswapLiquidityShare) Get() *BswapLiquidityShare {
 	return v.value
 }
 
-func (v *NullableSapiV1BswapLiquidityShare) Set(val *SapiV1BswapLiquidityShare) {
+func (v *NullableBswapLiquidityShare) Set(val *BswapLiquidityShare) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableSapiV1BswapLiquidityShare) IsSet() bool {
+func (v NullableBswapLiquidityShare) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableSapiV1BswapLiquidityShare) Unset() {
+func (v *NullableBswapLiquidityShare) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableSapiV1BswapLiquidityShare(val *SapiV1BswapLiquidityShare) *NullableSapiV1BswapLiquidityShare {
-	return &NullableSapiV1BswapLiquidityShare{value: val, isSet: true}
+func NewNullableBswapLiquidityShare(val *BswapLiquidityShare) *NullableBswapLiquidityShare {
+	return &NullableBswapLiquidityShare{value: val, isSet: true}
 }
 
-func (v NullableSapiV1BswapLiquidityShare) MarshalJSON() ([]byte, error) {
+func (v NullableBswapLiquidityShare) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableSapiV1BswapLiquidityShare) UnmarshalJSON(src []byte) error {
+func (v *NullableBswapLiquidityShare) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

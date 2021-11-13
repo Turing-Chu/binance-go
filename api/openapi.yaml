@@ -17907,7 +17907,7 @@ components:
       - symbol
       - transactionTime
       type: object
-    _api_v3_allOrderList_orders:
+    allOrderList_orders:
       example:
       - symbol: LTCBTC
         orderId: 4
@@ -17979,7 +17979,7 @@ components:
           type: boolean
         orders:
           items:
-            $ref: '#/components/schemas/_api_v3_allOrderList_orders'
+            $ref: '#/components/schemas/allOrderList_orders'
           type: array
       required:
       - contingencyType
@@ -17992,7 +17992,7 @@ components:
       - symbol
       - transactionTime
       type: object
-    _api_v3_openOrderList_orders:
+    openOrderList_orders:
       example:
       - symbol: LTCBTC
         orderId: 4
@@ -18061,7 +18061,7 @@ components:
           type: string
         orders:
           items:
-            $ref: '#/components/schemas/_api_v3_openOrderList_orders'
+            $ref: '#/components/schemas/openOrderList_orders'
           type: array
       required:
       - contingencyType
@@ -18932,7 +18932,7 @@ components:
           type: boolean
         orders:
           items:
-            $ref: '#/components/schemas/_api_v3_openOrderList_orders'
+            $ref: '#/components/schemas/openOrderList_orders'
           type: array
       required:
       - contingencyType

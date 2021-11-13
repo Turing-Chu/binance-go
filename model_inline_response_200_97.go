@@ -17,28 +17,28 @@ import (
 
 // InlineResponse20097 struct for InlineResponse20097
 type InlineResponse20097 struct {
-	TokenName          string                              `json:"tokenName"`
-	Description        string                              `json:"description"`
-	Underlying         string                              `json:"underlying"`
-	TokenIssued        string                              `json:"tokenIssued"`
-	Basket             string                              `json:"basket"`
-	CurrentBaskets     []SapiV1BlvtTokenInfoCurrentBaskets `json:"currentBaskets"`
-	Nav                string                              `json:"nav"`
-	RealLeverage       string                              `json:"realLeverage"`
-	FundingRate        string                              `json:"fundingRate"`
-	DailyManagementFee string                              `json:"dailyManagementFee"`
-	PurchaseFeePct     string                              `json:"purchaseFeePct"`
-	DailyPurchaseLimit string                              `json:"dailyPurchaseLimit"`
-	RedeemFeePct       string                              `json:"redeemFeePct"`
-	DailyRedeemLimit   string                              `json:"dailyRedeemLimit"`
-	Timestamp          int64                               `json:"timestamp"`
+	TokenName          string                        `json:"tokenName"`
+	Description        string                        `json:"description"`
+	Underlying         string                        `json:"underlying"`
+	TokenIssued        string                        `json:"tokenIssued"`
+	Basket             string                        `json:"basket"`
+	CurrentBaskets     []BlvtTokenInfoCurrentBaskets `json:"currentBaskets"`
+	Nav                string                        `json:"nav"`
+	RealLeverage       string                        `json:"realLeverage"`
+	FundingRate        string                        `json:"fundingRate"`
+	DailyManagementFee string                        `json:"dailyManagementFee"`
+	PurchaseFeePct     string                        `json:"purchaseFeePct"`
+	DailyPurchaseLimit string                        `json:"dailyPurchaseLimit"`
+	RedeemFeePct       string                        `json:"redeemFeePct"`
+	DailyRedeemLimit   string                        `json:"dailyRedeemLimit"`
+	Timestamp          int64                         `json:"timestamp"`
 }
 
 // NewInlineResponse20097 instantiates a new InlineResponse20097 object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInlineResponse20097(tokenName string, description string, underlying string, tokenIssued string, basket string, currentBaskets []SapiV1BlvtTokenInfoCurrentBaskets, nav string, realLeverage string, fundingRate string, dailyManagementFee string, purchaseFeePct string, dailyPurchaseLimit string, redeemFeePct string, dailyRedeemLimit string, timestamp int64) *InlineResponse20097 {
+func NewInlineResponse20097(tokenName string, description string, underlying string, tokenIssued string, basket string, currentBaskets []BlvtTokenInfoCurrentBaskets, nav string, realLeverage string, fundingRate string, dailyManagementFee string, purchaseFeePct string, dailyPurchaseLimit string, redeemFeePct string, dailyRedeemLimit string, timestamp int64) *InlineResponse20097 {
 	this := InlineResponse20097{}
 	this.TokenName = tokenName
 	this.Description = description
@@ -187,9 +187,9 @@ func (o *InlineResponse20097) SetBasket(v string) {
 }
 
 // GetCurrentBaskets returns the CurrentBaskets field value
-func (o *InlineResponse20097) GetCurrentBaskets() []SapiV1BlvtTokenInfoCurrentBaskets {
+func (o *InlineResponse20097) GetCurrentBaskets() []BlvtTokenInfoCurrentBaskets {
 	if o == nil {
-		var ret []SapiV1BlvtTokenInfoCurrentBaskets
+		var ret []BlvtTokenInfoCurrentBaskets
 		return ret
 	}
 
@@ -198,7 +198,7 @@ func (o *InlineResponse20097) GetCurrentBaskets() []SapiV1BlvtTokenInfoCurrentBa
 
 // GetCurrentBasketsOk returns a tuple with the CurrentBaskets field value
 // and a boolean to check if the value has been set.
-func (o *InlineResponse20097) GetCurrentBasketsOk() (*[]SapiV1BlvtTokenInfoCurrentBaskets, bool) {
+func (o *InlineResponse20097) GetCurrentBasketsOk() (*[]BlvtTokenInfoCurrentBaskets, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -206,7 +206,7 @@ func (o *InlineResponse20097) GetCurrentBasketsOk() (*[]SapiV1BlvtTokenInfoCurre
 }
 
 // SetCurrentBaskets sets field value
-func (o *InlineResponse20097) SetCurrentBaskets(v []SapiV1BlvtTokenInfoCurrentBaskets) {
+func (o *InlineResponse20097) SetCurrentBaskets(v []BlvtTokenInfoCurrentBaskets) {
 	o.CurrentBaskets = v
 }
 
